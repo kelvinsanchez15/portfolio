@@ -1,35 +1,32 @@
-import { cloneElement } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import {
+  AppBar,
+  Toolbar,
+  useScrollTrigger,
+  Slide,
+  Typography,
+} from "@material-ui/core/";
 
 import Menu from "./Menu";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
+  appbar: {
+    backgroundColor: theme.palette.grey[900],
+  },
   title: {
     flexGrow: 1,
   },
 }));
 
-function ElevationScroll(props) {
+function HideOnScroll(props) {
   const { children } = props;
+  const trigger = useScrollTrigger();
 
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-  });
-
-  return cloneElement(children, {
-    elevation: trigger ? 4 : 0,
-    style: {
-      backgroundColor: trigger ? "white" : "transparent",
-      color: trigger ? "black" : "white",
-      transition: trigger ? "0.3s" : "0.5s",
-      padding: trigger ? "0px" : "10px 0px",
-    },
-  });
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
 }
 
 export default function ElevateAppBar(props) {
@@ -37,16 +34,16 @@ export default function ElevateAppBar(props) {
 
   return (
     <nav id="navbar">
-      <ElevationScroll {...props}>
-        <AppBar>
+      <HideOnScroll {...props}>
+        <AppBar elevation={0} className={classes.appbar}>
           <Toolbar>
-            <Typography variant="h6" className={classes.title}>
+            <Typography variant="h6" color="primary" className={classes.title}>
               KS
             </Typography>
             <Menu />
           </Toolbar>
         </AppBar>
-      </ElevationScroll>
+      </HideOnScroll>
     </nav>
   );
 }
