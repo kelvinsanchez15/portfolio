@@ -2,6 +2,8 @@ import Head from "next/head";
 
 import HeroSection from "../components/home/HeroSection";
 import AboutSection from "../components/home/AboutSection";
+import PortfolioSection from "../components/home/PortfolioSection";
+import ContactSection from "../components/home/ContactSection";
 
 export default function Index() {
   return (
@@ -13,6 +15,8 @@ export default function Index() {
 
       <HeroSection />
       <AboutSection />
+      <PortfolioSection />
+      <ContactSection />
     </>
   );
 }

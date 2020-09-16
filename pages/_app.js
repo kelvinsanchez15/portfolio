@@ -6,6 +6,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../components/styles/theme";
 
 import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -32,6 +33,7 @@ export default function MyApp(props) {
         <CssBaseline />
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </>
   );
