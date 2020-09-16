@@ -12,6 +12,7 @@ import Menu from "./Menu";
 const useStyles = makeStyles((theme) => ({
   appbar: {
     backgroundColor: theme.palette.grey[900],
+    color: theme.palette.common.white,
   },
   title: {
     flexGrow: 1,
@@ -37,7 +38,7 @@ export default function ElevateAppBar(props) {
       <HideOnScroll {...props}>
         <AppBar elevation={0} className={classes.appbar}>
           <Toolbar>
-            <Typography variant="h6" color="primary" className={classes.title}>
+            <Typography variant="h4" color="primary" className={classes.title}>
               KS
             </Typography>
             <Menu />
