@@ -13,12 +13,13 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(10),
+    paddingTop: theme.spacing(10),
+    paddingBottom: theme.spacing(8),
   },
   separator: {
     height: "4px",
     width: "60px",
-    backgroundColor: "#4f4f4f",
+    backgroundColor: theme.palette.primary.main,
   },
 }));
 

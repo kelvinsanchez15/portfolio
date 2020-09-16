@@ -5,12 +5,10 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 const useStyles = makeStyles((theme) => ({
   homeHero: {
     minHeight: "100vh",
-    backgroundColor: "#7f5a83",
-    backgroundImage: "linear-gradient(315deg, #7f5a83 0%, #0d324d 74%)",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    color: theme.palette.common.white,
+    backgroundColor: theme.palette.grey[900],
   },
   heroButton: {
     marginTop: theme.spacing(20),
@@ -46,8 +44,8 @@ export default function Home() {
 
         <Button
           className={classes.heroButton}
-          variant="outlined"
-          color="inherit"
+          variant="contained"
+          color="primary"
           size="large"
           endIcon={<ArrowForwardIcon />}
         >
