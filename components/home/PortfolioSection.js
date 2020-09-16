@@ -112,11 +112,11 @@ export default function Portfolio() {
           Portfolio
         </Typography>
 
-        <Grid container spacing={2}>
+        <Grid container spacing={5}>
           {projects.map((project) => {
             return (
               <Grid item xs={12} key={project.name}>
-                <Card variant="outlined" className={classes.cardStyle}>
+                <Card elevation={4} className={classes.cardStyle}>
                   <CardMedia
                     component="img"
                     className={classes.cover}
