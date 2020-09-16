@@ -1,12 +1,19 @@
 import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
-import blue from "@material-ui/core/colors/blue";
+import cyan from "@material-ui/core/colors/cyan";
 
 // Create a theme instance.
 const theme = responsiveFontSizes(
   createMuiTheme({
     palette: {
       type: "dark",
-      primary: blue,
+      primary: cyan,
+    },
+    overrides: {
+      MuiListItemIcon: {
+        root: {
+          minWidth: 0,
+        },
+      },
     },
   })
 );
