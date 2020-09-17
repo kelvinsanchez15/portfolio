@@ -38,8 +38,8 @@ export default function ElevateAppBar(props) {
       <HideOnScroll {...props}>
         <AppBar elevation={0} className={classes.appbar}>
           <Toolbar>
-            <Typography variant="h4" color="primary" className={classes.title}>
-              KS
+            <Typography variant="h3" color="primary" className={classes.title}>
+              K
             </Typography>
             <Menu />
           </Toolbar>
