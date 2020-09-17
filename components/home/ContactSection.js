@@ -1,4 +1,4 @@
-import { Container, TextField, Typography } from "@material-ui/core";
+import { Container, TextField, Typography, Divider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -7,6 +7,13 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(8),
     display: "flex",
     flexWrap: "wrap",
+  },
+  divider: {
+    height: "4px",
+    width: "60px",
+    backgroundColor: theme.palette.primary.main,
+    margin: "auto",
+    marginBottom: theme.spacing(4),
   },
   textField: {
     marginLeft: theme.spacing(1),
@@ -24,6 +31,7 @@ export default function Contact() {
         <Typography component="h2" variant="h3" align="center" gutterBottom>
           Contact
         </Typography>
+        <Divider className={classes.divider} />
         <div>
           <TextField
             id="standard-full-width"

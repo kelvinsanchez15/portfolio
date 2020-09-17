@@ -2,6 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
   Container,
   Typography,
+  Divider,
   Grid,
   Card,
   CardContent,
@@ -19,6 +20,12 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(8),
     backgroundColor: theme.palette.grey[900],
+  },
+  divider: {
+    height: "4px",
+    width: "60px",
+    backgroundColor: theme.palette.primary.main,
+    margin: "auto",
   },
   cardStyle: {
     display: "flex",
@@ -108,11 +115,14 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className={classes.root}>
       <Container>
-        <Typography component="h2" variant="h3" align="center" gutterBottom>
-          Portfolio
-        </Typography>
+        <Grid container spacing={4}>
+          <Grid item xs={12}>
+            <Typography component="h2" variant="h3" align="center" gutterBottom>
+              Portfolio
+            </Typography>
+            <Divider className={classes.divider} />
+          </Grid>
 
-        <Grid container spacing={5}>
           {projects.map((project) => {
             return (
               <Grid item xs={12} key={project.name}>

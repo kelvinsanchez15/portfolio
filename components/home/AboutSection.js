@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(8),
   },
-  separator: {
+  divider: {
     height: "4px",
     width: "60px",
     backgroundColor: theme.palette.primary.main,
@@ -34,7 +34,7 @@ export default function About() {
             <Typography component="h2" variant="h3" gutterBottom>
               About me
             </Typography>
-            <Divider className={classes.separator} />
+            <Divider className={classes.divider} />
           </Grid>
 
           <Grid item xs={12} md={8}>
@@ -58,7 +58,7 @@ export default function About() {
             <Typography component="h2" variant="h3" gutterBottom>
               Languages
             </Typography>
-            <Divider className={classes.separator} />
+            <Divider className={classes.divider} />
           </Grid>
 
           <Grid item xs={12} md={8}>
@@ -94,7 +94,7 @@ export default function About() {
             <Typography component="h2" variant="h3" gutterBottom>
               My stack
             </Typography>
-            <Divider className={classes.separator} />
+            <Divider className={classes.divider} />
           </Grid>
 
           <Grid item xs={12} md={8}>
