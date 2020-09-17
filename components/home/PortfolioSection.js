@@ -168,7 +168,6 @@ export default function Portfolio() {
                         return (
                           <Chip
                             variant="outlined"
-                            color="primary"
                             size="small"
                             label={e}
                             key={e}
