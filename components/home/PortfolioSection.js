@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
   },
   cardStyle: {
     display: "flex",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
   },
   content: {
     display: "flex",
@@ -38,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   cover: {
-    width: 400,
+    display: "flex",
+    flex: "0 0 10%",
   },
   keyFeatures: {
     display: "flex",
@@ -47,9 +51,15 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       flex: "0 0 50%",
     },
+    [theme.breakpoints.down("xs")]: {
+      "& > *": {
+        display: "flex",
+        flex: "0 0 100%",
+      },
+    },
   },
   chip: {
-    marginRight: theme.spacing(0.5),
+    margin: theme.spacing(0.5),
   },
 }));
 
@@ -76,7 +86,6 @@ export default function Portfolio() {
                     className={classes.cover}
                     alt={project.imgAlt}
                     width="400"
-                    height="300"
                     image={project.imgPath}
                   />
 
