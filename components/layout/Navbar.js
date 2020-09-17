@@ -35,7 +35,6 @@ export default function ElevateAppBar(props) {
 
   return (
     <nav id="navbar">
-      <Toolbar />
       <HideOnScroll {...props}>
         <AppBar elevation={0} className={classes.appbar}>
           <Toolbar>

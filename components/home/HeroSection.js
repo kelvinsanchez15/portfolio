@@ -6,12 +6,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
     display: "flex",
+    alignItems: "center",
     backgroundColor: theme.palette.grey[900],
   },
   wrapper: {
-    display: "flex",
-    justifyContent: "space-evenly",
-    flexDirection: "column",
+    marginBottom: theme.spacing(10),
   },
   icon: {
     [theme.breakpoints.down("xs")]: {
@@ -25,8 +24,8 @@ export default function Home() {
 
   return (
     <section id="home" className={classes.root}>
-      <Container className={classes.wrapper}>
-        <Box>
+      <Container>
+        <Box className={classes.wrapper}>
           <Typography component="h2" variant="h3">
             Hi! I am
           </Typography>
@@ -52,17 +51,15 @@ export default function Home() {
           </Typography>
         </Box>
 
-        <Box>
-          <Button
-            href="#about"
-            variant="outlined"
-            color="primary"
-            size="large"
-            endIcon={<ArrowForward />}
-          >
-            Learn more about me
-          </Button>
-        </Box>
+        <Button
+          href="#about"
+          variant="outlined"
+          color="primary"
+          size="large"
+          endIcon={<ArrowForward />}
+        >
+          Learn more about me
+        </Button>
       </Container>
     </section>
   );
