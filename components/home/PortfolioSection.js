@@ -107,7 +107,7 @@ export default function Portfolio() {
                           return (
                             <ListItem key={feature}>
                               <ListItemIcon>
-                                <ChevronRightIcon color="primary" />
+                                <ChevronRightIcon color="secondary" />
                               </ListItemIcon>
                               <ListItemText primary={feature} />
                             </ListItem>

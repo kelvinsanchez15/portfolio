@@ -43,7 +43,7 @@ export default function About() {
               beautiful things
             </Typography>
 
-            <Typography variant="subtitle1" gutterBottom>
+            <Typography component="h5" variant="subtitle1" gutterBottom>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -68,22 +68,22 @@ export default function About() {
 
             <Grid container>
               <Grid item xs={6}>
-                <Typography variant="subtitle1" gutterBottom>
+                <Typography component="h5" variant="subtitle1" gutterBottom>
                   - HTML5
                 </Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography variant="subtitle1" gutterBottom>
+                <Typography component="h5" variant="subtitle1" gutterBottom>
                   - CSS3
                 </Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography variant="subtitle1" gutterBottom>
+                <Typography component="h5" variant="subtitle1" gutterBottom>
                   - SAAS
                 </Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography variant="subtitle1" gutterBottom>
+                <Typography component="h5" variant="subtitle1" gutterBottom>
                   - JavaScript
                 </Typography>
               </Grid>
@@ -105,28 +105,28 @@ export default function About() {
             <List>
               <ListItem>
                 <ListItemIcon>
-                  <ChevronRightIcon />
+                  <ChevronRightIcon color="secondary" />
                 </ListItemIcon>
                 <ListItemText primary="MongoDB" />
               </ListItem>
 
               <ListItem>
                 <ListItemIcon>
-                  <ChevronRightIcon />
+                  <ChevronRightIcon color="secondary" />
                 </ListItemIcon>
                 <ListItemText primary="Express" />
               </ListItem>
 
               <ListItem>
                 <ListItemIcon>
-                  <ChevronRightIcon />
+                  <ChevronRightIcon color="secondary" />
                 </ListItemIcon>
                 <ListItemText primary="React" />
               </ListItem>
 
               <ListItem>
                 <ListItemIcon>
-                  <ChevronRightIcon />
+                  <ChevronRightIcon color="secondary" />
                 </ListItemIcon>
                 <ListItemText primary="Node" />
               </ListItem>

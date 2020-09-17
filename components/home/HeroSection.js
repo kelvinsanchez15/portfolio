@@ -35,7 +35,7 @@ export default function Home() {
             <ChevronLeft
               className={classes.icon}
               fontSize="large"
-              color="primary"
+              color="secondary"
             />
             <Typography component="h1" variant="h2">
               Kelvin Sánchez
@@ -43,7 +43,7 @@ export default function Home() {
             <ChevronRight
               className={classes.icon}
               fontSize="large"
-              color="primary"
+              color="secondary"
             />
           </Grid>
 
