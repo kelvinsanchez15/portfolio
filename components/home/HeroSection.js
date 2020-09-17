@@ -1,22 +1,21 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { Container, Button, Typography, Grid } from "@material-ui/core/";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import { Container, Button, Typography, Box, Grid } from "@material-ui/core/";
+import { ChevronLeft, ChevronRight, ArrowForward } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
-  homeHero: {
+  root: {
     minHeight: "100vh",
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
     backgroundColor: theme.palette.grey[900],
   },
-  heroButton: {
-    marginTop: theme.spacing(20),
-    [theme.breakpoints.down("sm")]: {
-      marginTop: theme.spacing(8),
-    },
+  wrapper: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    flexDirection: "column",
+  },
+  icon: {
     [theme.breakpoints.down("xs")]: {
-      marginTop: theme.spacing(6),
+      fontSize: "1.5rem",
     },
   },
 }));
@@ -25,32 +24,45 @@ export default function Home() {
   const classes = useStyles();
 
   return (
-    <section id="home" className={classes.homeHero}>
-      <Container>
-        <Grid container>
-          <Grid item xs={12}>
-            <Typography component="h1" variant="h2" gutterBottom>
-              Hi! I&apos;m Kelvin, a full-stack developer.
+    <section id="home" className={classes.root}>
+      <Container className={classes.wrapper}>
+        <Box>
+          <Typography component="h2" variant="h3">
+            Hi! I am
+          </Typography>
+
+          <Grid container direction="row" alignItems="center">
+            <ChevronLeft
+              className={classes.icon}
+              fontSize="large"
+              color="primary"
+            />
+            <Typography component="h1" variant="h2">
+              Kelvin Sánchez
             </Typography>
+            <ChevronRight
+              className={classes.icon}
+              fontSize="large"
+              color="primary"
+            />
           </Grid>
 
-          <Grid item xs={12} md={8}>
-            <Typography variant="h5" component="p">
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam.
-            </Typography>
-          </Grid>
-        </Grid>
+          <Typography component="h2" variant="h3">
+            A full-stack developer.
+          </Typography>
+        </Box>
 
-        <Button
-          className={classes.heroButton}
-          variant="contained"
-          color="primary"
-          size="large"
-          endIcon={<ArrowForwardIcon />}
-        >
-          More About me
-        </Button>
+        <Box>
+          <Button
+            href="#about"
+            variant="outlined"
+            color="primary"
+            size="large"
+            endIcon={<ArrowForward />}
+          >
+            Learn more about me
+          </Button>
+        </Box>
       </Container>
     </section>
   );
