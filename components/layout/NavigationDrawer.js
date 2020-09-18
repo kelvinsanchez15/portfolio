@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   List,
@@ -28,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
 export default function NavigationDrawer(props) {
   const { menuItems, anchor, open, onClose } = props;
   const classes = useStyles();
-  const router = useRouter();
 
   return (
     <Drawer variant="temporary" anchor={anchor} open={open} onClose={onClose}>
@@ -43,11 +41,10 @@ export default function NavigationDrawer(props) {
           return (
             <ListItem
               button
+              onClick={onClose}
               key={item.name}
-              onClick={() => {
-                router.push(item.link);
-                onClose();
-              }}
+              href={item.link}
+              component="a"
             >
               <ListItemIcon className={classes.listItemIcon}>
                 {item.icon}

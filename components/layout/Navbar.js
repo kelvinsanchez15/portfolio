@@ -8,6 +8,7 @@ import {
   Typography,
   Hidden,
   IconButton,
+  Button,
 } from "@material-ui/core/";
 import {
   Menu as MenuIcon,
@@ -17,7 +18,6 @@ import {
   PermIdentity as PermIdentityIcon,
 } from "@material-ui/icons";
 
-import Menu from "./Menu";
 import NavigationDrawer from "./NavigationDrawer";
 
 const useStyles = makeStyles((theme) => ({
@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+  },
+  noDecoration: {
+    textDecoration: "none !important",
   },
 }));
 
@@ -65,7 +68,18 @@ export default function ElevateAppBar(props) {
               K
             </Typography>
             <Hidden smDown implementation="css">
-              <Menu />
+              {menuItems.map((item) => {
+                return (
+                  <Button
+                    key={item.name}
+                    href={item.link}
+                    size="large"
+                    component="a"
+                  >
+                    {item.name}
+                  </Button>
+                );
+              })}
             </Hidden>
             <Hidden mdUp implementation="css">
               <IconButton
