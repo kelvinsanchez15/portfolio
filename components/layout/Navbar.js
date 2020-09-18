@@ -86,6 +86,7 @@ export default function ElevateAppBar(props) {
                 );
               })}
             </Hidden>
+
             <Hidden mdUp implementation="css">
               <IconButton
                 onClick={handleDrawerToggle}
@@ -97,6 +98,7 @@ export default function ElevateAppBar(props) {
           </Toolbar>
         </AppBar>
       </HideOnScroll>
+
       <NavigationDrawer
         menuItems={menuItems}
         anchor="right"
