@@ -9,6 +9,7 @@ import {
   Hidden,
   IconButton,
   Button,
+  Link,
 } from "@material-ui/core/";
 import {
   Menu as MenuIcon,
@@ -25,8 +26,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.grey[900],
     color: theme.palette.common.white,
   },
-  title: {
-    flexGrow: 1,
+  toolbar: {
+    display: "flex",
+    justifyContent: "space-between",
   },
   noDecoration: {
     textDecoration: "none !important",
@@ -63,10 +65,13 @@ export default function ElevateAppBar(props) {
     <nav id="navbar">
       <HideOnScroll {...props}>
         <AppBar elevation={0} className={classes.appbar}>
-          <Toolbar>
-            <Typography variant="h3" color="primary" className={classes.title}>
-              K
-            </Typography>
+          <Toolbar className={classes.toolbar}>
+            <Link className={classes.noDecoration} href="/#" variant="button">
+              <Typography variant="h3" color="primary">
+                K
+              </Typography>
+            </Link>
+
             <Hidden smDown implementation="css">
               {menuItems.map((item) => {
                 return (
