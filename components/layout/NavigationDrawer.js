@@ -34,7 +34,7 @@ export default function NavigationDrawer(props) {
     <Drawer variant="temporary" anchor={anchor} open={open} onClose={onClose}>
       <div className={classes.drawerHeader}>
         <IconButton onClick={onClose}>
-          <CloseIcon color="secondary" />
+          <CloseIcon fontSize="large" color="secondary" />
         </IconButton>
       </div>
       <Divider />

@@ -72,7 +72,7 @@ export default function ElevateAppBar(props) {
                 onClick={handleDrawerToggle}
                 aria-label="Open Navigation"
               >
-                <MenuIcon color="secondary" />
+                <MenuIcon fontSize="large" color="secondary" />
               </IconButton>
             </Hidden>
           </Toolbar>
