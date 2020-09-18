@@ -64,10 +64,10 @@ export default function ElevateAppBar(props) {
             <Typography variant="h3" color="primary" className={classes.title}>
               K
             </Typography>
-            <Hidden smDown>
+            <Hidden smDown implementation="css">
               <Menu />
             </Hidden>
-            <Hidden mdUp>
+            <Hidden mdUp implementation="css">
               <IconButton
                 onClick={handleDrawerToggle}
                 aria-label="Open Navigation"
