@@ -8,7 +8,6 @@ import {
   Typography,
   Hidden,
   IconButton,
-  Button,
   Link,
 } from "@material-ui/core/";
 import {
@@ -20,6 +19,7 @@ import {
 } from "@material-ui/icons";
 
 import NavigationDrawer from "./NavigationDrawer";
+import AnimatedLink from "../AnimatedLink";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
@@ -75,14 +75,15 @@ export default function ElevateAppBar(props) {
             <Hidden smDown implementation="css">
               {menuItems.map((item) => {
                 return (
-                  <Button
+                  <AnimatedLink
                     key={item.name}
                     href={item.link}
-                    size="large"
-                    component="a"
+                    variant="button"
+                    color="inherit"
+                    underline="none"
                   >
                     {item.name}
-                  </Button>
+                  </AnimatedLink>
                 );
               })}
             </Hidden>
