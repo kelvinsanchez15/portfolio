@@ -14,6 +14,13 @@ const theme = responsiveFontSizes(
           minWidth: 0,
         },
       },
+      MuiAutocomplete: {
+        option: {
+          '&[data-focus="true"]': {
+            backgroundColor: "red",
+          },
+        },
+      },
     },
   })
 );

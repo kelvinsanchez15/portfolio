@@ -1,12 +1,26 @@
-import { Container, TextField, Typography, Divider } from "@material-ui/core";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import { makeStyles } from "@material-ui/core/styles";
+import {
+  Container,
+  Grid,
+  TextField,
+  Typography,
+  Divider,
+  Button,
+  Card,
+  CardContent,
+  Box,
+  IconButton,
+  Link,
+} from "@material-ui/core";
+
+import socialIcons from "./constants/socialIcons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(8),
-    display: "flex",
-    flexWrap: "wrap",
   },
   divider: {
     height: "4px",
@@ -15,142 +29,195 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     marginBottom: theme.spacing(4),
   },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: "25ch",
+  card: {
+    marginBottom: theme.spacing(4),
+  },
+  socialIcon: {
+    fill: theme.palette.common.white,
+    "&:hover": {
+      fill: theme.palette.primary.light,
+    },
+    "&:focus": {
+      fill: theme.palette.primary.light,
+    },
   },
 }));
+
+const initialValues = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  message: "",
+};
+
+const validationSchema = Yup.object({
+  firstName: Yup.string().required("Required"),
+  lastName: Yup.string().required("Required"),
+  email: Yup.string().email("Invalid email format").required("Required"),
+});
 
 export default function Contact() {
   const classes = useStyles();
 
+  const onSubmit = (values, onSubmitProps) => {
+    console.log(values);
+    onSubmitProps.resetForm();
+  };
+
+  const formik = useFormik({
+    initialValues,
+    onSubmit,
+    validationSchema,
+  });
+
+  const {
+    errors,
+    touched,
+    values,
+    handleChange,
+    handleSubmit,
+    getFieldProps,
+  } = formik;
+
   return (
     <section id="contact" className={classes.root}>
-      <Container>
+      <Container maxWidth="sm">
         <Typography component="h2" variant="h3" align="center" gutterBottom>
           Contact
         </Typography>
         <Divider className={classes.divider} />
-        <div>
-          <TextField
-            id="standard-full-width"
-            label="Label"
-            style={{ margin: 8 }}
-            placeholder="Placeholder"
-            helperText="Full width!"
-            fullWidth
-            margin="normal"
-            InputLabelProps={{
-              shrink: true,
-            }}
-          />
-          <TextField
-            label="None"
-            id="margin-none"
-            defaultValue="Default Value"
-            className={classes.textField}
-            helperText="Some important text"
-          />
-          <TextField
-            label="Dense"
-            id="margin-dense"
-            defaultValue="Default Value"
-            className={classes.textField}
-            helperText="Some important text"
-            margin="dense"
-          />
-          <TextField
-            label="Normal"
-            id="margin-normal"
-            defaultValue="Default Value"
-            className={classes.textField}
-            helperText="Some important text"
-            margin="normal"
-          />
-        </div>
-        <div>
-          <TextField
-            id="filled-full-width"
-            label="Label"
-            style={{ margin: 8 }}
-            placeholder="Placeholder"
-            helperText="Full width!"
-            fullWidth
-            margin="normal"
-            InputLabelProps={{
-              shrink: true,
-            }}
-            variant="filled"
-          />
-          <TextField
-            label="None"
-            id="filled-margin-none"
-            defaultValue="Default Value"
-            className={classes.textField}
-            helperText="Some important text"
-            variant="filled"
-          />
-          <TextField
-            label="Dense"
-            id="filled-margin-dense"
-            defaultValue="Default Value"
-            className={classes.textField}
-            helperText="Some important text"
-            margin="dense"
-            variant="filled"
-          />
-          <TextField
-            label="Normal"
-            id="filled-margin-normal"
-            defaultValue="Default Value"
-            className={classes.textField}
-            helperText="Some important text"
-            margin="normal"
-            variant="filled"
-          />
-        </div>
-        <div>
-          <TextField
-            id="outlined-full-width"
-            label="Label"
-            style={{ margin: 8 }}
-            placeholder="Placeholder"
-            helperText="Full width!"
-            fullWidth
-            margin="normal"
-            InputLabelProps={{
-              shrink: true,
-            }}
-            variant="outlined"
-          />
-          <TextField
-            label="None"
-            id="outlined-margin-none"
-            defaultValue="Default Value"
-            className={classes.textField}
-            helperText="Some important text"
-            variant="outlined"
-          />
-          <TextField
-            label="Dense"
-            id="outlined-margin-dense"
-            defaultValue="Default Value"
-            className={classes.textField}
-            helperText="Some important text"
-            margin="dense"
-            variant="outlined"
-          />
-          <TextField
-            label="Normal"
-            id="outlined-margin-normal"
-            defaultValue="Default Value"
-            className={classes.textField}
-            helperText="Some important text"
-            margin="normal"
-            variant="outlined"
-          />
-        </div>
+
+        <Card className={classes.card}>
+          <CardContent>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {
+                "If you are interested in hiring me for your project please use the form below to get in touch. Want to know how I work and what I can offer? Check out my "
+              }
+              <Link href="/#portfolio" color="secondary">
+                portfolio
+              </Link>
+              {" and "}
+              <Link href="/#" color="secondary">
+                resume
+              </Link>
+              .
+            </Typography>
+          </CardContent>
+
+          <Divider />
+
+          <CardContent>
+            <Typography
+              variant="body1"
+              color="textPrimary"
+              align="center"
+              component="p"
+              gutterBottom
+            >
+              You can also find me on the following channels
+            </Typography>
+
+            <Box display="flex" justifyContent="center">
+              {socialIcons.map((socialIcon) => (
+                <IconButton
+                  key={socialIcon.label}
+                  aria-label={socialIcon.label}
+                  className={classes.socialIcon}
+                  href={socialIcon.href}
+                  rel="noopener"
+                  target="_blank"
+                  component="a"
+                >
+                  {socialIcon.icon}
+                </IconButton>
+              ))}
+            </Box>
+          </CardContent>
+        </Card>
+
+        <Typography component="h3" variant="h4" align="center" gutterBottom>
+          Get in touch
+        </Typography>
+
+        <form onSubmit={handleSubmit}>
+          <Grid container spacing={1}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                fullWidth
+                id="firstName"
+                name="firstName"
+                label="First Name"
+                autoComplete="given-name"
+                variant="outlined"
+                color="primary"
+                {...getFieldProps("firstName")}
+                error={errors.firstName && Boolean(touched.firstName)}
+                helperText={touched.firstName ? errors.firstName : ""}
+              />
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+              <TextField
+                fullWidth
+                id="lastName"
+                name="lastName"
+                label="Last Name"
+                autoComplete="family-name"
+                variant="outlined"
+                color="primary"
+                {...getFieldProps("lastName")}
+                error={errors.lastName && Boolean(touched.lastName)}
+                helperText={touched.lastName ? errors.lastName : ""}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                id="email"
+                name="email"
+                label="Email"
+                autoComplete="email"
+                variant="outlined"
+                color="primary"
+                {...getFieldProps("email")}
+                error={errors.email && Boolean(touched.email)}
+                helperText={touched.email ? errors.email : ""}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <TextField
+                multiline
+                rows={5}
+                fullWidth
+                id="message"
+                name="message"
+                type="message"
+                label="Message"
+                autoComplete="message"
+                variant="outlined"
+                color="primary"
+                onChange={handleChange}
+                value={values.message}
+                placeholder="Feel free to include any details."
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <Button
+                fullWidth
+                type="submit"
+                variant="outlined"
+                color="primary"
+                size="large"
+                className={classes.submit}
+              >
+                Send
+              </Button>
+            </Grid>
+          </Grid>
+        </form>
       </Container>
     </section>
   );
