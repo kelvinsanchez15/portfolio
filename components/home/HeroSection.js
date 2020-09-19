@@ -47,7 +47,7 @@ export default function Home() {
           </Grid>
 
           <Typography component="h2" variant="h3">
-            A full-stack developer.
+            A full-stack developer
           </Typography>
         </Box>
 
