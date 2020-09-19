@@ -38,12 +38,12 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={8}>
-            <Typography component="h4" variant="h5" gutterBottom>
+            <Typography component="h3" variant="h4" gutterBottom>
               I&apos;m a full stack developer who loves to build simple and
               beautiful things
             </Typography>
 
-            <Typography component="h5" variant="subtitle1" gutterBottom>
+            <Typography component="h4" variant="subtitle1" gutterBottom>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -62,28 +62,28 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={8}>
-            <Typography component="h4" variant="h5" gutterBottom>
+            <Typography component="h3" variant="h4" gutterBottom>
               I utilize the following programming languages to build websites.
             </Typography>
 
             <Grid container>
               <Grid item xs={6}>
-                <Typography component="h5" variant="subtitle1" gutterBottom>
+                <Typography component="h4" variant="subtitle1" gutterBottom>
                   - HTML5
                 </Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography component="h5" variant="subtitle1" gutterBottom>
+                <Typography component="h4" variant="subtitle1" gutterBottom>
                   - CSS3
                 </Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography component="h5" variant="subtitle1" gutterBottom>
+                <Typography component="h4" variant="subtitle1" gutterBottom>
                   - SAAS
                 </Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography component="h5" variant="subtitle1" gutterBottom>
+                <Typography component="h4" variant="subtitle1" gutterBottom>
                   - JavaScript
                 </Typography>
               </Grid>
@@ -98,7 +98,7 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={8}>
-            <Typography component="h4" variant="h5" gutterBottom>
+            <Typography component="h3" variant="h4" gutterBottom>
               Something something MERN stack.
             </Typography>
 
