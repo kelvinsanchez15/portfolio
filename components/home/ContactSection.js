@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
   card: {
     marginBottom: theme.spacing(4),
   },
+  linkColor: {
+    color: theme.palette.primary.light,
+  },
   socialIcon: {
     fill: theme.palette.common.white,
     "&:hover": {
@@ -93,11 +96,11 @@ export default function Contact() {
               {
                 "If you are interested in hiring me for your project please use the form below to get in touch. Want to know how I work and what I can offer? Check out my "
               }
-              <Link href="/#portfolio" color="secondary">
+              <Link href="/#portfolio" className={classes.linkColor}>
                 portfolio
               </Link>
               {" and "}
-              <Link href="/#" color="secondary">
+              <Link href="/#" className={classes.linkColor}>
                 resume
               </Link>
               .
