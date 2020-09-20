@@ -62,9 +62,21 @@ const validationSchema = Yup.object({
 export default function Contact() {
   const classes = useStyles();
 
-  const onSubmit = (values, onSubmitProps) => {
-    console.log(values);
+  const onSubmit = async (values, onSubmitProps) => {
+    await fetch("/api/mail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        firstName: values.firstName,
+        lastName: values.lastName,
+        email: values.email,
+        message: values.message,
+      }),
+    });
+
+    // setSenderFirstName(values.firstName)
     onSubmitProps.resetForm();
+    // setDisplayModal(true)
   };
 
   const formik = useFormik({
@@ -214,7 +226,6 @@ export default function Contact() {
                 variant="outlined"
                 color="primary"
                 size="large"
-                className={classes.submit}
               >
                 Send
               </Button>
