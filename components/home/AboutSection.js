@@ -8,8 +8,11 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
+  Box,
 } from "@material-ui/core/";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+
+import skillIcons from "./constants/skillIcons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +23,23 @@ const useStyles = makeStyles((theme) => ({
     height: "4px",
     width: "60px",
     backgroundColor: theme.palette.primary.main,
+  },
+  skills: {
+    display: "flex",
+    flexWrap: "wrap",
+    fontSize: "4rem",
+    [theme.breakpoints.down("xs")]: {
+      justifyContent: "space-around",
+    },
+  },
+  skillIcon: {
+    marginRight: "1.3rem",
+    "&:hover": {
+      color: theme.palette.primary.light,
+    },
+    [theme.breakpoints.down("xs")]: {
+      margin: "0 0.4rem",
+    },
   },
 }));
 
@@ -131,6 +151,25 @@ export default function About() {
                 <ListItemText primary="Node" />
               </ListItem>
             </List>
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <Typography component="h2" variant="h3" gutterBottom>
+              Skills
+            </Typography>
+            <Divider className={classes.divider} />
+          </Grid>
+
+          <Grid item xs={12} md={8}>
+            <Box className={classes.skills}>
+              {skillIcons.map((skillIcon) => {
+                return (
+                  <div key={skillIcon.label} className={classes.skillIcon}>
+                    {skillIcon.icon}
+                  </div>
+                );
+              })}
+            </Box>
           </Grid>
         </Grid>
       </Container>
