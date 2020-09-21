@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { makeStyles } from "@material-ui/core/styles";
@@ -16,6 +17,8 @@ import {
 } from "@material-ui/core";
 
 import socialIcons from "./constants/socialIcons";
+
+import EmailSuccessMessage from "../EmailSuccessMessage";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,6 +63,9 @@ const validationSchema = Yup.object({
 });
 
 export default function Contact() {
+  const [displayMessage, setDisplayMessage] = useState(false);
+  const [senderFirstName, setSenderFirstName] = useState("");
+
   const classes = useStyles();
 
   const onSubmit = async (values, onSubmitProps) => {
@@ -74,9 +80,9 @@ export default function Contact() {
       }),
     });
 
-    // setSenderFirstName(values.firstName)
+    setSenderFirstName(values.firstName);
     onSubmitProps.resetForm();
-    // setDisplayModal(true)
+    setDisplayMessage(true);
   };
 
   const formik = useFormik({
@@ -232,6 +238,12 @@ export default function Contact() {
             </Grid>
           </Grid>
         </form>
+
+        <EmailSuccessMessage
+          senderFirstName={senderFirstName}
+          setDisplayMessage={setDisplayMessage}
+          displayMessage={displayMessage}
+        />
       </Container>
     </section>
   );
