@@ -12,6 +12,7 @@ const theme = responsiveFontSizes(
       MuiListItemIcon: {
         root: {
           minWidth: 0,
+          marginRight: "0.5rem",
         },
       },
       MuiAutocomplete: {
