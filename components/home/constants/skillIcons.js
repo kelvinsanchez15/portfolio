@@ -10,6 +10,8 @@ import {
   SiJest,
   SiMocha,
   SiD3DotJs,
+  SiMaterialUi,
+  SiBootstrap,
 } from "react-icons/si";
 
 const skillLogos = [
@@ -56,6 +58,14 @@ const skillLogos = [
   {
     icon: <SiD3DotJs title="D3" />,
     label: "D3",
+  },
+  {
+    icon: <SiMaterialUi title="Material UI" />,
+    label: "Material UI",
+  },
+  {
+    icon: <SiBootstrap title="Bootstrap" />,
+    label: "Bootstrap",
   },
 ];
 
