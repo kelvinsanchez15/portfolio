@@ -4,13 +4,15 @@ import {
   Divider,
   Typography,
   Grid,
+  Box,
+  Button,
   List,
   ListItem,
-  ListItemText,
   ListItemIcon,
-  Box,
+  ListItemText,
 } from "@material-ui/core/";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+
+import { Code, Description } from "@material-ui/icons";
 
 import skillIcons from "./constants/skillIcons";
 
@@ -23,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     height: "4px",
     width: "60px",
     backgroundColor: theme.palette.primary.main,
+  },
+  resumeBtn: {
+    margin: "1rem",
   },
   skills: {
     display: "flex",
@@ -58,99 +63,65 @@ export default function About() {
           </Grid>
 
           <Grid item xs={12} md={8}>
-            <Typography component="h3" variant="h4" gutterBottom>
-              I&apos;m a full stack developer who loves to build simple and
-              beautiful things
-            </Typography>
-
-            <Typography component="h4" variant="subtitle1" gutterBottom>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Typography>
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <Typography component="h2" variant="h3" gutterBottom>
-              Languages
-            </Typography>
-            <Divider className={classes.divider} />
-          </Grid>
-
-          <Grid item xs={12} md={8}>
-            <Typography component="h3" variant="h4" gutterBottom>
-              I utilize the following programming languages to build websites.
-            </Typography>
-
-            <Grid container>
-              <Grid item xs={6}>
-                <Typography component="h4" variant="subtitle1" gutterBottom>
-                  - HTML5
-                </Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <Typography component="h4" variant="subtitle1" gutterBottom>
-                  - CSS3
-                </Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <Typography component="h4" variant="subtitle1" gutterBottom>
-                  - SAAS
-                </Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <Typography component="h4" variant="subtitle1" gutterBottom>
-                  - JavaScript
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <Typography component="h2" variant="h3" gutterBottom>
-              My stack
-            </Typography>
-            <Divider className={classes.divider} />
-          </Grid>
-
-          <Grid item xs={12} md={8}>
-            <Typography component="h3" variant="h4" gutterBottom>
-              Something something MERN stack.
-            </Typography>
-
-            <List>
+            <List disablePadding>
               <ListItem>
                 <ListItemIcon>
-                  <ChevronRightIcon color="secondary" />
+                  <Code color="secondary" />
                 </ListItemIcon>
-                <ListItemText primary="MongoDB" />
+                <ListItemText primary="I'm a full stack developer based in Bolívar, Venezuela." />
               </ListItem>
 
               <ListItem>
                 <ListItemIcon>
-                  <ChevronRightIcon color="secondary" />
+                  <Code color="secondary" />
                 </ListItemIcon>
-                <ListItemText primary="Express" />
+                <ListItemText
+                  primary="I like to design and build beautiful and functional websites and
+              web applications, taking special care to produce clear and
+              understandable code."
+                />
               </ListItem>
 
               <ListItem>
                 <ListItemIcon>
-                  <ChevronRightIcon color="secondary" />
+                  <Code color="secondary" />
                 </ListItemIcon>
-                <ListItemText primary="React" />
+                <ListItemText
+                  primary="I love teamwork and good communication, always open to feedback
+              and willing to learn new things."
+                />
               </ListItem>
 
               <ListItem>
                 <ListItemIcon>
-                  <ChevronRightIcon color="secondary" />
+                  <Code color="secondary" />
                 </ListItemIcon>
-                <ListItemText primary="Node" />
+                <ListItemText primary="In my free time I like to play the guitar, travel and meet new people." />
               </ListItem>
             </List>
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <Typography component="h2" variant="h3" gutterBottom>
+              Resumé
+            </Typography>
+            <Divider className={classes.divider} />
+          </Grid>
+
+          <Grid item xs={12} md={8}>
+            <Typography component="h3" variant="h4" gutterBottom>
+              You can check my resumé in the link below.
+            </Typography>
+
+            <Button
+              className={classes.resumeBtn}
+              variant="outlined"
+              color="primary"
+              size="large"
+              endIcon={<Description />}
+            >
+              Resumé
+            </Button>
           </Grid>
 
           <Grid item xs={12} md={4}>
