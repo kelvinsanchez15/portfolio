@@ -119,7 +119,7 @@ export default function Contact() {
               </Link>
               {" and "}
               <Link href="/#" className={classes.linkColor}>
-                resume
+                resumé
               </Link>
               .
             </Typography>
