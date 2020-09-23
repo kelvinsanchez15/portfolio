@@ -12,8 +12,11 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  ButtonGroup,
+  Button,
 } from "@material-ui/core/";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+
+import { ChevronRight, GitHub, Visibility } from "@material-ui/icons";
 
 import projects from "./constants/projects";
 
@@ -40,9 +43,29 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "space-between",
   },
+  coverWrapper: {
+    display: "flex",
+    position: "relative",
+  },
   cover: {
     display: "flex",
-    flex: "0 0 10%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
+  overlay: {
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.7);",
+    opacity: 0,
+    transition: "all 0.3s ease-in-out",
+    "&:hover": {
+      opacity: 1,
+    },
   },
   keyFeatures: {
     display: "flex",
@@ -81,13 +104,40 @@ export default function Portfolio() {
             return (
               <Grid item xs={12} key={project.name}>
                 <Card elevation={4} className={classes.cardStyle}>
-                  <CardMedia
-                    component="img"
-                    className={classes.cover}
-                    alt={project.imgAlt}
-                    width="400"
-                    image={project.imgPath}
-                  />
+                  <div className={classes.coverWrapper}>
+                    <CardMedia
+                      component="img"
+                      className={classes.cover}
+                      alt={project.imgAlt}
+                      width="400"
+                      image={project.imgPath}
+                    />
+
+                    <div className={classes.overlay}>
+                      <ButtonGroup variant="contained">
+                        <Button
+                          href={project.repoUrl}
+                          rel="noopener"
+                          target="_blank"
+                          component="a"
+                          aria-label="Link to project GitHub repository"
+                          startIcon={<GitHub />}
+                        >
+                          Repo
+                        </Button>
+                        <Button
+                          href={project.projectUrl}
+                          rel="noopener"
+                          target="_blank"
+                          component="a"
+                          aria-label="Link to project live preview"
+                          startIcon={<Visibility />}
+                        >
+                          Live
+                        </Button>
+                      </ButtonGroup>
+                    </div>
+                  </div>
 
                   <CardContent className={classes.content}>
                     <div>
@@ -107,7 +157,7 @@ export default function Portfolio() {
                           return (
                             <ListItem key={feature}>
                               <ListItemIcon>
-                                <ChevronRightIcon color="secondary" />
+                                <ChevronRight color="secondary" />
                               </ListItemIcon>
                               <ListItemText primary={feature} />
                             </ListItem>
