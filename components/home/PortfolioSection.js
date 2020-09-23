@@ -141,7 +141,7 @@ export default function Portfolio() {
 
                   <CardContent className={classes.content}>
                     <div>
-                      <Typography component="h4" variant="h5" gutterBottom>
+                      <Typography component="h3" variant="h5" gutterBottom>
                         {project.name}
                       </Typography>
                       <Typography
