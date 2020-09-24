@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   avatarWrapper: {
     display: "flex",
     justifyContent: "center",
-    marginBottom: theme.spacing(1),
+    marginBottom: theme.spacing(2),
   },
   avatar: {
     width: theme.spacing(7),
