@@ -6,15 +6,31 @@ const projects = [
     imgPath: "projectMedia/anonymous-message-board.jpg",
     imgAlt: "Anonymous message board preview",
     summary:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "An anonymous message board where users can create boards, post/report comments, and remove them.",
     keyFeatures: [
-      "CRUD API",
+      "RESTful API",
       "Server side rendering",
+      "Dark theme",
       "Flash alerts",
       "Quality assurance",
-      "Dark theme",
     ],
     technologies: ["Express", "Node", "MongoDB", "PUG"],
+  },
+  {
+    name: "Choropleth Map",
+    projectUrl: "https://kelvinsanchez15.github.io/choropleth-map/",
+    repoUrl: "https://github.com/kelvinsanchez15/choropleth-map",
+    imgPath: "projectMedia/choropleth-map.jpg",
+    imgAlt: "Choropleth map preview",
+    summary:
+      "A D3 Choropleth Map showing United States Educational Attainment (Percentage of adults age 25 and older with a bachelor's degree or higher)",
+    keyFeatures: [
+      "Data visualization",
+      "Color legend",
+      "Dynamic tooltip",
+      "Dark theme",
+    ],
+    technologies: ["Vanilla JS", "D3"],
   },
   {
     name: "Issue Tracker",
@@ -23,36 +39,29 @@ const projects = [
     imgPath: "projectMedia/issue-tracker.jpg",
     imgAlt: "Issue tracker preview",
     summary:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    keyFeatures: ["CRUD API", "Filters", "Relative time", "Test enviroment"],
+      "A GitHub issues clone where users can open, assign, filter, close, and delete issues.",
+    keyFeatures: [
+      "CRUD model",
+      "Server side rendering",
+      "Filters",
+      "Quality assurance",
+    ],
     technologies: ["Express", "Node", "MongoDB", "PUG"],
   },
   {
-    name: "Choropleth Map",
-    projectUrl: "https://anonymous-message-board-kel.glitch.me",
-    repoUrl: "https://github.com/kelvinsanchez15/choropleth-map",
-    imgPath: "projectMedia/choropleth-map.jpg",
-    imgAlt: "Choropleth map preview",
+    name: "Drum Machine",
+    projectUrl: "https://kelvinsanchez15.github.io/drum-machine/",
+    repoUrl: "https://github.com/kelvinsanchez15/drum-machine",
+    imgPath: "projectMedia/drum-machine.jpg",
+    imgAlt: "Drum Machine preview",
     summary:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "An interactive drumpad with realistic sounds built using React. The app allows you to play various sounds on the board, adjust the volume and turn the game on and off.",
     keyFeatures: [
-      "Data visualization",
-      "Color legend",
-      "Data tooltip",
-      "Dark theme",
+      "Real sounds",
+      "Mouse & Keyboard support",
+      "Volume/Power controls",
     ],
-    technologies: ["Vanilla JS", "D3"],
-  },
-  {
-    name: "JavaScript Calculator",
-    projectUrl: "https://anonymous-message-board-kel.glitch.me",
-    repoUrl: "https://github.com/kelvinsanchez15/javascript-calculator",
-    imgPath: "projectMedia/javascript-calculator.jpg",
-    imgAlt: "JavaScript calculator preview",
-    summary:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    keyFeatures: ["Feature 1", "Feature 2", "Feature 3"],
-    technologies: ["React"],
+    technologies: ["React", "SCSS"],
   },
 ];
 
