@@ -34,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
   },
   cardStyle: {
     display: "flex",
-    [theme.breakpoints.down("sm")]: {
+    height: "100%",
+    [theme.breakpoints.down("md")]: {
       flexDirection: "column",
     },
   },
@@ -42,16 +43,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    height: "100%",
+    [theme.breakpoints.up("lg")]: {
+      width: "80%",
+    },
   },
   coverWrapper: {
     display: "flex",
     position: "relative",
-  },
-  cover: {
-    display: "flex",
-    [theme.breakpoints.down("sm")]: {
-      width: "100%",
-    },
   },
   overlay: {
     position: "absolute",
@@ -74,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       flex: "0 0 50%",
     },
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       "& > *": {
         display: "flex",
         flex: "0 0 100%",
@@ -102,14 +101,13 @@ export default function Portfolio() {
 
           {projects.map((project) => {
             return (
-              <Grid item xs={12} key={project.name}>
+              <Grid item lg={12} sm={6} xs={12} key={project.name}>
                 <Card elevation={4} className={classes.cardStyle}>
                   <div className={classes.coverWrapper}>
                     <CardMedia
                       component="img"
                       className={classes.cover}
                       alt={project.imgAlt}
-                      width="400"
                       image={project.imgPath}
                     />
 
