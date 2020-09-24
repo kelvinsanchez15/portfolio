@@ -121,7 +121,7 @@ export default function Contact() {
         <Box className={classes.avatarWrapper}>
           <Avatar
             alt="Kelvin Sánchez"
-            src="/profile_picture.jpg"
+            src="/profile-picture.jpg"
             className={classes.avatar}
           />
         </Box>
