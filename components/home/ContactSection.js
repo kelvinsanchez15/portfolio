@@ -14,6 +14,7 @@ import {
   Box,
   IconButton,
   Link,
+  Avatar,
 } from "@material-ui/core";
 
 import socialIcons from "./constants/socialIcons";
@@ -46,6 +47,15 @@ const useStyles = makeStyles((theme) => ({
     "&:focus": {
       fill: theme.palette.primary.light,
     },
+  },
+  avatarWrapper: {
+    display: "flex",
+    justifyContent: "center",
+    marginBottom: theme.spacing(1),
+  },
+  avatar: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
   },
 }));
 
@@ -107,6 +117,14 @@ export default function Contact() {
           Contact
         </Typography>
         <Divider className={classes.divider} />
+
+        <Box className={classes.avatarWrapper}>
+          <Avatar
+            alt="Kelvin Sánchez"
+            src="/profile_picture.jpg"
+            className={classes.avatar}
+          />
+        </Box>
 
         <Card className={classes.card}>
           <CardContent>
