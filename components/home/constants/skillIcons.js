@@ -12,6 +12,7 @@ import {
   SiD3DotJs,
   SiMaterialUi,
   SiBootstrap,
+  SiNextDotJs,
 } from "react-icons/si";
 
 const skillLogos = [
@@ -38,6 +39,10 @@ const skillLogos = [
   {
     icon: <SiReact title="React" />,
     label: "React",
+  },
+  {
+    icon: <SiNextDotJs title="NextJS" />,
+    label: "NextJS",
   },
   {
     icon: <SiNodeDotJs title="Node" />,
