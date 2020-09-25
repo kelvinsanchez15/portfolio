@@ -29,7 +29,7 @@ export default function Footer() {
           <KeyboardArrowUpIcon />
         </Fab>
 
-        <Typography component="h5" variant="h6" align="center" gutterBottom>
+        <Typography component="p" variant="h6" align="center" gutterBottom>
           KELVIN SANCHEZ ©2020
         </Typography>
       </Box>
