@@ -1,11 +1,14 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { Container, Typography, Grid, Box } from "@material-ui/core/";
+import { Box, Fab, Typography } from "@material-ui/core/";
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(8),
+    padding: theme.spacing(5, 0, 5, 0),
     backgroundColor: theme.palette.grey[900],
+  },
+  fab: {
+    marginBottom: theme.spacing(2),
   },
 }));
 
@@ -14,11 +17,22 @@ export default function Footer() {
 
   return (
     <footer className={classes.root}>
-      <Container>
-        <Typography component="h4" variant="h5" align="center" gutterBottom>
-          By Kelvin Sánchez
+      <Box display="flex" flexDirection="column" alignItems="center">
+        <Fab
+          className={classes.fab}
+          color="secondary"
+          size="small"
+          href="/#"
+          title="Scroll back to top"
+          aria-label="Scroll back to top"
+        >
+          <KeyboardArrowUpIcon />
+        </Fab>
+
+        <Typography component="h5" variant="h6" align="center" gutterBottom>
+          KELVIN SANCHEZ ©2020
         </Typography>
-      </Container>
+      </Box>
     </footer>
   );
 }
