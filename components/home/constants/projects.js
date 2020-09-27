@@ -6,13 +6,13 @@ const projects = [
     imgPath: "projectMedia/anonymous-message-board.jpg",
     imgAlt: "Anonymous message board preview",
     summary:
-      "An anonymous message board where users can create boards, post/report comments, and remove them.",
+      "A web app where users can create boards, post comments and remove them.",
     keyFeatures: [
       "RESTful API",
       "Server side rendering",
       "Dark theme",
       "Flash alerts",
-      "Quality assurance",
+      "Unit tests",
     ],
     technologies: ["Express", "Node", "MongoDB", "PUG"],
   },
@@ -23,9 +23,9 @@ const projects = [
     imgPath: "projectMedia/choropleth-map.jpg",
     imgAlt: "Choropleth map preview",
     summary:
-      "A D3 Choropleth Map showing United States Educational Attainment (Percentage of adults age 25 and older with a bachelor's degree or higher)",
+      "An United States Educational Attainment data visualization map built with D3.",
     keyFeatures: [
-      "Data visualization",
+      "Data fetching",
       "Color legend",
       "Dynamic tooltip",
       "Dark theme",
@@ -57,7 +57,7 @@ const projects = [
     summary:
       "An interactive drumpad with realistic sounds built using React. The app allows you to play various sounds on the board, adjust the volume and turn the game on and off.",
     keyFeatures: [
-      "Real sounds",
+      "Real sound bank",
       "Mouse & Keyboard support",
       "Volume/Power controls",
     ],
