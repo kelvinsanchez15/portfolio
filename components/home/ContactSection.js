@@ -136,7 +136,12 @@ export default function Contact() {
                 portfolio
               </Link>
               {" and "}
-              <Link href="/#" className={classes.linkColor}>
+              <Link
+                className={classes.linkColor}
+                href="https://drive.google.com/file/d/1e5K-hbuE2y4yE_TXEXt3BXQcYuRdDcrn/view?usp=sharing"
+                rel="noopener"
+                target="_blank"
+              >
                 resumé
               </Link>
               .

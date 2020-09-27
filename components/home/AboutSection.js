@@ -119,6 +119,9 @@ export default function About() {
               color="primary"
               size="large"
               endIcon={<Description />}
+              href="https://drive.google.com/file/d/1e5K-hbuE2y4yE_TXEXt3BXQcYuRdDcrn/view?usp=sharing"
+              rel="noopener"
+              target="_blank"
             >
               Resumé
             </Button>
