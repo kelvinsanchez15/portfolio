@@ -1,30 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## View project
 
-## Getting Started
+[kelvinsanchez.vercel.app](https://kelvinsanchez.vercel.app/)
 
-First, run the development server:
+## About the project
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+A personal portfolio website that showcases my feature projects, technical skill stack, contact information and more about me.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Screenshot
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+![Portfolio material resizer mockup (6)](https://user-images.githubusercontent.com/4708484/94466143-f9a11780-018e-11eb-8faa-8dcd22c15b6f.png)
 
-## Learn More
+## Core dependencies
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [React](https://reactjs.org/) - A Javascript library for building user interfaces.
+- [NextJS](https://nextjs.org/) - A React framework with hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more.
+- [Material UI](https://material-ui.com/) - A React component-based design system.
+- [Formik](https://www.npmjs.com/package/formik) - An open source form library for React and React Native.
+- [Yup](https://www.npmjs.com/package/yup) - A JavaScript schema builder for value parsing and validation.
+- [SendGrid/Mail](https://www.npmjs.com/package/@sendgrid/mail) - Send emails with Javascript
