@@ -25,8 +25,8 @@ const skillLogos = [
     label: "CSS3",
   },
   {
-    icon: <SiSass title="SAAS" />,
-    label: "SAAS",
+    icon: <SiSass title="SASS" />,
+    label: "SASS",
   },
   {
     icon: <SiJavascript title="JavaScript" />,
