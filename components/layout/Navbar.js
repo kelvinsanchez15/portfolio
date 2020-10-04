@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
   noDecoration: {
     textDecoration: "none !important",
   },
+  link: {
+    padding: "12px 15px",
+  },
 }));
 
 function HideOnScroll(props) {
@@ -76,6 +79,7 @@ export default function ElevateAppBar(props) {
               {menuItems.map((item) => {
                 return (
                   <AnimatedLink
+                    className={classes.link}
                     key={item.name}
                     href={item.link}
                     variant="button"
