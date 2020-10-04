@@ -57,6 +57,12 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(7),
     height: theme.spacing(7),
   },
+  formHeader: {
+    marginBottom: theme.spacing(2),
+  },
+  submitButton: {
+    marginTop: theme.spacing(1),
+  },
 }));
 
 const initialValues = {
@@ -179,7 +185,12 @@ export default function Contact() {
           </CardContent>
         </Card>
 
-        <Typography component="h3" variant="h4" align="center" gutterBottom>
+        <Typography
+          className={classes.formHeader}
+          component="h3"
+          variant="h4"
+          align="center"
+        >
           Get in touch
         </Typography>
 
@@ -196,7 +207,9 @@ export default function Contact() {
                 color="primary"
                 {...getFieldProps("firstName")}
                 error={errors.firstName && Boolean(touched.firstName)}
-                helperText={touched.firstName ? errors.firstName : ""}
+                helperText={
+                  touched.firstName && errors.firstName ? errors.firstName : " "
+                }
               />
             </Grid>
 
@@ -211,7 +224,9 @@ export default function Contact() {
                 color="primary"
                 {...getFieldProps("lastName")}
                 error={errors.lastName && Boolean(touched.lastName)}
-                helperText={touched.lastName ? errors.lastName : ""}
+                helperText={
+                  touched.lastName && errors.lastName ? errors.lastName : " "
+                }
               />
             </Grid>
 
@@ -226,7 +241,7 @@ export default function Contact() {
                 color="primary"
                 {...getFieldProps("email")}
                 error={errors.email && Boolean(touched.email)}
-                helperText={touched.email ? errors.email : ""}
+                helperText={touched.email && errors.email ? errors.email : " "}
               />
             </Grid>
 
@@ -250,6 +265,7 @@ export default function Contact() {
 
             <Grid item xs={12}>
               <Button
+                className={classes.submitButton}
                 fullWidth
                 type="submit"
                 variant="outlined"
