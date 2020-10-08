@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cover: {
     width: "100%",
-    height: "auto",
+    height: "100%",
   },
   overlay: {
     position: "absolute",
