@@ -15,10 +15,10 @@ const theme = responsiveFontSizes(
           marginRight: "0.5rem",
         },
       },
-      MuiAutocomplete: {
-        option: {
-          '&[data-focus="true"]': {
-            backgroundColor: "red",
+      MuiOutlinedInput: {
+        input: {
+          "&:-webkit-autofill": {
+            WebkitBoxShadow: "0 0 0 100px #1d3140 inset",
           },
         },
       },
