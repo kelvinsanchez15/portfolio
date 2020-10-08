@@ -109,6 +109,7 @@ export default function Portfolio() {
                       className={classes.cover}
                       alt={project.imgAlt}
                       image={project.imgPath}
+                      loading="lazy"
                     />
 
                     <div className={classes.overlay}>
