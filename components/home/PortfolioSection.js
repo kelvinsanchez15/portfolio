@@ -52,6 +52,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     position: "relative",
   },
+  cover: {
+    width: "100%",
+    height: "100%",
+  },
   overlay: {
     position: "absolute",
     width: "100%",
@@ -109,6 +113,9 @@ export default function Portfolio() {
                       className={classes.cover}
                       alt={project.imgAlt}
                       image={project.imgPath}
+                      width="600"
+                      height="381"
+                      loading="lazy"
                     />
 
                     <div className={classes.overlay}>
