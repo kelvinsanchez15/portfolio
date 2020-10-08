@@ -7,6 +7,9 @@ const theme = responsiveFontSizes(
     palette: {
       type: "dark",
       primary: cyan,
+      error: {
+        main: "#ff6358",
+      },
     },
     overrides: {
       MuiListItemIcon: {
