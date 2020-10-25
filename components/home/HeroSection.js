@@ -1,5 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { Container, Button, Typography, Grid } from "@material-ui/core/";
+import {
+  Container,
+  Button,
+  Typography,
+  Grid,
+  useMediaQuery,
+} from "@material-ui/core/";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
   const classes = useStyles();
+  const matches = useMediaQuery("(min-width:600px)");
 
   return (
     <section id="home" className={classes.root}>
@@ -42,7 +49,7 @@ export default function Home() {
               href="#portfolio"
               variant="contained"
               color="primary"
-              size="large"
+              size={matches ? "large" : "medium"}
             >
               Check My Work
             </Button>
@@ -52,7 +59,7 @@ export default function Home() {
               href="#contact"
               variant="outlined"
               color="primary"
-              size="large"
+              size={matches ? "large" : "medium"}
             >
               Contact me
             </Button>
