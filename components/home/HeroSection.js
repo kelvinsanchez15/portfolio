@@ -1,6 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { Container, Button, Typography, Box, Grid } from "@material-ui/core/";
-import { ChevronLeft, ChevronRight, ArrowForward } from "@material-ui/icons";
+import { Container, Button, Typography, Grid } from "@material-ui/core/";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -10,12 +9,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.grey[900],
   },
   wrapper: {
-    marginBottom: theme.spacing(10),
-  },
-  icon: {
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "1.5rem",
-    },
+    marginBottom: theme.spacing(7),
   },
 }));
 
@@ -25,41 +19,45 @@ export default function Home() {
   return (
     <section id="home" className={classes.root}>
       <Container>
-        <Box className={classes.wrapper}>
-          <Typography component="h2" variant="h3">
-            Hi! I am
-          </Typography>
-
-          <Grid container direction="row" alignItems="center">
-            <ChevronLeft
-              className={classes.icon}
-              fontSize="large"
-              color="secondary"
-            />
-            <Typography component="h1" variant="h2">
-              Kelvin Sánchez
+        <div className={classes.wrapper}>
+          <Typography component="h4" variant="h5" gutterBottom>
+            <Typography variant="inherit" color="primary">
+              HELLO,{" "}
             </Typography>
-            <ChevronRight
-              className={classes.icon}
-              fontSize="large"
-              color="secondary"
-            />
-          </Grid>
-
-          <Typography component="h2" variant="h3">
-            A full-stack developer
+            I&apos;m Kelvin Sánchez
           </Typography>
-        </Box>
 
-        <Button
-          href="#about"
-          variant="outlined"
-          color="primary"
-          size="large"
-          endIcon={<ArrowForward />}
-        >
-          Learn more about me
-        </Button>
+          <Typography component="h1" variant="h2" gutterBottom>
+            Full Stack Developer
+          </Typography>
+
+          <Typography component="p" variant="subtitle1" color="textSecondary">
+            Passionate about coding and specialize in MERN and JAM stacks.
+          </Typography>
+        </div>
+
+        <Grid container spacing={2}>
+          <Grid item>
+            <Button
+              href="#portfolio"
+              variant="contained"
+              color="primary"
+              size="large"
+            >
+              Check My Work
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              href="#contact"
+              variant="outlined"
+              color="primary"
+              size="large"
+            >
+              Contact me
+            </Button>
+          </Grid>
+        </Grid>
       </Container>
     </section>
   );
