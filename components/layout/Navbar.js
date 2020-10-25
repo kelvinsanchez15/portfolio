@@ -9,6 +9,7 @@ import {
   Hidden,
   IconButton,
   Link,
+  Container,
 } from "@material-ui/core/";
 import {
   Menu as MenuIcon,
@@ -68,39 +69,41 @@ export default function ElevateAppBar(props) {
     <nav id="navbar">
       <HideOnScroll {...props}>
         <AppBar elevation={0} className={classes.appbar}>
-          <Toolbar className={classes.toolbar}>
-            <Link className={classes.noDecoration} href="/#" variant="button">
-              <Typography variant="h3" color="primary">
-                K
-              </Typography>
-            </Link>
+          <Container maxWidth="lg">
+            <Toolbar className={classes.toolbar} disableGutters>
+              <Link className={classes.noDecoration} href="/#" variant="button">
+                <Typography variant="h3" color="primary">
+                  K
+                </Typography>
+              </Link>
 
-            <Hidden smDown implementation="css">
-              {menuItems.map((item) => {
-                return (
-                  <AnimatedLink
-                    className={classes.link}
-                    key={item.name}
-                    href={item.link}
-                    variant="button"
-                    color="inherit"
-                    underline="none"
-                  >
-                    {item.name}
-                  </AnimatedLink>
-                );
-              })}
-            </Hidden>
+              <Hidden smDown implementation="css">
+                {menuItems.map((item) => {
+                  return (
+                    <AnimatedLink
+                      className={classes.link}
+                      key={item.name}
+                      href={item.link}
+                      variant="button"
+                      color="inherit"
+                      underline="none"
+                    >
+                      {item.name}
+                    </AnimatedLink>
+                  );
+                })}
+              </Hidden>
 
-            <Hidden mdUp implementation="css">
-              <IconButton
-                onClick={handleDrawerToggle}
-                aria-label="Open Navigation"
-              >
-                <MenuIcon fontSize="large" color="secondary" />
-              </IconButton>
-            </Hidden>
-          </Toolbar>
+              <Hidden mdUp implementation="css">
+                <IconButton
+                  onClick={handleDrawerToggle}
+                  aria-label="Open Navigation"
+                >
+                  <MenuIcon fontSize="large" color="secondary" />
+                </IconButton>
+              </Hidden>
+            </Toolbar>
+          </Container>
         </AppBar>
       </HideOnScroll>
 
