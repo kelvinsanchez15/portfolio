@@ -8,7 +8,7 @@ A personal portfolio website that showcases my feature projects, technical skill
 
 ## Screenshot
 
-![Portfolio material resizer mockup (6)](https://user-images.githubusercontent.com/4708484/94466143-f9a11780-018e-11eb-8faa-8dcd22c15b6f.png)
+![Portfolio material resizer mockup (7)](https://user-images.githubusercontent.com/4708484/97511766-3d3d9b80-195e-11eb-8cd9-04fb298a81e7.jpg)
 
 ## Core dependencies
 
