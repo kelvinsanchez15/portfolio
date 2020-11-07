@@ -13,6 +13,7 @@ import {
   SiMaterialUi,
   SiBootstrap,
   SiNextDotJs,
+  SiPostgresql,
 } from "react-icons/si";
 
 const skillLogos = [
@@ -47,6 +48,10 @@ const skillLogos = [
   {
     icon: <SiNodeDotJs title="Node" />,
     label: "Node",
+  },
+  {
+    icon: <SiPostgresql title="PostgreSQL" />,
+    label: "PostgreSQL",
   },
   {
     icon: <SiMongodb title="MongoDB" />,
