@@ -30,7 +30,7 @@ export default function Footer() {
         </Fab>
 
         <Typography component="p" variant="h6" align="center" gutterBottom>
-          KELVIN SANCHEZ ©2020
+          KELVIN SANCHEZ ©2021
         </Typography>
       </Box>
     </footer>
