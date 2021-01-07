@@ -10,7 +10,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
-    "@sendgrid/mail": "^7.3.0",
+    "@sendgrid/mail": "^7.4.1",
     "clsx": "^1.1.1",
     "formik": "^2.2.1",
     "next": "^10.0.4",
