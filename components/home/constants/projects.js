@@ -1,20 +1,18 @@
 const projects = [
   {
-    name: "Anonymous Message Board",
-    projectUrl: "https://anonymous-message-board-kel.glitch.me",
-    repoUrl: "https://github.com/kelvinsanchez15/anonymous-message-board",
-    imgPath: "projectMedia/anonymous-message-board.jpg",
-    imgAlt: "Anonymous message board preview",
-    summary:
-      "A web app where users can create boards, post comments and remove them.",
+    name: "Issueless",
+    projectUrl: "https://issueless.vercel.app",
+    repoUrl: "https://github.com/kelvinsanchez15/issueless",
+    imgPath: "projectMedia/issueless.jpg",
+    imgAlt: "Issueless preview",
+    summary: "JAMStack Issue Tracker project inspired on GitHub issues.",
     keyFeatures: [
-      "RESTful API",
-      "Server side rendering",
-      "Dark theme",
-      "Flash alerts",
-      "Unit tests",
+      "Hybrid static & server rendering",
+      "OAuth sign-in services",
+      "Markdown support",
+      "Custom MUI theme",
     ],
-    technologies: ["Express", "Node", "MongoDB", "PUG"],
+    technologies: ["React", "NextJS", "PostgreSQL", "Prisma", "Material-UI"],
   },
   {
     name: "Choropleth Map",
@@ -49,19 +47,21 @@ const projects = [
     technologies: ["React", "NextJS", "MongoDB", "Material-UI", "SWR"],
   },
   {
-    name: "Drum Machine",
-    projectUrl: "https://kelvinsanchez15.github.io/drum-machine/",
-    repoUrl: "https://github.com/kelvinsanchez15/drum-machine",
-    imgPath: "projectMedia/drum-machine.jpg",
-    imgAlt: "Drum Machine preview",
+    name: "Anonymous Message Board",
+    projectUrl: "https://anonymous-message-board-kel.glitch.me",
+    repoUrl: "https://github.com/kelvinsanchez15/anonymous-message-board",
+    imgPath: "projectMedia/anonymous-message-board.jpg",
+    imgAlt: "Anonymous message board preview",
     summary:
-      "An interactive drumpad with realistic sounds built using React. The app allows you to play various sounds on the board, adjust the volume and turn the game on and off.",
+      "A web app where users can create boards, post comments and remove them.",
     keyFeatures: [
-      "Real sound bank",
-      "Mouse & Keyboard support",
-      "Volume/Power controls",
+      "RESTful API",
+      "Server side rendering",
+      "Dark theme",
+      "Flash alerts",
+      "Unit tests",
     ],
-    technologies: ["React", "SCSS"],
+    technologies: ["Express", "Node", "MongoDB", "PUG"],
   },
 ];
 
