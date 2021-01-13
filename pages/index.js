@@ -1,11 +1,21 @@
 import Head from "next/head";
-
 import HeroSection from "../components/home/HeroSection";
 import AboutSection from "../components/home/AboutSection";
 import PortfolioSection from "../components/home/PortfolioSection";
 import ContactSection from "../components/home/ContactSection";
 
-export default function Index() {
+export async function getStaticProps({ locale }) {
+  const response = await import(`../locales/${locale}.json`);
+
+  return {
+    props: {
+      content: response.default,
+    },
+  };
+}
+
+export default function Index({ content }) {
+  const { heroData, aboutData, portfolioData, contactData } = content;
   const metaInfo = {
     title: "Kelvin Sánchez | Web Developer",
     description:
@@ -38,10 +48,10 @@ export default function Index() {
         <meta property="og:image" content={previewImage} key="ogimage" />
       </Head>
 
-      <HeroSection />
-      <AboutSection />
-      <PortfolioSection />
-      <ContactSection />
+      <HeroSection heroData={heroData} />
+      <AboutSection aboutData={aboutData} />
+      <PortfolioSection portfolioData={portfolioData} />
+      <ContactSection contactData={contactData} />
     </>
   );
 }

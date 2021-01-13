@@ -13,9 +13,9 @@ import {
   CardContent,
   Box,
   IconButton,
-  Link,
   Avatar,
 } from "@material-ui/core";
+import Link from "../Link";
 
 import socialIcons from "./constants/socialIcons";
 
@@ -65,24 +65,45 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const initialValues = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  message: "",
-};
+export default function Contact({ contactData }) {
+  const classes = useStyles();
 
-const validationSchema = Yup.object({
-  firstName: Yup.string().required("Required"),
-  lastName: Yup.string().required("Required"),
-  email: Yup.string().email("Invalid email format").required("Required"),
-});
+  const {
+    title,
+    p1,
+    p2,
+    p3,
+    p4,
+    resumeLink,
+    subtitle,
+    formTitle,
+    firstNameLabel,
+    lastNameLabel,
+    emailLabel,
+    messageLabel,
+    placeholder,
+    submitButton,
+    requiredErrorMessage,
+    invalidEmailErrorMessage,
+  } = contactData;
 
-export default function Contact() {
   const [displayMessage, setDisplayMessage] = useState(false);
   const [senderFirstName, setSenderFirstName] = useState("");
 
-  const classes = useStyles();
+  const initialValues = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  };
+
+  const validationSchema = Yup.object({
+    firstName: Yup.string().required(requiredErrorMessage),
+    lastName: Yup.string().required(requiredErrorMessage),
+    email: Yup.string()
+      .email(invalidEmailErrorMessage)
+      .required(requiredErrorMessage),
+  });
 
   const onSubmit = async (values, onSubmitProps) => {
     await fetch("/api/mail", {
@@ -120,7 +141,7 @@ export default function Contact() {
     <section id="contact" className={classes.root}>
       <Container maxWidth="sm">
         <Typography component="h2" variant="h3" align="center" gutterBottom>
-          Contact
+          {title}
         </Typography>
         <Divider className={classes.divider} />
 
@@ -135,20 +156,18 @@ export default function Contact() {
         <Card className={classes.card}>
           <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">
-              {
-                "If you are interested in hiring me for your project please use the form below to get in touch. Want to know how I work and what I can offer? Check out my "
-              }
+              {p1}
               <Link href="/#portfolio" className={classes.linkColor}>
-                portfolio
+                {p2}
               </Link>
-              {" and "}
+              {p3}
               <Link
                 className={classes.linkColor}
-                href="https://drive.google.com/file/d/1e5K-hbuE2y4yE_TXEXt3BXQcYuRdDcrn/view?usp=sharing"
+                href={resumeLink}
                 rel="noopener"
                 target="_blank"
               >
-                resumé
+                {p4}
               </Link>
               .
             </Typography>
@@ -164,7 +183,7 @@ export default function Contact() {
               component="p"
               gutterBottom
             >
-              You can also find me on the following channels
+              {subtitle}
             </Typography>
 
             <Box display="flex" justifyContent="center">
@@ -191,7 +210,7 @@ export default function Contact() {
           variant="h4"
           align="center"
         >
-          Get in touch
+          {formTitle}
         </Typography>
 
         <form onSubmit={handleSubmit}>
@@ -201,7 +220,7 @@ export default function Contact() {
                 fullWidth
                 id="firstName"
                 name="firstName"
-                label="First Name"
+                label={firstNameLabel}
                 autoComplete="given-name"
                 variant="outlined"
                 color="primary"
@@ -218,7 +237,7 @@ export default function Contact() {
                 fullWidth
                 id="lastName"
                 name="lastName"
-                label="Last Name"
+                label={lastNameLabel}
                 autoComplete="family-name"
                 variant="outlined"
                 color="primary"
@@ -235,7 +254,7 @@ export default function Contact() {
                 fullWidth
                 id="email"
                 name="email"
-                label="Email"
+                label={emailLabel}
                 autoComplete="email"
                 variant="outlined"
                 color="primary"
@@ -253,13 +272,13 @@ export default function Contact() {
                 id="message"
                 name="message"
                 type="message"
-                label="Message"
+                label={messageLabel}
                 autoComplete="message"
                 variant="outlined"
                 color="primary"
                 onChange={handleChange}
                 value={values.message}
-                placeholder="Feel free to include any details."
+                placeholder={placeholder}
               />
             </Grid>
 
@@ -272,7 +291,7 @@ export default function Contact() {
                 color="primary"
                 size="large"
               >
-                Send
+                {submitButton}
               </Button>
             </Grid>
           </Grid>

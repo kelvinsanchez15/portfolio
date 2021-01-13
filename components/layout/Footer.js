@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Fab, Typography } from "@material-ui/core/";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import { NextLinkComposed } from "../Link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,7 +23,8 @@ export default function Footer() {
           className={classes.fab}
           color="secondary"
           size="small"
-          href="/#"
+          to="/"
+          component={NextLinkComposed}
           title="Scroll back to top"
           aria-label="Scroll back to top"
         >

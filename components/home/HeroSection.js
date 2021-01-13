@@ -25,8 +25,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Home() {
+export default function Hero({ heroData }) {
   const classes = useStyles();
+  const {
+    greetings,
+    introduction,
+    role,
+    paragraph,
+    button1,
+    button2,
+  } = heroData;
 
   return (
     <section id="home" className={classes.root}>
@@ -34,17 +42,17 @@ export default function Home() {
         <div className={classes.wrapper}>
           <Typography component="h4" variant="h5" gutterBottom>
             <Typography variant="inherit" color="primary">
-              HELLO,{" "}
+              {greetings}
             </Typography>
-            I&apos;m Kelvin Sánchez
+            {introduction}
           </Typography>
 
           <Typography component="h1" variant="h2" gutterBottom>
-            Full Stack Developer
+            {role}
           </Typography>
 
           <Typography component="p" variant="subtitle1" color="textSecondary">
-            Passionate about coding and specialize in MERN and JAM stacks.
+            {paragraph}
           </Typography>
         </div>
 
@@ -57,7 +65,7 @@ export default function Home() {
               size="large"
               className={classes.responsiveButtonSize}
             >
-              Check My Work
+              {button1}
             </Button>
           </Grid>
           <Grid item>
@@ -68,7 +76,7 @@ export default function Home() {
               size="large"
               className={classes.responsiveOutlinedButtonSize}
             >
-              Contact me
+              {button2}
             </Button>
           </Grid>
         </Grid>

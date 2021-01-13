@@ -18,8 +18,6 @@ import {
 
 import { ChevronRight, GitHub, Visibility } from "@material-ui/icons";
 
-import projects from "./constants/projects";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(10),
@@ -85,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Portfolio() {
+export default function Portfolio({ portfolioData }) {
   const classes = useStyles();
 
   return (
@@ -99,7 +97,7 @@ export default function Portfolio() {
             <Divider className={classes.divider} />
           </Grid>
 
-          {projects.map((project) => {
+          {portfolioData.map((project) => {
             return (
               <Grid item lg={12} sm={6} xs={12} key={project.name}>
                 <Card elevation={4} className={classes.cardStyle}>
