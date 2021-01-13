@@ -9,6 +9,7 @@ import {
   Divider,
 } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
+import Link from "../Link";
 
 const useStyles = makeStyles((theme) => ({
   drawerHeader: {
@@ -44,7 +45,8 @@ export default function NavigationDrawer(props) {
               onClick={onClose}
               key={item.name}
               href={item.link}
-              component="a"
+              component={Link}
+              naked
             >
               <ListItemIcon className={classes.listItemIcon}>
                 {item.icon}
