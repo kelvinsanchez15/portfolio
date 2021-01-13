@@ -22,6 +22,7 @@ import Link from "../Link";
 
 import NavigationDrawer from "./NavigationDrawer";
 import AnimatedLink from "../AnimatedLink";
+import LanguageSelector from "../LanguageSelector";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
@@ -30,10 +31,10 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     display: "flex",
-    justifyContent: "space-between",
   },
-  noDecoration: {
+  logo: {
     textDecoration: "none !important",
+    flexGrow: 1,
   },
   link: {
     padding: "12px 15px",
@@ -54,8 +55,8 @@ function HideOnScroll(props) {
 export default function ElevateAppBar(props) {
   const classes = useStyles();
   const router = useRouter();
-  const [mobileOpen, setMobileOpen] = useState(false);
 
+  const [mobileOpen, setMobileOpen] = useState(false);
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -89,7 +90,7 @@ export default function ElevateAppBar(props) {
         <AppBar elevation={0} className={classes.appbar}>
           <Container maxWidth="lg">
             <Toolbar className={classes.toolbar} disableGutters>
-              <Link className={classes.noDecoration} href="/" variant="button">
+              <Link className={classes.logo} href="/" variant="button">
                 <Typography variant="h3" color="primary">
                   K
                 </Typography>
@@ -111,6 +112,8 @@ export default function ElevateAppBar(props) {
                   );
                 })}
               </Hidden>
+
+              <LanguageSelector />
 
               <Hidden mdUp implementation="css">
                 <IconButton
