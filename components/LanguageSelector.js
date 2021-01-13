@@ -19,6 +19,11 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(2),
     },
   },
+  menu: {
+    "& div": {
+      width: "144px",
+    },
+  },
 }));
 
 export default function LanguageSelector() {
@@ -55,6 +60,7 @@ export default function LanguageSelector() {
 
       <Menu
         id="language-menu"
+        className={classes.menu}
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
         onClose={handleClose}
