@@ -6,19 +6,32 @@ import { useRouter } from "next/router";
 import NextLink from "next/link";
 import MuiLink from "@material-ui/core/Link";
 
-const NextComposed = React.forwardRef(function NextComposed(props, ref) {
-  const { as, href, ...other } = props;
+export const NextLinkComposed = React.forwardRef(function NextComposed(
+  props,
+  ref
+) {
+  // eslint-disable-next-line react/prop-types
+  const {
+    href,
+    to,
+    as,
+    replace,
+    scroll,
+    passHref,
+    shallow,
+    prefetch,
+    ...other
+  } = props;
 
   return (
-    <NextLink href={href} as={as}>
+    <NextLink href={to} as={as}>
       <a ref={ref} {...other} />
     </NextLink>
   );
 });
 
-NextComposed.propTypes = {
+NextLinkComposed.propTypes = {
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   prefetch: PropTypes.bool,
 };
 
@@ -42,10 +55,10 @@ function Link(props) {
 
   if (naked) {
     return (
-      <NextComposed
+      <NextLinkComposed
         className={className}
         ref={innerRef}
-        href={href}
+        to={href}
         {...other}
       />
     );
@@ -53,10 +66,10 @@ function Link(props) {
 
   return (
     <MuiLink
-      component={NextComposed}
+      component={NextLinkComposed}
       className={className}
       ref={innerRef}
-      href={href}
+      to={href}
       {...other}
     />
   );
