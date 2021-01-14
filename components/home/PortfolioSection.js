@@ -24,6 +24,11 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(8),
     backgroundColor: theme.palette.grey[900],
   },
+  container: {
+    [theme.breakpoints.down("xs")]: {
+      padding: 0,
+    },
+  },
   divider: {
     height: "4px",
     width: "60px",
@@ -88,7 +93,7 @@ export default function Portfolio({ portfolioData }) {
 
   return (
     <section id="portfolio" className={classes.root}>
-      <Container>
+      <Container className={classes.container}>
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <Typography component="h2" variant="h3" align="center" gutterBottom>
