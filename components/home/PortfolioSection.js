@@ -29,6 +29,16 @@ const useStyles = makeStyles((theme) => ({
       padding: 0,
     },
   },
+  grid: {
+    [theme.breakpoints.down("xs")]: {
+      padding: 0,
+      margin: 0,
+      width: "100%",
+      "& > .MuiGrid-item": {
+        padding: theme.spacing(2, 0),
+      },
+    },
+  },
   divider: {
     height: "4px",
     width: "60px",
@@ -94,7 +104,7 @@ export default function Portfolio({ portfolioData }) {
   return (
     <section id="portfolio" className={classes.root}>
       <Container className={classes.container}>
-        <Grid container spacing={4}>
+        <Grid container spacing={4} className={classes.grid}>
           <Grid item xs={12}>
             <Typography component="h2" variant="h3" align="center" gutterBottom>
               Portfolio
