@@ -107,12 +107,12 @@ export default function Portfolio({ portfolioData }) {
         <Grid container spacing={4} className={classes.grid}>
           <Grid item xs={12}>
             <Typography component="h2" variant="h3" align="center" gutterBottom>
-              Portfolio
+              {portfolioData.portfolioTitle}
             </Typography>
             <Divider className={classes.divider} />
           </Grid>
 
-          {portfolioData.map((project) => {
+          {portfolioData.projects.map((project) => {
             return (
               <Grid item lg={12} sm={6} xs={12} key={project.name}>
                 <Card elevation={4} className={classes.cardStyle}>
