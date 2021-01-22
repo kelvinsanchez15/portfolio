@@ -6,7 +6,6 @@ import { NextLinkComposed } from "../Link";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(5, 0, 5, 0),
-    backgroundColor: theme.palette.grey[900],
   },
   fab: {
     marginBottom: theme.spacing(2),
