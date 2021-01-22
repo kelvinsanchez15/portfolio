@@ -2,6 +2,7 @@ import Head from "next/head";
 import HeroSection from "../components/home/HeroSection";
 import AboutSection from "../components/home/AboutSection";
 import PortfolioSection from "../components/home/PortfolioSection";
+import BlogSection from "../components/home/BlogSection";
 import ContactSection from "../components/home/ContactSection";
 
 export async function getStaticProps({ locale }) {
@@ -15,7 +16,7 @@ export async function getStaticProps({ locale }) {
 }
 
 export default function Index({ content }) {
-  const { heroData, aboutData, portfolioData, contactData } = content;
+  const { heroData, aboutData, portfolioData, blogData, contactData } = content;
   const metaInfo = {
     title: "Kelvin Sánchez | Web Developer",
     description:
@@ -51,6 +52,7 @@ export default function Index({ content }) {
       <HeroSection heroData={heroData} />
       <AboutSection aboutData={aboutData} />
       <PortfolioSection portfolioData={portfolioData} />
+      <BlogSection blogData={blogData} />
       <ContactSection contactData={contactData} />
     </>
   );

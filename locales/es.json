@@ -93,6 +93,11 @@
       }
     ]
   },
+  "blogData": {
+    "featuredArticle": "Artículo Destacado",
+    "mostRecent": "Más recientes",
+    "button": "Más Artículos"
+  },
   "contactData": {
     "title": "Contacto",
     "p1": "Si estas interesado en contratarme para tu proyecto puedes usar la forma de abajo para ponerte en contacto. ¿Quieres saber como trabajo y que puedo ofrecer? Revisa mi ",

@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(8),
+    backgroundColor: theme.palette.grey[900],
   },
   divider: {
     height: "4px",
