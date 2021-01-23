@@ -1,25 +1,25 @@
-import { makeStyles } from "@material-ui/core/styles";
-import { Container, Button, Typography, Grid } from "@material-ui/core/";
+import { makeStyles } from '@material-ui/core/styles';
+import { Container, Button, Typography, Grid } from '@material-ui/core/';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: "100vh",
-    display: "flex",
-    alignItems: "center",
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
     backgroundColor: theme.palette.grey[900],
   },
   wrapper: {
     marginBottom: theme.spacing(7),
   },
   responsiveButtonSize: {
-    [theme.breakpoints.down("xs")]: {
-      padding: "6px 16px",
+    [theme.breakpoints.down('xs')]: {
+      padding: '6px 16px',
       fontSize: theme.typography.button.fontSize,
     },
   },
   responsiveOutlinedButtonSize: {
-    [theme.breakpoints.down("xs")]: {
-      padding: "5px 15px",
+    [theme.breakpoints.down('xs')]: {
+      padding: '5px 15px',
       fontSize: theme.typography.button.fontSize,
     },
   },

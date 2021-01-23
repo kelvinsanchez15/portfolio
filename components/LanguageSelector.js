@@ -1,27 +1,27 @@
-import React from "react";
-import { useRouter } from "next/router";
-import { makeStyles } from "@material-ui/core/styles";
-import { Button, FormControl, Menu, MenuItem } from "@material-ui/core";
+import React from 'react';
+import { useRouter } from 'next/router';
+import { makeStyles } from '@material-ui/core/styles';
+import { Button, FormControl, Menu, MenuItem } from '@material-ui/core';
 import {
   Translate as TranslateIcon,
   KeyboardArrowDown as KeyboardArrowDownIcon,
-} from "@material-ui/icons";
+} from '@material-ui/icons';
 
 const languages = [
-  { code: "en", text: "English" },
-  { code: "es", text: "Español" },
+  { code: 'en', text: 'English' },
+  { code: 'es', text: 'Español' },
 ];
 
 const useStyles = makeStyles((theme) => ({
   root: {
     marginLeft: theme.spacing(2),
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down('sm')]: {
       marginRight: theme.spacing(2),
     },
   },
   menu: {
-    "& div": {
-      width: "144px",
+    '& div': {
+      width: '144px',
     },
   },
 }));
@@ -55,7 +55,7 @@ export default function LanguageSelector() {
         endIcon={<KeyboardArrowDownIcon />}
         aria-haspopup="true"
       >
-        {locale === "en" ? "ENGLISH" : "ESPAÑOL"}
+        {locale === 'en' ? 'ENGLISH' : 'ESPAÑOL'}
       </Button>
 
       <Menu

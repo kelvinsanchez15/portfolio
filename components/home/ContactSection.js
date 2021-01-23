@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { makeStyles } from "@material-ui/core/styles";
+import { useState } from 'react';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Container,
   Grid,
@@ -14,12 +14,12 @@ import {
   Box,
   IconButton,
   Avatar,
-} from "@material-ui/core";
-import Link from "../Link";
+} from '@material-ui/core';
+import Link from '../Link';
 
-import socialIcons from "./constants/socialIcons";
+import socialIcons from './constants/socialIcons';
 
-import EmailSuccessMessage from "../EmailSuccessMessage";
+import EmailSuccessMessage from '../EmailSuccessMessage';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,10 +28,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.grey[900],
   },
   divider: {
-    height: "4px",
-    width: "60px",
+    height: '4px',
+    width: '60px',
     backgroundColor: theme.palette.primary.main,
-    margin: "auto",
+    margin: 'auto',
     marginBottom: theme.spacing(4),
   },
   card: {
@@ -42,16 +42,16 @@ const useStyles = makeStyles((theme) => ({
   },
   socialIcon: {
     fill: theme.palette.common.white,
-    "&:hover": {
+    '&:hover': {
       fill: theme.palette.primary.light,
     },
-    "&:focus": {
+    '&:focus': {
       fill: theme.palette.primary.light,
     },
   },
   avatarWrapper: {
-    display: "flex",
-    justifyContent: "center",
+    display: 'flex',
+    justifyContent: 'center',
     marginBottom: theme.spacing(2),
   },
   avatar: {
@@ -89,13 +89,13 @@ export default function Contact({ contactData }) {
   } = contactData;
 
   const [displayMessage, setDisplayMessage] = useState(false);
-  const [senderFirstName, setSenderFirstName] = useState("");
+  const [senderFirstName, setSenderFirstName] = useState('');
 
   const initialValues = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
   };
 
   const validationSchema = Yup.object({
@@ -107,9 +107,9 @@ export default function Contact({ contactData }) {
   });
 
   const onSubmit = async (values, onSubmitProps) => {
-    await fetch("/api/mail", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    await fetch('/api/mail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         firstName: values.firstName,
         lastName: values.lastName,
@@ -225,10 +225,10 @@ export default function Contact({ contactData }) {
                 autoComplete="given-name"
                 variant="outlined"
                 color="primary"
-                {...getFieldProps("firstName")}
+                {...getFieldProps('firstName')}
                 error={errors.firstName && Boolean(touched.firstName)}
                 helperText={
-                  touched.firstName && errors.firstName ? errors.firstName : " "
+                  touched.firstName && errors.firstName ? errors.firstName : ' '
                 }
               />
             </Grid>
@@ -242,10 +242,10 @@ export default function Contact({ contactData }) {
                 autoComplete="family-name"
                 variant="outlined"
                 color="primary"
-                {...getFieldProps("lastName")}
+                {...getFieldProps('lastName')}
                 error={errors.lastName && Boolean(touched.lastName)}
                 helperText={
-                  touched.lastName && errors.lastName ? errors.lastName : " "
+                  touched.lastName && errors.lastName ? errors.lastName : ' '
                 }
               />
             </Grid>
@@ -259,9 +259,9 @@ export default function Contact({ contactData }) {
                 autoComplete="email"
                 variant="outlined"
                 color="primary"
-                {...getFieldProps("email")}
+                {...getFieldProps('email')}
                 error={errors.email && Boolean(touched.email)}
-                helperText={touched.email && errors.email ? errors.email : " "}
+                helperText={touched.email && errors.email ? errors.email : ' '}
               />
             </Grid>
 

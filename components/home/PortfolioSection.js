@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Container,
   Typography,
@@ -14,9 +14,9 @@ import {
   ListItemText,
   ButtonGroup,
   Button,
-} from "@material-ui/core/";
+} from '@material-ui/core/';
 
-import { ChevronRight, GitHub, Visibility } from "@material-ui/icons";
+import { ChevronRight, GitHub, Visibility } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,71 +25,71 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.grey[900],
   },
   container: {
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down('xs')]: {
       padding: 0,
     },
   },
   grid: {
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down('xs')]: {
       padding: 0,
       margin: 0,
-      width: "100%",
-      "& > .MuiGrid-item": {
+      width: '100%',
+      '& > .MuiGrid-item': {
         padding: theme.spacing(2, 0),
       },
     },
   },
   divider: {
-    height: "4px",
-    width: "60px",
+    height: '4px',
+    width: '60px',
     backgroundColor: theme.palette.primary.main,
-    margin: "auto",
+    margin: 'auto',
   },
   cardStyle: {
-    display: "flex",
-    height: "100%",
-    [theme.breakpoints.down("md")]: {
-      flexDirection: "column",
+    display: 'flex',
+    height: '100%',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
     },
   },
   content: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    height: "100%",
-    [theme.breakpoints.up("lg")]: {
-      width: "80%",
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: '100%',
+    [theme.breakpoints.up('lg')]: {
+      width: '80%',
     },
   },
   coverWrapper: {
-    display: "flex",
-    position: "relative",
+    display: 'flex',
+    position: 'relative',
   },
   overlay: {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.7);",
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.7);',
     opacity: 0,
-    transition: "all 0.3s ease-in-out",
-    "&:hover": {
+    transition: 'all 0.3s ease-in-out',
+    '&:hover': {
       opacity: 1,
     },
   },
   keyFeatures: {
-    display: "flex",
-    flexWrap: "wrap",
-    "& > *": {
-      display: "flex",
-      flex: "0 0 50%",
+    display: 'flex',
+    flexWrap: 'wrap',
+    '& > *': {
+      display: 'flex',
+      flex: '0 0 50%',
     },
-    [theme.breakpoints.down("sm")]: {
-      "& > *": {
-        display: "flex",
-        flex: "0 0 100%",
+    [theme.breakpoints.down('sm')]: {
+      '& > *': {
+        display: 'flex',
+        flex: '0 0 100%',
       },
     },
   },
@@ -171,7 +171,7 @@ export default function Portfolio({ portfolioData }) {
                           </ListItemIcon>
                           <ListItemText primary={feature} />
                         </ListItem>
-                          ))}
+                      ))}
                     </List>
                   </div>
 
@@ -184,12 +184,12 @@ export default function Portfolio({ portfolioData }) {
                         key={e}
                         className={classes.chip}
                       />
-                        ))}
+                    ))}
                   </div>
                 </CardContent>
               </Card>
             </Grid>
-            ))}
+          ))}
         </Grid>
       </Container>
     </section>

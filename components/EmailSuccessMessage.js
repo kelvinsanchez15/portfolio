@@ -1,4 +1,4 @@
-import { Snackbar } from "@material-ui/core";
+import { Snackbar } from '@material-ui/core';
 
 export default function EmailSuccessMessage({
   senderFirstName,
@@ -6,7 +6,7 @@ export default function EmailSuccessMessage({
   displayMessage,
 }) {
   const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
+    if (reason === 'clickaway') {
       return;
     }
 

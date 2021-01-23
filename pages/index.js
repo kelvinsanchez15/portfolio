@@ -1,9 +1,9 @@
-import Head from "next/head";
-import HeroSection from "../components/home/HeroSection";
-import AboutSection from "../components/home/AboutSection";
-import PortfolioSection from "../components/home/PortfolioSection";
-import BlogSection from "../components/home/BlogSection";
-import ContactSection from "../components/home/ContactSection";
+import Head from 'next/head';
+import HeroSection from '../components/home/HeroSection';
+import AboutSection from '../components/home/AboutSection';
+import PortfolioSection from '../components/home/PortfolioSection';
+import BlogSection from '../components/home/BlogSection';
+import ContactSection from '../components/home/ContactSection';
 
 export async function getStaticProps({ locale }) {
   const response = await import(`../locales/${locale}.json`);
@@ -18,12 +18,12 @@ export async function getStaticProps({ locale }) {
 export default function Index({ content }) {
   const { heroData, aboutData, portfolioData, blogData, contactData } = content;
   const metaInfo = {
-    title: "Kelvin Sánchez | Web Developer",
+    title: 'Kelvin Sánchez | Web Developer',
     description:
-      "Kelvin Sánchez is a full stack developer, experienced in creating beautiful and functional websites and web applications.",
-    url: "https://kelvinsanchez.vercel.app/",
+      'Kelvin Sánchez is a full stack developer, experienced in creating beautiful and functional websites and web applications.',
+    url: 'https://kelvinsanchez.vercel.app/',
     previewImage:
-      "https://user-images.githubusercontent.com/4708484/93688063-050a8980-fa91-11ea-89ca-3530a9038393.png",
+      'https://user-images.githubusercontent.com/4708484/93688063-050a8980-fa91-11ea-89ca-3530a9038393.png',
   };
 
   const { title, description, url, previewImage } = metaInfo;

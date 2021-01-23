@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
@@ -9,7 +9,7 @@ import {
   Hidden,
   IconButton,
   Container,
-} from "@material-ui/core/";
+} from '@material-ui/core/';
 import {
   Menu as MenuIcon,
   Home as HomeIcon,
@@ -17,13 +17,13 @@ import {
   Assignment as AssignmentIcon,
   Mail as MailIcon,
   PermIdentity as PermIdentityIcon,
-} from "@material-ui/icons";
-import { useRouter } from "next/router";
-import Link from "../Link";
+} from '@material-ui/icons';
+import { useRouter } from 'next/router';
+import Link from '../Link';
 
-import NavigationDrawer from "./NavigationDrawer";
-import AnimatedLink from "../AnimatedLink";
-import LanguageSelector from "../LanguageSelector";
+import NavigationDrawer from './NavigationDrawer';
+import AnimatedLink from '../AnimatedLink';
+import LanguageSelector from '../LanguageSelector';
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
@@ -31,14 +31,14 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.common.white,
   },
   toolbar: {
-    display: "flex",
+    display: 'flex',
   },
   logo: {
-    textDecoration: "none !important",
+    textDecoration: 'none !important',
     flexGrow: 1,
   },
   link: {
-    padding: "12px 15px",
+    padding: '12px 15px',
   },
 }));
 
@@ -64,28 +64,28 @@ export default function ElevateAppBar(props) {
 
   const menuItems = [
     {
-      link: "/#",
-      name: `${router.locale === "en" ? "HOME" : "INICIO"}`,
+      link: '/#',
+      name: `${router.locale === 'en' ? 'HOME' : 'INICIO'}`,
       icon: <HomeIcon />,
     },
     {
-      link: "/#about",
-      name: `${router.locale === "en" ? "ABOUT" : "ACERCA DE MI"}`,
+      link: '/#about',
+      name: `${router.locale === 'en' ? 'ABOUT' : 'ACERCA DE MI'}`,
       icon: <PermIdentityIcon />,
     },
     {
-      link: "/#portfolio",
-      name: `${router.locale === "en" ? "PORFOLIO" : "PORTAFOLIO"}`,
+      link: '/#portfolio',
+      name: `${router.locale === 'en' ? 'PORFOLIO' : 'PORTAFOLIO'}`,
       icon: <WorkIcon />,
     },
     {
-      link: "/#blog",
-      name: "BLOG",
+      link: '/#blog',
+      name: 'BLOG',
       icon: <AssignmentIcon />,
     },
     {
-      link: "/#contact",
-      name: `${router.locale === "en" ? "CONTACT" : "CONTACTO"}`,
+      link: '/#contact',
+      name: `${router.locale === 'en' ? 'CONTACT' : 'CONTACTO'}`,
       icon: <MailIcon />,
     },
   ];
@@ -114,7 +114,7 @@ export default function ElevateAppBar(props) {
                   >
                     {item.name}
                   </AnimatedLink>
-                  ))}
+                ))}
               </Hidden>
 
               <LanguageSelector />

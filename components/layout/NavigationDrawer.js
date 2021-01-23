@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 import {
   List,
   ListItem,
@@ -7,21 +7,21 @@ import {
   Drawer,
   IconButton,
   Divider,
-} from "@material-ui/core";
-import CloseIcon from "@material-ui/icons/Close";
-import Link from "../Link";
+} from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
+import Link from '../Link';
 
 const useStyles = makeStyles((theme) => ({
   drawerHeader: {
-    display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
   },
   listItemIcon: {
-    minWidth: "56px",
+    minWidth: '56px',
   },
 }));
 
@@ -52,7 +52,7 @@ export default function NavigationDrawer(props) {
             </ListItemIcon>
             <ListItemText primary={item.name} />
           </ListItem>
-          ))}
+        ))}
       </List>
     </Drawer>
   );

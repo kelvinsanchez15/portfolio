@@ -14,68 +14,68 @@ import {
   SiBootstrap,
   SiNextDotJs,
   SiPostgresql,
-} from "react-icons/si";
+} from 'react-icons/si';
 
 const skillLogos = [
   {
     icon: <SiHtml5 title="Html5" />,
-    label: "Html5",
+    label: 'Html5',
   },
   {
     icon: <SiCss3 title="CSS3" />,
-    label: "CSS3",
+    label: 'CSS3',
   },
   {
     icon: <SiSass title="SASS" />,
-    label: "SASS",
+    label: 'SASS',
   },
   {
     icon: <SiJavascript title="JavaScript" />,
-    label: "JavaScript",
+    label: 'JavaScript',
   },
   {
     icon: <SiGit title="Git" />,
-    label: "Git",
+    label: 'Git',
   },
   {
     icon: <SiReact title="React" />,
-    label: "React",
+    label: 'React',
   },
   {
     icon: <SiNextDotJs title="NextJS" />,
-    label: "NextJS",
+    label: 'NextJS',
   },
   {
     icon: <SiNodeDotJs title="Node" />,
-    label: "Node",
+    label: 'Node',
   },
   {
     icon: <SiPostgresql title="PostgreSQL" />,
-    label: "PostgreSQL",
+    label: 'PostgreSQL',
   },
   {
     icon: <SiMongodb title="MongoDB" />,
-    label: "MongoDB",
+    label: 'MongoDB',
   },
   {
     icon: <SiJest title="Jest" />,
-    label: "Jest",
+    label: 'Jest',
   },
   {
     icon: <SiMocha title="Mocha" />,
-    label: "Mocha",
+    label: 'Mocha',
   },
   {
     icon: <SiD3DotJs title="D3" />,
-    label: "D3",
+    label: 'D3',
   },
   {
     icon: <SiMaterialUi title="Material UI" />,
-    label: "Material UI",
+    label: 'Material UI',
   },
   {
     icon: <SiBootstrap title="Bootstrap" />,
-    label: "Bootstrap",
+    label: 'Bootstrap',
   },
 ];
 

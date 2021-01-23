@@ -1,37 +1,37 @@
-import Image from "next/image";
-import { makeStyles } from "@material-ui/core/styles";
+import Image from 'next/image';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Typography,
   Card,
   CardContent,
   CardActionArea,
-} from "@material-ui/core/";
+} from '@material-ui/core/';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     marginBottom: theme.spacing(2),
   },
   cardActionArea: {
-    [theme.breakpoints.up("md")]: {
-      display: "flex",
-      flexDirection: "row",
-      flex: "1 1 100%",
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+      flexDirection: 'row',
+      flex: '1 1 100%',
     },
   },
   mediaWrapper: {
-    display: "none",
-    [theme.breakpoints.up("md")]: {
-      display: "block",
-      flex: "1 1 260px",
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'block',
+      flex: '1 1 260px',
     },
   },
   media: {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
   },
   cardContent: {
-    flex: "0 1 80%",
+    flex: '0 1 80%',
   },
 }));
 

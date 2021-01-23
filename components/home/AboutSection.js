@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Container,
   Divider,
@@ -10,11 +10,11 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-} from "@material-ui/core/";
+} from '@material-ui/core/';
 
-import { Code, Description } from "@material-ui/icons";
+import { Code, Description } from '@material-ui/icons';
 
-import skillIcons from "./constants/skillIcons";
+import skillIcons from './constants/skillIcons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,28 +22,28 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(8),
   },
   divider: {
-    height: "4px",
-    width: "60px",
+    height: '4px',
+    width: '60px',
     backgroundColor: theme.palette.primary.main,
   },
   resumeBtn: {
-    margin: "1rem",
+    margin: '1rem',
   },
   skills: {
-    display: "flex",
-    flexWrap: "wrap",
-    fontSize: "4rem",
-    [theme.breakpoints.down("xs")]: {
-      justifyContent: "space-around",
+    display: 'flex',
+    flexWrap: 'wrap',
+    fontSize: '4rem',
+    [theme.breakpoints.down('xs')]: {
+      justifyContent: 'space-around',
     },
   },
   skillIcon: {
-    marginRight: "1.3rem",
-    "&:hover": {
+    marginRight: '1.3rem',
+    '&:hover': {
       color: theme.palette.primary.light,
     },
-    [theme.breakpoints.down("xs")]: {
-      margin: "0 0.4rem",
+    [theme.breakpoints.down('xs')]: {
+      margin: '0 0.4rem',
     },
   },
 }));

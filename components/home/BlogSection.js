@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { makeStyles } from "@material-ui/core/styles";
+import Image from 'next/image';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Container,
   Divider,
@@ -10,10 +10,10 @@ import {
   CardActionArea,
   Button,
   Hidden,
-} from "@material-ui/core/";
+} from '@material-ui/core/';
 
-import blogPosts from "./constants/blogs";
-import RecentPostCard from "../RecentPostCard";
+import blogPosts from './constants/blogs';
+import RecentPostCard from '../RecentPostCard';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,10 +21,10 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(8),
   },
   divider: {
-    height: "4px",
-    width: "60px",
+    height: '4px',
+    width: '60px',
     backgroundColor: theme.palette.primary.main,
-    margin: "auto",
+    margin: 'auto',
     marginBottom: theme.spacing(4),
   },
   card: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: 300,
-    objectFit: "cover",
+    objectFit: 'cover',
   },
 }));
 
