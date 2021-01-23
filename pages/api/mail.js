@@ -2,10 +2,8 @@ const sgMail = require("@sendgrid/mail");
 
 export default async (req, res) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
   if (req.method === "POST") {
     const { firstName, lastName, email, message } = req.body;
-
     const msg = {
       to: process.env.TO_EMAIL,
       from: process.env.FROM_EMAIL,
@@ -14,15 +12,13 @@ export default async (req, res) => {
           Email: ${email}
           Message: ${message}`,
     };
-
     try {
       await sgMail.send(msg);
-
-      console.log("Message sent");
       res.status(200).end();
     } catch (error) {
-      console.log("ERROR SENDING EMAIL VIA SENDGRID: ", error);
-      res.status(500).json(error.message);
+      res.status(500).json({
+        message: `ERROR SENDING EMAIL VIA SENDGRID: ${error.message}`,
+      });
     }
   }
 
