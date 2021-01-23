@@ -103,20 +103,18 @@ export default function ElevateAppBar(props) {
               </Link>
 
               <Hidden smDown implementation="css">
-                {menuItems.map((item) => {
-                  return (
-                    <AnimatedLink
-                      className={classes.link}
-                      key={item.name}
-                      href={item.link}
-                      variant="button"
-                      color="inherit"
-                      underline="none"
-                    >
-                      {item.name}
-                    </AnimatedLink>
-                  );
-                })}
+                {menuItems.map((item) => (
+                  <AnimatedLink
+                    className={classes.link}
+                    key={item.name}
+                    href={item.link}
+                    variant="button"
+                    color="inherit"
+                    underline="none"
+                  >
+                    {item.name}
+                  </AnimatedLink>
+                  ))}
               </Hidden>
 
               <LanguageSelector />

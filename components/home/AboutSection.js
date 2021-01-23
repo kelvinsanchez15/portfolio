@@ -119,13 +119,11 @@ export default function About({ aboutData }) {
 
           <Grid item xs={12} md={8}>
             <Box className={classes.skills}>
-              {skillIcons.map((skillIcon) => {
-                return (
-                  <div key={skillIcon.label} className={classes.skillIcon}>
-                    {skillIcon.icon}
-                  </div>
-                );
-              })}
+              {skillIcons.map((skillIcon) => (
+                <div key={skillIcon.label} className={classes.skillIcon}>
+                  {skillIcon.icon}
+                </div>
+              ))}
             </Box>
           </Grid>
         </Grid>

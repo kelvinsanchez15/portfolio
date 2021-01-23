@@ -38,23 +38,21 @@ export default function NavigationDrawer(props) {
       </div>
       <Divider />
       <List>
-        {menuItems.map((item) => {
-          return (
-            <ListItem
-              button
-              onClick={onClose}
-              key={item.name}
-              href={item.link}
-              component={Link}
-              naked
-            >
-              <ListItemIcon className={classes.listItemIcon}>
-                {item.icon}
-              </ListItemIcon>
-              <ListItemText primary={item.name} />
-            </ListItem>
-          );
-        })}
+        {menuItems.map((item) => (
+          <ListItem
+            button
+            onClick={onClose}
+            key={item.name}
+            href={item.link}
+            component={Link}
+            naked
+          >
+            <ListItemIcon className={classes.listItemIcon}>
+              {item.icon}
+            </ListItemIcon>
+            <ListItemText primary={item.name} />
+          </ListItem>
+          ))}
       </List>
     </Drawer>
   );

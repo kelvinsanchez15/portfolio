@@ -112,90 +112,84 @@ export default function Portfolio({ portfolioData }) {
             <Divider className={classes.divider} />
           </Grid>
 
-          {portfolioData.projects.map((project) => {
-            return (
-              <Grid item lg={12} sm={6} xs={12} key={project.name}>
-                <Card elevation={4} className={classes.cardStyle}>
-                  <div className={classes.coverWrapper}>
-                    <CardMedia
-                      component="img"
-                      className={classes.cover}
-                      alt={project.imgAlt}
-                      image={project.imgPath}
-                      loading="lazy"
-                    />
+          {portfolioData.projects.map((project) => (
+            <Grid item lg={12} sm={6} xs={12} key={project.name}>
+              <Card elevation={4} className={classes.cardStyle}>
+                <div className={classes.coverWrapper}>
+                  <CardMedia
+                    component="img"
+                    className={classes.cover}
+                    alt={project.imgAlt}
+                    image={project.imgPath}
+                    loading="lazy"
+                  />
 
-                    <div className={classes.overlay}>
-                      <ButtonGroup variant="contained">
-                        <Button
-                          href={project.repoUrl}
-                          rel="noopener"
-                          target="_blank"
-                          component="a"
-                          aria-label="Link to project GitHub repository"
-                          startIcon={<GitHub />}
-                        >
-                          Repo
-                        </Button>
-                        <Button
-                          href={project.projectUrl}
-                          rel="noopener"
-                          target="_blank"
-                          component="a"
-                          aria-label="Link to project live preview"
-                          startIcon={<Visibility />}
-                        >
-                          Live
-                        </Button>
-                      </ButtonGroup>
-                    </div>
+                  <div className={classes.overlay}>
+                    <ButtonGroup variant="contained">
+                      <Button
+                        href={project.repoUrl}
+                        rel="noopener"
+                        target="_blank"
+                        component="a"
+                        aria-label="Link to project GitHub repository"
+                        startIcon={<GitHub />}
+                      >
+                        Repo
+                      </Button>
+                      <Button
+                        href={project.projectUrl}
+                        rel="noopener"
+                        target="_blank"
+                        component="a"
+                        aria-label="Link to project live preview"
+                        startIcon={<Visibility />}
+                      >
+                        Live
+                      </Button>
+                    </ButtonGroup>
+                  </div>
+                </div>
+
+                <CardContent className={classes.content}>
+                  <div>
+                    <Typography component="h3" variant="h5" gutterBottom>
+                      {project.name}
+                    </Typography>
+                    <Typography
+                      component="p"
+                      variant="subtitle1"
+                      color="textSecondary"
+                    >
+                      {project.summary}
+                    </Typography>
+
+                    <List dense className={classes.keyFeatures}>
+                      {project.keyFeatures.map((feature) => (
+                        <ListItem key={feature}>
+                          <ListItemIcon>
+                            <ChevronRight color="secondary" />
+                          </ListItemIcon>
+                          <ListItemText primary={feature} />
+                        </ListItem>
+                          ))}
+                    </List>
                   </div>
 
-                  <CardContent className={classes.content}>
-                    <div>
-                      <Typography component="h3" variant="h5" gutterBottom>
-                        {project.name}
-                      </Typography>
-                      <Typography
-                        component="p"
-                        variant="subtitle1"
-                        color="textSecondary"
-                      >
-                        {project.summary}
-                      </Typography>
-
-                      <List dense className={classes.keyFeatures}>
-                        {project.keyFeatures.map((feature) => {
-                          return (
-                            <ListItem key={feature}>
-                              <ListItemIcon>
-                                <ChevronRight color="secondary" />
-                              </ListItemIcon>
-                              <ListItemText primary={feature} />
-                            </ListItem>
-                          );
-                        })}
-                      </List>
-                    </div>
-
-                    <div>
-                      {project.technologies.map((e) => {
-                        return (
-                          <Chip
-                            variant="outlined"
-                            size="small"
-                            label={e}
-                            key={e}
-                            className={classes.chip}
-                          />
-                        );
-                      })}
-                    </div>
-                  </CardContent>
-                </Card>
-              </Grid>
-            );
-          })}
+                  <div>
+                    {project.technologies.map((e) => (
+                      <Chip
+                        variant="outlined"
+                        size="small"
+                        label={e}
+                        key={e}
+                        className={classes.chip}
+                      />
+                        ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </Grid>
+            ))}
         </Grid>
       </Container>
     </section>
