@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint . --ext js"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.2",
