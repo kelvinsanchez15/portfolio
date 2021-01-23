@@ -51,7 +51,7 @@ export default function Blog({ blogData }) {
             <Typography variant="h4" component="h2" align="left" gutterBottom>
               {blogData.featuredArticle}
             </Typography>
-            <Card className={classes.card}>
+            <Card className={classes.card} component="article">
               <CardActionArea
                 href={blogPosts.featuredPost.link}
                 rel="noopener"

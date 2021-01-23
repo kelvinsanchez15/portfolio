@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 export default function RecentPostCard({ title, category, link, mediaSrc }) {
   const classes = useStyles();
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} component="article">
       <CardActionArea
         className={classes.cardActionArea}
         href={link}
