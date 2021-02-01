@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -147,11 +148,14 @@ export default function Contact({ contactData }) {
         <Divider className={classes.divider} />
 
         <Box className={classes.avatarWrapper}>
-          <Avatar
-            alt="Kelvin Sánchez"
-            src="/profile-picture.jpg"
-            className={classes.avatar}
-          />
+          <Avatar className={classes.avatar}>
+            <Image
+              alt="Kelvin Sánchez"
+              src="/profile-picture.jpg"
+              width={56}
+              height={56}
+            />
+          </Avatar>
         </Box>
 
         <Card className={classes.card}>
