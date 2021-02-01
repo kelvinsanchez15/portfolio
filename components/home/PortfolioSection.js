@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Container,
@@ -6,7 +7,6 @@ import {
   Grid,
   Card,
   CardContent,
-  CardMedia,
   Chip,
   List,
   ListItem,
@@ -61,9 +61,18 @@ const useStyles = makeStyles((theme) => ({
       width: '80%',
     },
   },
-  coverWrapper: {
+  mediaWrapper: {
     display: 'flex',
+    flexDirection: 'column',
     position: 'relative',
+    [theme.breakpoints.up('lg')]: {
+      flex: '1 1 600px',
+    },
+  },
+  media: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
   },
   overlay: {
     position: 'absolute',
@@ -115,13 +124,14 @@ export default function Portfolio({ portfolioData }) {
           {portfolioData.projects.map((project) => (
             <Grid item lg={12} sm={6} xs={12} key={project.name}>
               <Card elevation={4} className={classes.cardStyle}>
-                <div className={classes.coverWrapper}>
-                  <CardMedia
-                    component="img"
-                    className={classes.cover}
+                <div className={classes.mediaWrapper}>
+                  <Image
+                    className={classes.media}
+                    src={`/${project.imgPath}`}
                     alt={project.imgAlt}
-                    image={project.imgPath}
-                    loading="lazy"
+                    layout="responsive"
+                    width={600}
+                    height={370}
                   />
 
                   <div className={classes.overlay}>
