@@ -12,7 +12,6 @@ import {
   Button,
   Card,
   CardContent,
-  Box,
   IconButton,
   Avatar,
 } from '@material-ui/core';
@@ -40,6 +39,10 @@ const useStyles = makeStyles((theme) => ({
   },
   linkColor: {
     color: theme.palette.primary.light,
+  },
+  socialIconWrapper: {
+    display: 'flex',
+    justifyContent: 'center',
   },
   socialIcon: {
     fill: theme.palette.common.white,
@@ -147,7 +150,7 @@ export default function Contact({ contactData }) {
         </Typography>
         <Divider className={classes.divider} />
 
-        <Box className={classes.avatarWrapper}>
+        <div className={classes.avatarWrapper}>
           <Avatar className={classes.avatar}>
             <Image
               alt="Kelvin Sánchez"
@@ -156,7 +159,7 @@ export default function Contact({ contactData }) {
               height={56}
             />
           </Avatar>
-        </Box>
+        </div>
 
         <Card className={classes.card}>
           <CardContent>
@@ -191,7 +194,7 @@ export default function Contact({ contactData }) {
               {subtitle}
             </Typography>
 
-            <Box display="flex" justifyContent="center">
+            <div className={classes.socialIconWrapper}>
               {socialIcons.map((socialIcon) => (
                 <IconButton
                   key={socialIcon.label}
@@ -205,7 +208,7 @@ export default function Contact({ contactData }) {
                   {socialIcon.icon}
                 </IconButton>
               ))}
-            </Box>
+            </div>
           </CardContent>
         </Card>
 
