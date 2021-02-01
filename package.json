@@ -31,7 +31,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
-    "yup": "^0.29.3"
+    "yup": "^0.32.8"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
