@@ -8,7 +8,6 @@ import ContactSection from '../components/home/ContactSection';
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const response = await import(`../locales/${locale}.json`);
-  console.log(response);
 
   return {
     props: {
