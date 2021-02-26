@@ -1,21 +1,27 @@
 import Head from 'next/head';
+import { GetStaticProps } from 'next';
 import HeroSection from '../components/home/HeroSection';
 import AboutSection from '../components/home/AboutSection';
 import PortfolioSection from '../components/home/PortfolioSection';
 import BlogSection from '../components/home/BlogSection';
 import ContactSection from '../components/home/ContactSection';
 
-export async function getStaticProps({ locale }) {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const response = await import(`../locales/${locale}.json`);
+  console.log(response);
 
   return {
     props: {
       content: response.default,
     },
   };
-}
+};
 
-export default function Index({ content }) {
+export default function Index({
+  content,
+}: {
+  content: typeof import('../locales/en.json');
+}) {
   const { heroData, aboutData, portfolioData, blogData, contactData } = content;
   const metaInfo = {
     title: 'Kelvin Sánchez | Web Developer',
