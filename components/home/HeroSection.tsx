@@ -25,16 +25,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Hero({ heroData }) {
+interface HeroData {
+  greetings: string;
+  introduction: string;
+  role: string;
+  paragraph: string;
+  button1: string;
+  button2: string;
+}
+
+export default function Hero({ heroData: t }: { heroData: HeroData }) {
   const classes = useStyles();
-  const {
-    greetings,
-    introduction,
-    role,
-    paragraph,
-    button1,
-    button2,
-  } = heroData;
 
   return (
     <section id="home" className={classes.root}>
@@ -42,17 +43,17 @@ export default function Hero({ heroData }) {
         <div className={classes.wrapper}>
           <Typography component="h4" variant="h5" gutterBottom>
             <Typography variant="inherit" color="primary">
-              {greetings}
+              {t.greetings}
             </Typography>
-            {introduction}
+            {t.introduction}
           </Typography>
 
           <Typography component="h1" variant="h2" gutterBottom>
-            {role}
+            {t.role}
           </Typography>
 
           <Typography component="p" variant="subtitle1" color="textSecondary">
-            {paragraph}
+            {t.paragraph}
           </Typography>
         </div>
 
@@ -65,7 +66,7 @@ export default function Hero({ heroData }) {
               size="large"
               className={classes.responsiveButtonSize}
             >
-              {button1}
+              {t.button1}
             </Button>
           </Grid>
           <Grid item>
@@ -76,7 +77,7 @@ export default function Hero({ heroData }) {
               size="large"
               className={classes.responsiveOutlinedButtonSize}
             >
-              {button2}
+              {t.button2}
             </Button>
           </Grid>
         </Grid>
