@@ -48,17 +48,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function About({ aboutData }) {
+interface AboutData {
+  aboutTitle: string;
+  aboutItems: string[];
+  resumeTitle: string;
+  resumeParagraph: string;
+  resumeButton: string;
+  resumeLink: string;
+  skillsTitle: string;
+}
+
+export default function About({ aboutData: t }: { aboutData: AboutData }) {
   const classes = useStyles();
-  const {
-    aboutTitle,
-    aboutItems,
-    resumeTitle,
-    resumeParagraph,
-    resumeButton,
-    resumeLink,
-    skillsTitle,
-  } = aboutData;
 
   return (
     <section id="about" className={classes.root}>
@@ -66,14 +67,14 @@ export default function About({ aboutData }) {
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
             <Typography component="h2" variant="h3" gutterBottom>
-              {aboutTitle}
+              {t.aboutTitle}
             </Typography>
             <Divider className={classes.divider} />
           </Grid>
 
           <Grid item xs={12} md={8}>
             <List disablePadding>
-              {aboutItems.map((item) => (
+              {t.aboutItems.map((item) => (
                 <ListItem key={item}>
                   <ListItemIcon>
                     <Code color="secondary" />
@@ -86,14 +87,14 @@ export default function About({ aboutData }) {
 
           <Grid item xs={12} md={4}>
             <Typography component="h2" variant="h3" gutterBottom>
-              {resumeTitle}
+              {t.resumeTitle}
             </Typography>
             <Divider className={classes.divider} />
           </Grid>
 
           <Grid item xs={12} md={8}>
             <Typography component="h3" variant="h4" gutterBottom>
-              {resumeParagraph}
+              {t.resumeParagraph}
             </Typography>
 
             <Button
@@ -102,17 +103,17 @@ export default function About({ aboutData }) {
               color="primary"
               size="large"
               endIcon={<Description />}
-              href={resumeLink}
+              href={t.resumeLink}
               rel="noopener"
               target="_blank"
             >
-              {resumeButton}
+              {t.resumeButton}
             </Button>
           </Grid>
 
           <Grid item xs={12} md={4}>
             <Typography component="h2" variant="h3" gutterBottom>
-              {skillsTitle}
+              {t.skillsTitle}
             </Typography>
             <Divider className={classes.divider} />
           </Grid>

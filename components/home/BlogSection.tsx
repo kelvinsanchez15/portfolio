@@ -36,7 +36,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Blog({ blogData }) {
+interface BlogData {
+  featuredArticle: string;
+  mostRecent: string;
+  button: string;
+}
+
+export default function Blog({ blogData: t }: { blogData: BlogData }) {
   const classes = useStyles();
 
   return (
@@ -49,7 +55,7 @@ export default function Blog({ blogData }) {
         <Grid container spacing={4}>
           <Grid item md={5} xs={12}>
             <Typography variant="h4" component="h2" align="left" gutterBottom>
-              {blogData.featuredArticle}
+              {t.featuredArticle}
             </Typography>
             <Card className={classes.card} component="article">
               <CardActionArea
@@ -98,13 +104,13 @@ export default function Blog({ blogData }) {
                 rel="noopener"
                 target="_blank"
               >
-                {blogData.button}
+                {t.button}
               </Button>
             </Hidden>
           </Grid>
           <Grid item md={7} xs={12}>
             <Typography variant="h4" component="h2" align="right" gutterBottom>
-              {blogData.mostRecent}
+              {t.mostRecent}
             </Typography>
             <div>
               {blogPosts.recentPosts.map((post) => (
@@ -127,7 +133,7 @@ export default function Blog({ blogData }) {
                 rel="noopener"
                 target="_blank"
               >
-                {blogData.button}
+                {t.button}
               </Button>
             </Hidden>
           </Grid>

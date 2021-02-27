@@ -107,7 +107,27 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Portfolio({ portfolioData }) {
+interface Project {
+  name: string;
+  projectUrl: string;
+  repoUrl: string;
+  imgPath: string;
+  imgAlt: string;
+  summary: string;
+  keyFeatures: string[];
+  technologies: string[];
+}
+
+interface PortfolioData {
+  portfolioTitle: string;
+  projects: Project[];
+}
+
+export default function Portfolio({
+  portfolioData: t,
+}: {
+  portfolioData: PortfolioData;
+}) {
   const classes = useStyles();
 
   return (
@@ -116,12 +136,12 @@ export default function Portfolio({ portfolioData }) {
         <Grid container spacing={4} className={classes.grid}>
           <Grid item xs={12}>
             <Typography component="h2" variant="h3" align="center" gutterBottom>
-              {portfolioData.portfolioTitle}
+              {t.portfolioTitle}
             </Typography>
             <Divider className={classes.divider} />
           </Grid>
 
-          {portfolioData.projects.map((project) => (
+          {t.projects.map((project) => (
             <Grid item lg={12} sm={6} xs={12} key={project.name}>
               <Card elevation={4} className={classes.cardStyle}>
                 <div className={classes.mediaWrapper}>
