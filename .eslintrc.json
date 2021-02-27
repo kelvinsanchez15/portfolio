@@ -2,6 +2,8 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["prettier", "@typescript-eslint", "react"],
   "extends": [
+    "airbnb",
+    "airbnb/hooks",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
@@ -37,6 +39,8 @@
     "react/display-name": 1,
     "react/prop-types": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
-    "jsx-a11y/anchor-is-valid": 0
+    "jsx-a11y/anchor-is-valid": 0,
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"]
   }
 }
