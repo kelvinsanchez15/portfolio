@@ -35,7 +35,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RecentPostCard({ title, category, link, mediaSrc }) {
+interface RecentPostCardProps {
+  title: string;
+  category: string;
+  link: string;
+  mediaSrc: string;
+}
+
+export default function RecentPostCard({
+  title,
+  category,
+  link,
+  mediaSrc,
+}: RecentPostCardProps) {
   const classes = useStyles();
   return (
     <Card className={classes.root} component="article">
