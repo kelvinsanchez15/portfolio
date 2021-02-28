@@ -1,6 +1,16 @@
 import sgMail from '@sendgrid/mail';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async (req, res) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  if (
+    !process.env.SENDGRID_API_KEY ||
+    !process.env.TO_EMAIL ||
+    !process.env.FROM_EMAIL
+  ) {
+    return res.status(500).json({
+      message: `ERROR SENDING EMAIL VIA SENDGRID: Check your enviroment variable config`,
+    });
+  }
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   if (req.method === 'POST') {
     const { firstName, lastName, email, message } = req.body;
@@ -14,13 +24,12 @@ export default async (req, res) => {
     };
     try {
       await sgMail.send(msg);
-      res.status(200).end();
+      return res.status(200).end();
     } catch (error) {
-      res.status(500).json({
+      return res.status(500).json({
         message: `ERROR SENDING EMAIL VIA SENDGRID: ${error.message}`,
       });
     }
   }
-
-  res.status(200).end();
+  return res.status(200).end();
 };
