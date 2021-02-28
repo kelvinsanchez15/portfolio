@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import { withStyles } from '@material-ui/core/styles';
-import Link from './Link';
+import { withStyles, createStyles } from '@material-ui/core/styles';
+import Link, { LinkProps } from './Link';
 
-const styles = {
+const styles = createStyles({
   root: {
     padding: '10px',
     textDecoration: 'none',
@@ -23,13 +23,13 @@ const styles = {
       width: '100%',
     },
   },
-};
+});
 
-function AnimatedLink(props) {
+function AnimatedLink(props: LinkProps) {
   const { classes, children, className, ...other } = props;
 
   return (
-    <Link className={clsx(classes.root, className)} {...other}>
+    <Link className={clsx(classes?.root, className)} {...other}>
       {children || 'class names'}
     </Link>
   );
