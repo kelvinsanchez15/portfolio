@@ -19,11 +19,6 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(2),
     },
   },
-  menu: {
-    '& div': {
-      width: '144px',
-    },
-  },
 }));
 
 export default function LanguageSelector() {
@@ -31,15 +26,17 @@ export default function LanguageSelector() {
   const router = useRouter();
   const { locale } = router;
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
-  const handleButtonClick = (event) => {
+  const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMenuItemClick = (event) => {
+  const handleMenuItemClick = (event: { currentTarget: { lang: string } }) => {
     setAnchorEl(null);
-    router.push(router.pathname, router.asPath, { locale: event.target.lang });
+    router.push(router.pathname, router.asPath, {
+      locale: event.currentTarget.lang,
+    });
   };
 
   const handleClose = () => {
@@ -60,8 +57,9 @@ export default function LanguageSelector() {
 
       <Menu
         id="language-menu"
-        className={classes.menu}
+        PaperProps={{ style: { width: '144px' } }}
         anchorEl={anchorEl}
+        keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
@@ -71,7 +69,6 @@ export default function LanguageSelector() {
             selected={locale === language.code}
             onClick={handleMenuItemClick}
             lang={language.code}
-            hrefLang={language.code}
           >
             {language.text}
           </MenuItem>
