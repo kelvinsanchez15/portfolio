@@ -57,7 +57,7 @@ function HideOnScroll(props: Props) {
   );
 }
 
-export default function ElevateAppBar(props: Props) {
+export default function ElevateAppBar() {
   const classes = useStyles();
   const router = useRouter();
 
@@ -96,7 +96,7 @@ export default function ElevateAppBar(props: Props) {
 
   return (
     <nav id="navbar">
-      <HideOnScroll {...props}>
+      <HideOnScroll>
         <AppBar elevation={0} className={classes.appbar}>
           <Container maxWidth="lg">
             <Toolbar className={classes.toolbar} disableGutters>
