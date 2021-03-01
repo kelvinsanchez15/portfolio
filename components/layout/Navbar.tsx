@@ -42,7 +42,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function HideOnScroll(props) {
+interface Props {
+  children: React.ReactElement;
+}
+
+function HideOnScroll(props: Props) {
   const { children } = props;
   const trigger = useScrollTrigger();
 
@@ -53,7 +57,7 @@ function HideOnScroll(props) {
   );
 }
 
-export default function ElevateAppBar(props) {
+export default function ElevateAppBar(props: Props) {
   const classes = useStyles();
   const router = useRouter();
 
@@ -134,7 +138,6 @@ export default function ElevateAppBar(props) {
 
       <NavigationDrawer
         menuItems={menuItems}
-        anchor="right"
         open={mobileOpen}
         onClose={handleDrawerToggle}
       />

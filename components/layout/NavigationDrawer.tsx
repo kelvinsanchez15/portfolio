@@ -25,12 +25,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavigationDrawer(props) {
-  const { menuItems, anchor, open, onClose } = props;
+interface MenuItems {
+  link: string;
+  name: string;
+  icon: JSX.Element;
+}
+
+interface NavigationDrawerProps {
+  menuItems: MenuItems[];
+  open: boolean;
+  onClose: () => void;
+}
+
+export default function NavigationDrawer(props: NavigationDrawerProps) {
+  const { menuItems, open, onClose } = props;
   const classes = useStyles();
 
   return (
-    <Drawer variant="temporary" anchor={anchor} open={open} onClose={onClose}>
+    <Drawer variant="temporary" anchor="right" open={open} onClose={onClose}>
       <div className={classes.drawerHeader}>
         <IconButton onClick={onClose}>
           <CloseIcon fontSize="large" color="secondary" />
@@ -43,9 +55,7 @@ export default function NavigationDrawer(props) {
             button
             onClick={onClose}
             key={item.name}
-            href={item.link}
-            component={Link}
-            naked
+            {...{ component: Link, href: item.link, noLinkStyle: true }}
           >
             <ListItemIcon className={classes.listItemIcon}>
               {item.icon}
