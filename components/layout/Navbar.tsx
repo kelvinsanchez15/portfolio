@@ -79,7 +79,7 @@ export default function ElevateAppBar() {
     },
     {
       link: '/#portfolio',
-      name: `${router.locale === 'en' ? 'PORFOLIO' : 'PORTAFOLIO'}`,
+      name: `${router.locale === 'en' ? 'PORTFOLIO' : 'PORTAFOLIO'}`,
       icon: <WorkIcon />,
     },
     {
