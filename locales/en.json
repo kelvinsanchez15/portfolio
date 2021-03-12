@@ -46,19 +46,18 @@
         ]
       },
       {
-        "name": "Choropleth Map",
-        "projectUrl": "https://kelvinsanchez15.github.io/choropleth-map/",
-        "repoUrl": "https://github.com/kelvinsanchez15/choropleth-map",
-        "imgPath": "projectMedia/choropleth-map.jpg",
-        "imgAlt": "Choropleth map preview",
-        "summary": "An United States Educational Attainment data visualization map built with D3.",
+        "name": "Easybank",
+        "projectUrl": "https://easybank-web.vercel.app/",
+        "repoUrl": "https://github.com/kelvinsanchez15/easybank-landing-page",
+        "imgPath": "projectMedia/easybank.jpg",
+        "imgAlt": "Easybank website preview",
+        "summary": "Fully responsive SAAS product landing page designed with Tailwind CSS.",
         "keyFeatures": [
-          "Data fetching",
-          "Color legend",
-          "Dynamic tooltip",
-          "Dark theme"
+          "Pixel perfect design",
+          "Absolute positioning",
+          "Custom classes"
         ],
-        "technologies": ["Vanilla JS", "D3"]
+        "technologies": ["Tailwind", "TypeScript", "React", "NextJS"]
       },
       {
         "name": "A-Note",
