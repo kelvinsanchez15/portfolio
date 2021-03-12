@@ -14,6 +14,8 @@ import {
   SiBootstrap,
   SiNextDotJs,
   SiPostgresql,
+  SiTailwindcss,
+  SiTypescript,
 } from 'react-icons/si';
 
 const skillLogos = [
@@ -32,6 +34,10 @@ const skillLogos = [
   {
     icon: <SiJavascript title="JavaScript" />,
     label: 'JavaScript',
+  },
+  {
+    icon: <SiTypescript title="TypeScript" />,
+    label: 'TypeScript',
   },
   {
     icon: <SiGit title="Git" />,
@@ -68,6 +74,10 @@ const skillLogos = [
   {
     icon: <SiD3DotJs title="D3" />,
     label: 'D3',
+  },
+  {
+    icon: <SiTailwindcss title="Tailwind CSS" />,
+    label: 'Tailwind CSS',
   },
   {
     icon: <SiMaterialUi title="Material UI" />,
