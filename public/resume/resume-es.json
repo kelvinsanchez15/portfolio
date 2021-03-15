@@ -1,0 +1,133 @@
+{
+  "selectedTemplate": 6,
+  "headings": {
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "education": "Educación",
+    "work": "Experiencia Laboral"
+  },
+  "basics": {
+    "email": "kelvinsanchez15@gmail.com",
+    "phone": "+584249302355",
+    "name": "Kelvin Sánchez",
+    "location": {
+      "address": "Bolívar, Venezuela"
+    },
+    "website": "https://kelvinsanchez.vercel.app/"
+  },
+  "education": [
+    {
+      "location": "",
+      "area": "",
+      "studyType": "Full Stack Developer",
+      "endDate": "Dec 2020",
+      "gpa": "",
+      "institution": "freeCodeCamp",
+      "startDate": "Jul 2020"
+    },
+    {}
+  ],
+  "work": [
+    {
+      "position": "Desarrollador Web",
+      "website": "",
+      "startDate": "Ene 2019",
+      "endDate": "Presente",
+      "highlights": [
+        "Mantener y mejorar el sitio web",
+        "Optimizar las páginas web para lograr la máxima velocidad y escalabilidad",
+        "Desarrollar funcionalidades para mejorar la experiencia del usuario"
+      ],
+      "company": "PETUCA",
+      "location": "Ciudad Bolívar, Venezuela"
+    },
+    {
+      "highlights": [
+        "Instalar y configurar hardware y software informático",
+        "Mantener y reparar equipos tecnológicos y periféricos",
+        "Solucionar fallas o errores del sistema y brindar soluciones"
+      ],
+      "company": "PETUCA",
+      "position": "Técnico Informático",
+      "location": "Ciudad Bolívar, Venezuela",
+      "startDate": "Ene 2015",
+      "endDate": "Dic 2018"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js"
+      ],
+      "name": "Front-end"
+    },
+    {
+      "keywords": ["Node.js", "Express.js"],
+      "name": "Back-end"
+    },
+    {
+      "keywords": ["PostgreSQL", "MongoDB"],
+      "name": "Bases de datos"
+    },
+    {
+      "keywords": ["Tailwind CSS", "Material UI", "Bootstrap"],
+      "name": "Frameworks de CSS"
+    },
+    {
+      "keywords": ["Jest", "Cypress"],
+      "name": "Testing"
+    },
+    {
+      "keywords": ["Git", "Figma", "Postman"]
+    }
+  ],
+  "projects": [
+    {
+      "description": "Rastreador de problemas (Issue Tracker) inspirado en Github Issues.",
+      "url": "https://issueless.vercel.app/",
+      "keywords": ["React", "Next.js", "PostgreSQL", "Prisma", "Material UI"],
+      "name": "Issueless"
+    },
+    {
+      "keywords": ["Tailwind CSS", "TypeScript", "React", "Next.js"],
+      "name": "Easybank",
+      "description": "Página de producto SAAS completamente responsiva diseñada con Tailwind CSS.",
+      "url": "https://easybank-web.vercel.app/"
+    },
+    {
+      "keywords": ["React", "Next.js", "MongoDB", "Material UI", "SWR"],
+      "name": "A-Note",
+      "description": "Una aplicación JAMStack que permite tomar notas de forma simple, rápida e intuitiva.",
+      "url": "https://a-note.vercel.app/"
+    },
+    {
+      "keywords": ["Express.js", "Node.js", "MongoDB"],
+      "name": "Tablón de mensajes anónimos",
+      "description": "Una aplicación web en donde los usuarios pueden crear tablones, publicar comentarios, removerlos, entre otras funciones.",
+      "url": "https://message-board.glitch.me/"
+    }
+  ],
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "work",
+    "skills",
+    "projects",
+    "education",
+    "awards"
+  ]
+}
