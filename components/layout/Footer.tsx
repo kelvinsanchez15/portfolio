@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Fab, Typography } from '@material-ui/core/';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+
 import { NextLinkComposed } from '../Link';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,20 +18,20 @@ export default function Footer() {
 
   return (
     <footer className={classes.root}>
-      <Box display="flex" flexDirection="column" alignItems="center">
+      <Box alignItems="center" display="flex" flexDirection="column">
         <Fab
+          aria-label="Scroll back to top"
           className={classes.fab}
           color="secondary"
-          size="small"
-          to="/"
           component={NextLinkComposed}
+          size="small"
           title="Scroll back to top"
-          aria-label="Scroll back to top"
+          to="/"
         >
           <KeyboardArrowUpIcon />
         </Fab>
 
-        <Typography component="p" variant="h6" align="center" gutterBottom>
+        <Typography gutterBottom align="center" component="p" variant="h6">
           KELVIN SANCHEZ ©2021
         </Typography>
       </Box>

@@ -11,7 +11,6 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@material-ui/core/';
-
 import { Code, Description } from '@material-ui/icons';
 
 import skillIcons from './constants/skillIcons';
@@ -62,17 +61,17 @@ export default function About({ aboutData: t }: { aboutData: AboutData }) {
   const classes = useStyles();
 
   return (
-    <section id="about" className={classes.root}>
+    <section className={classes.root} id="about">
       <Container>
         <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
-            <Typography component="h2" variant="h3" gutterBottom>
+          <Grid item md={4} xs={12}>
+            <Typography gutterBottom component="h2" variant="h3">
               {t.aboutTitle}
             </Typography>
             <Divider className={classes.divider} />
           </Grid>
 
-          <Grid item xs={12} md={8}>
+          <Grid item md={8} xs={12}>
             <List disablePadding>
               {t.aboutItems.map((item) => (
                 <ListItem key={item}>
@@ -85,40 +84,40 @@ export default function About({ aboutData: t }: { aboutData: AboutData }) {
             </List>
           </Grid>
 
-          <Grid item xs={12} md={4}>
-            <Typography component="h2" variant="h3" gutterBottom>
+          <Grid item md={4} xs={12}>
+            <Typography gutterBottom component="h2" variant="h3">
               {t.resumeTitle}
             </Typography>
             <Divider className={classes.divider} />
           </Grid>
 
-          <Grid item xs={12} md={8}>
-            <Typography component="h3" variant="h4" gutterBottom>
+          <Grid item md={8} xs={12}>
+            <Typography gutterBottom component="h3" variant="h4">
               {t.resumeParagraph}
             </Typography>
 
             <Button
               className={classes.resumeBtn}
-              variant="outlined"
               color="primary"
-              size="large"
               endIcon={<Description />}
               href={t.resumeLink}
               rel="noopener"
+              size="large"
               target="_blank"
+              variant="outlined"
             >
               {t.resumeButton}
             </Button>
           </Grid>
 
-          <Grid item xs={12} md={4}>
-            <Typography component="h2" variant="h3" gutterBottom>
+          <Grid item md={4} xs={12}>
+            <Typography gutterBottom component="h2" variant="h3">
               {t.skillsTitle}
             </Typography>
             <Divider className={classes.divider} />
           </Grid>
 
-          <Grid item xs={12} md={8}>
+          <Grid item md={8} xs={12}>
             <Box className={classes.skills}>
               {skillIcons.map((skillIcon) => (
                 <div key={skillIcon.label} className={classes.skillIcon}>

@@ -15,11 +15,11 @@ import {
   IconButton,
   Avatar,
 } from '@material-ui/core';
+
 import Link from '../Link';
+import EmailSuccessMessage from '../EmailSuccessMessage';
 
 import socialIcons from './constants/socialIcons';
-
-import EmailSuccessMessage from '../EmailSuccessMessage';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -157,9 +157,9 @@ export default function Contact({
   } = formik;
 
   return (
-    <section id="contact" className={classes.root}>
+    <section className={classes.root} id="contact">
       <Container maxWidth="sm">
-        <Typography component="h2" variant="h3" align="center" gutterBottom>
+        <Typography gutterBottom align="center" component="h2" variant="h3">
           {t.title}
         </Typography>
         <Divider className={classes.divider} />
@@ -168,18 +168,18 @@ export default function Contact({
           <Avatar className={classes.avatar}>
             <Image
               alt="Kelvin Sánchez"
+              height={56}
               src="/profile-picture.jpg"
               width={56}
-              height={56}
             />
           </Avatar>
         </div>
 
         <Card className={classes.card}>
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography color="textSecondary" component="p" variant="body2">
               {t.p1}
-              <Link href="/#portfolio" className={classes.linkColor}>
+              <Link className={classes.linkColor} href="/#portfolio">
                 {t.p2}
               </Link>
               {t.p3}
@@ -199,11 +199,11 @@ export default function Contact({
 
           <CardContent>
             <Typography
-              variant="body1"
-              color="textPrimary"
-              align="center"
-              component="p"
               gutterBottom
+              align="center"
+              color="textPrimary"
+              component="p"
+              variant="body1"
             >
               {t.subtitle}
             </Typography>
@@ -214,10 +214,10 @@ export default function Contact({
                   key={socialIcon.label}
                   aria-label={socialIcon.label}
                   className={classes.socialIcon}
+                  component="a"
                   href={socialIcon.href}
                   rel="noopener"
                   target="_blank"
-                  component="a"
                 >
                   {socialIcon.icon}
                 </IconButton>
@@ -227,24 +227,24 @@ export default function Contact({
         </Card>
 
         <Typography
+          align="center"
           className={classes.formHeader}
           component="h3"
           variant="h4"
-          align="center"
         >
           {t.formTitle}
         </Typography>
 
         <form onSubmit={handleSubmit}>
           <Grid container spacing={1}>
-            <Grid item xs={12} sm={6}>
+            <Grid item sm={6} xs={12}>
               <TextField
                 fullWidth
+                autoComplete="given-name"
+                color="primary"
                 id="firstName"
                 label={t.firstNameLabel}
-                autoComplete="given-name"
                 variant="outlined"
-                color="primary"
                 {...getFieldProps('firstName')}
                 error={Boolean(errors.firstName) && Boolean(touched.firstName)}
                 helperText={
@@ -253,14 +253,14 @@ export default function Contact({
               />
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid item sm={6} xs={12}>
               <TextField
                 fullWidth
+                autoComplete="family-name"
+                color="primary"
                 id="lastName"
                 label={t.lastNameLabel}
-                autoComplete="family-name"
                 variant="outlined"
-                color="primary"
                 {...getFieldProps('lastName')}
                 error={Boolean(errors.lastName) && Boolean(touched.lastName)}
                 helperText={
@@ -272,11 +272,11 @@ export default function Contact({
             <Grid item xs={12}>
               <TextField
                 fullWidth
+                autoComplete="email"
+                color="primary"
                 id="email"
                 label={t.emailLabel}
-                autoComplete="email"
                 variant="outlined"
-                color="primary"
                 {...getFieldProps('email')}
                 error={Boolean(errors.email) && Boolean(touched.email)}
                 helperText={touched.email && errors.email ? errors.email : ' '}
@@ -285,30 +285,30 @@ export default function Contact({
 
             <Grid item xs={12}>
               <TextField
-                multiline
-                rows={5}
                 fullWidth
-                id="message"
-                name="message"
-                type="message"
-                label={t.messageLabel}
+                multiline
                 autoComplete="message"
-                variant="outlined"
                 color="primary"
-                onChange={handleChange}
-                value={values.message}
+                id="message"
+                label={t.messageLabel}
+                name="message"
                 placeholder={t.placeholder}
+                rows={5}
+                type="message"
+                value={values.message}
+                variant="outlined"
+                onChange={handleChange}
               />
             </Grid>
 
             <Grid item xs={12}>
               <Button
-                className={classes.submitButton}
                 fullWidth
-                type="submit"
-                variant="outlined"
+                className={classes.submitButton}
                 color="primary"
                 size="large"
+                type="submit"
+                variant="outlined"
               >
                 {t.submitButton}
               </Button>
@@ -317,9 +317,9 @@ export default function Contact({
         </form>
 
         <EmailSuccessMessage
+          displayMessage={displayMessage}
           senderFirstName={senderFirstName}
           setDisplayMessage={setDisplayMessage}
-          displayMessage={displayMessage}
         />
       </Container>
     </section>

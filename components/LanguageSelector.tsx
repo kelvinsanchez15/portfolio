@@ -46,29 +46,29 @@ export default function LanguageSelector() {
   return (
     <FormControl className={classes.root}>
       <Button
+        aria-haspopup="true"
+        endIcon={<KeyboardArrowDownIcon />}
+        startIcon={<TranslateIcon />}
         variant="outlined"
         onClick={handleButtonClick}
-        startIcon={<TranslateIcon />}
-        endIcon={<KeyboardArrowDownIcon />}
-        aria-haspopup="true"
       >
         {locale === 'en' ? 'ENGLISH' : 'ESPAÑOL'}
       </Button>
 
       <Menu
-        id="language-menu"
+        keepMounted
         PaperProps={{ style: { width: '144px' } }}
         anchorEl={anchorEl}
-        keepMounted
+        id="language-menu"
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
         {languages.map((language) => (
           <MenuItem
             key={language.code}
+            lang={language.code}
             selected={locale === language.code}
             onClick={handleMenuItemClick}
-            lang={language.code}
           >
             {language.text}
           </MenuItem>

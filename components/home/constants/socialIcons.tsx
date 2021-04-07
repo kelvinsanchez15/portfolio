@@ -2,10 +2,10 @@ const socialIcons = [
   {
     icon: (
       <svg
-        role="img"
-        width="24px"
         height="24px"
+        role="img"
         viewBox="0 0 24 24"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>GitHub</title>
@@ -18,10 +18,10 @@ const socialIcons = [
   {
     icon: (
       <svg
-        role="img"
-        width="24px"
         height="24px"
+        role="img"
         viewBox="0 0 24 24"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>LinkedIn</title>
@@ -34,10 +34,10 @@ const socialIcons = [
   {
     icon: (
       <svg
-        role="img"
-        width="24px"
         height="24px"
+        role="img"
         viewBox="0 0 24 24"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>Twitter</title>

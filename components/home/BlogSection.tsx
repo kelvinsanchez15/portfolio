@@ -12,8 +12,9 @@ import {
   Hidden,
 } from '@material-ui/core/';
 
-import blogPosts from './constants/blogs';
 import RecentPostCard from '../RecentPostCard';
+
+import blogPosts from './constants/blogs';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,49 +47,49 @@ export default function Blog({ blogData: t }: { blogData: BlogData }) {
   const classes = useStyles();
 
   return (
-    <section id="blog" className={classes.root}>
+    <section className={classes.root} id="blog">
       <Container>
-        <Typography component="h2" variant="h3" align="center" gutterBottom>
+        <Typography gutterBottom align="center" component="h2" variant="h3">
           BLOG
         </Typography>
         <Divider className={classes.divider} />
         <Grid container spacing={4}>
           <Grid item md={5} xs={12}>
-            <Typography variant="h4" component="h2" align="left" gutterBottom>
+            <Typography gutterBottom align="left" component="h2" variant="h4">
               {t.featuredArticle}
             </Typography>
             <Card className={classes.card} component="article">
               <CardActionArea
+                disableRipple
+                component="a"
                 href={blogPosts.featuredPost.link}
                 rel="noopener"
                 target="_blank"
-                component="a"
-                disableRipple
               >
                 <Image
-                  className={classes.media}
-                  src={blogPosts.featuredPost.mediaSrc}
                   alt={blogPosts.featuredPost.title}
-                  layout="responsive"
-                  width={500}
+                  className={classes.media}
                   height={300}
+                  layout="responsive"
+                  src={blogPosts.featuredPost.mediaSrc}
+                  width={500}
                 />
                 <CardContent>
                   <Typography
-                    variant="body2"
                     color="textSecondary"
                     component="p"
+                    variant="body2"
                   >
                     {`#${blogPosts.featuredPost.category}`}
                   </Typography>
 
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom component="h2" variant="h5">
                     {blogPosts.featuredPost.title}
                   </Typography>
                   <Typography
-                    variant="body2"
                     color="textSecondary"
                     component="p"
+                    variant="body2"
                   >
                     {blogPosts.featuredPost.description}
                   </Typography>
@@ -97,41 +98,41 @@ export default function Blog({ blogData: t }: { blogData: BlogData }) {
             </Card>
             <Hidden smDown implementation="css">
               <Button
-                size="large"
                 fullWidth
-                variant="contained"
                 href="https://www.freecodecamp.org/espanol/news/author/kelvin/"
                 rel="noopener"
+                size="large"
                 target="_blank"
+                variant="contained"
               >
                 {t.button}
               </Button>
             </Hidden>
           </Grid>
           <Grid item md={7} xs={12}>
-            <Typography variant="h4" component="h2" align="right" gutterBottom>
+            <Typography gutterBottom align="right" component="h2" variant="h4">
               {t.mostRecent}
             </Typography>
             <div>
               {blogPosts.recentPosts.map((post) => (
                 <RecentPostCard
                   key={post.title}
-                  title={post.title}
                   category={post.category}
                   link={post.link}
                   mediaSrc={post.mediaSrc}
+                  title={post.title}
                 />
               ))}
             </div>
 
             <Hidden mdUp implementation="css">
               <Button
-                size="large"
                 fullWidth
-                variant="contained"
                 href="https://www.freecodecamp.org/espanol/news/author/kelvin/"
                 rel="noopener"
+                size="large"
                 target="_blank"
+                variant="contained"
               >
                 {t.button}
               </Button>

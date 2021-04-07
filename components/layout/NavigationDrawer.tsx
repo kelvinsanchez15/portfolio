@@ -9,6 +9,7 @@ import {
   Divider,
 } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
+
 import Link from '../Link';
 
 const useStyles = makeStyles((theme) => ({
@@ -42,19 +43,19 @@ export default function NavigationDrawer(props: NavigationDrawerProps) {
   const classes = useStyles();
 
   return (
-    <Drawer variant="temporary" anchor="right" open={open} onClose={onClose}>
+    <Drawer anchor="right" open={open} variant="temporary" onClose={onClose}>
       <div className={classes.drawerHeader}>
         <IconButton onClick={onClose}>
-          <CloseIcon fontSize="large" color="secondary" />
+          <CloseIcon color="secondary" fontSize="large" />
         </IconButton>
       </div>
       <Divider />
       <List>
         {menuItems.map((item) => (
           <ListItem
+            key={item.name}
             button
             onClick={onClose}
-            key={item.name}
             {...{ component: Link, href: item.link, noLinkStyle: true }}
           >
             <ListItemIcon className={classes.listItemIcon}>

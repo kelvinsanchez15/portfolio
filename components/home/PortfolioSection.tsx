@@ -15,7 +15,6 @@ import {
   ButtonGroup,
   Button,
 } from '@material-ui/core/';
-
 import { ChevronRight, GitHub, Visibility } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
@@ -131,48 +130,48 @@ export default function Portfolio({
   const classes = useStyles();
 
   return (
-    <section id="portfolio" className={classes.root}>
+    <section className={classes.root} id="portfolio">
       <Container className={classes.container}>
-        <Grid container spacing={4} className={classes.grid}>
+        <Grid container className={classes.grid} spacing={4}>
           <Grid item xs={12}>
-            <Typography component="h2" variant="h3" align="center" gutterBottom>
+            <Typography gutterBottom align="center" component="h2" variant="h3">
               {t.portfolioTitle}
             </Typography>
             <Divider className={classes.divider} />
           </Grid>
 
           {t.projects.map((project) => (
-            <Grid item lg={12} sm={6} xs={12} key={project.name}>
-              <Card elevation={4} className={classes.cardStyle}>
+            <Grid key={project.name} item lg={12} sm={6} xs={12}>
+              <Card className={classes.cardStyle} elevation={4}>
                 <div className={classes.mediaWrapper}>
                   <Image
-                    className={classes.media}
-                    src={`/${project.imgPath}`}
                     alt={project.imgAlt}
-                    layout="responsive"
-                    width={600}
+                    className={classes.media}
                     height={370}
+                    layout="responsive"
+                    src={`/${project.imgPath}`}
+                    width={600}
                   />
 
                   <div className={classes.overlay}>
                     <ButtonGroup variant="contained">
                       <Button
+                        aria-label="Link to project GitHub repository"
+                        component="a"
                         href={project.repoUrl}
                         rel="noopener"
-                        target="_blank"
-                        component="a"
-                        aria-label="Link to project GitHub repository"
                         startIcon={<GitHub />}
+                        target="_blank"
                       >
                         Repo
                       </Button>
                       <Button
+                        aria-label="Link to project live preview"
+                        component="a"
                         href={project.projectUrl}
                         rel="noopener"
-                        target="_blank"
-                        component="a"
-                        aria-label="Link to project live preview"
                         startIcon={<Visibility />}
+                        target="_blank"
                       >
                         Live
                       </Button>
@@ -182,13 +181,13 @@ export default function Portfolio({
 
                 <CardContent className={classes.content}>
                   <div>
-                    <Typography component="h3" variant="h5" gutterBottom>
+                    <Typography gutterBottom component="h3" variant="h5">
                       {project.name}
                     </Typography>
                     <Typography
+                      color="textSecondary"
                       component="p"
                       variant="subtitle1"
-                      color="textSecondary"
                     >
                       {project.summary}
                     </Typography>
@@ -208,11 +207,11 @@ export default function Portfolio({
                   <div>
                     {project.technologies.map((e) => (
                       <Chip
-                        variant="outlined"
-                        size="small"
-                        label={e}
                         key={e}
                         className={classes.chip}
+                        label={e}
+                        size="small"
+                        variant="outlined"
                       />
                     ))}
                   </div>

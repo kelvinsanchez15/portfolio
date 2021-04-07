@@ -50,6 +50,16 @@
         "ts": "never",
         "tsx": "never"
       }
+    ],
+    "import/order": ["warn", { "newlines-between": "always" }],
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": true
+      }
     ]
   }
 }

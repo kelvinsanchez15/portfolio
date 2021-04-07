@@ -32,14 +32,14 @@ export const NextLinkComposed = React.forwardRef<
 
   return (
     <NextLink
-      href={to}
-      prefetch={prefetch}
       as={linkAs}
+      href={to}
+      locale={locale}
+      passHref={passHref}
+      prefetch={prefetch}
       replace={replace}
       scroll={scroll}
       shallow={shallow}
-      passHref={passHref}
-      locale={locale}
     >
       <a ref={ref} {...other} />
     </NextLink>
@@ -83,10 +83,10 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
     if (noLinkStyle) {
       return (
         <a
-          className={className}
-          href={href as string}
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           ref={ref as any}
+          className={className}
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          href={href as string}
           {...other}
         />
       );
@@ -94,9 +94,9 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
 
     return (
       <MuiLink
+        ref={ref}
         className={className}
         href={href as string}
-        ref={ref}
         {...other}
       />
     );
@@ -105,9 +105,9 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   if (noLinkStyle) {
     return (
       <NextLinkComposed
-        className={className}
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ref={ref as any}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        className={className}
         to={href}
         {...other}
       />
@@ -116,10 +116,10 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
 
   return (
     <MuiLink
+      ref={ref}
+      className={className}
       component={NextLinkComposed}
       linkAs={linkAs}
-      className={className}
-      ref={ref}
       to={href}
       {...other}
     />

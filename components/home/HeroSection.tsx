@@ -38,21 +38,21 @@ export default function Hero({ heroData: t }: { heroData: HeroData }) {
   const classes = useStyles();
 
   return (
-    <section id="home" className={classes.root}>
+    <section className={classes.root} id="home">
       <Container>
         <div className={classes.wrapper}>
-          <Typography component="h4" variant="h5" gutterBottom>
-            <Typography variant="inherit" color="primary">
+          <Typography gutterBottom component="h4" variant="h5">
+            <Typography color="primary" variant="inherit">
               {t.greetings}
             </Typography>
             {t.introduction}
           </Typography>
 
-          <Typography component="h1" variant="h2" gutterBottom>
+          <Typography gutterBottom component="h1" variant="h2">
             {t.role}
           </Typography>
 
-          <Typography component="p" variant="subtitle1" color="textSecondary">
+          <Typography color="textSecondary" component="p" variant="subtitle1">
             {t.paragraph}
           </Typography>
         </div>
@@ -60,22 +60,22 @@ export default function Hero({ heroData: t }: { heroData: HeroData }) {
         <Grid container spacing={2}>
           <Grid item>
             <Button
-              href="#portfolio"
-              variant="contained"
-              color="primary"
-              size="large"
               className={classes.responsiveButtonSize}
+              color="primary"
+              href="#portfolio"
+              size="large"
+              variant="contained"
             >
               {t.button1}
             </Button>
           </Grid>
           <Grid item>
             <Button
-              href="#contact"
-              variant="outlined"
-              color="primary"
-              size="large"
               className={classes.responsiveOutlinedButtonSize}
+              color="primary"
+              href="#contact"
+              size="large"
+              variant="outlined"
             >
               {t.button2}
             </Button>

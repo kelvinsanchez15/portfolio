@@ -1,6 +1,7 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
+
 import theme from '../components/styles/theme';
 
 export default class MyDocument extends Document {
@@ -9,31 +10,31 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta content={theme.palette.primary.main} name="theme-color" />
           <link
-            rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
           />
           <link
+            href="/apple-touch-icon.png"
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/apple-touch-icon.png"
           />
           <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
             href="/favicon-32x32.png"
+            rel="icon"
+            sizes="32x32"
+            type="image/png"
           />
           <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
             href="/favicon-16x16.png"
+            rel="icon"
+            sizes="16x16"
+            type="image/png"
           />
-          <link rel="manifest" href="/site.webmanifest" />
-          <meta name="msapplication-config" content="/browserconfig.xml" />
-          <meta name="msapplication-TileColor" content="#ffffff" />
+          <link href="/site.webmanifest" rel="manifest" />
+          <meta content="/browserconfig.xml" name="msapplication-config" />
+          <meta content="#ffffff" name="msapplication-TileColor" />
         </Head>
         <body>
           <Main />

@@ -19,11 +19,12 @@ import {
   PermIdentity as PermIdentityIcon,
 } from '@material-ui/icons';
 import { useRouter } from 'next/router';
-import Link from '../Link';
 
-import NavigationDrawer from './NavigationDrawer';
+import Link from '../Link';
 import AnimatedLink from '../AnimatedLink';
 import LanguageSelector from '../LanguageSelector';
+
+import NavigationDrawer from './NavigationDrawer';
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
@@ -97,11 +98,11 @@ export default function ElevateAppBar() {
   return (
     <nav id="navbar">
       <HideOnScroll>
-        <AppBar elevation={0} className={classes.appbar}>
+        <AppBar className={classes.appbar} elevation={0}>
           <Container maxWidth="lg">
-            <Toolbar className={classes.toolbar} disableGutters>
+            <Toolbar disableGutters className={classes.toolbar}>
               <Link className={classes.logo} href="/" variant="button">
-                <Typography variant="h3" color="primary">
+                <Typography color="primary" variant="h3">
                   K
                 </Typography>
               </Link>
@@ -109,12 +110,12 @@ export default function ElevateAppBar() {
               <Hidden smDown implementation="css">
                 {menuItems.map((item) => (
                   <AnimatedLink
-                    className={classes.link}
                     key={item.name}
-                    href={item.link}
-                    variant="button"
+                    className={classes.link}
                     color="inherit"
+                    href={item.link}
                     underline="none"
+                    variant="button"
                   >
                     {item.name}
                   </AnimatedLink>
@@ -125,10 +126,10 @@ export default function ElevateAppBar() {
 
               <Hidden mdUp implementation="css">
                 <IconButton
-                  onClick={handleDrawerToggle}
                   aria-label="Open Navigation"
+                  onClick={handleDrawerToggle}
                 >
-                  <MenuIcon fontSize="large" color="secondary" />
+                  <MenuIcon color="secondary" fontSize="large" />
                 </IconButton>
               </Hidden>
             </Toolbar>

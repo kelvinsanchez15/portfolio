@@ -52,29 +52,29 @@ export default function RecentPostCard({
   return (
     <Card className={classes.root} component="article">
       <CardActionArea
+        disableRipple
         className={classes.cardActionArea}
+        component="a"
         href={link}
         rel="noopener"
         target="_blank"
-        component="a"
-        disableRipple
       >
         <div className={classes.mediaWrapper}>
           <Image
-            className={classes.media}
-            src={mediaSrc}
             alt={title}
-            layout="responsive"
-            width={500}
+            className={classes.media}
             height={300}
+            layout="responsive"
+            src={mediaSrc}
+            width={500}
           />
         </div>
 
         <CardContent className={classes.cardContent}>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography color="textSecondary" component="p" variant="body2">
             {`#${category}`}
           </Typography>
-          <Typography variant="body1" component="h2">
+          <Typography component="h2" variant="body1">
             {title}
           </Typography>
         </CardContent>

@@ -25,10 +25,10 @@ export default function EmailSuccessMessage({
 
   return (
     <Snackbar
-      open={displayMessage}
-      onClose={handleClose}
       autoHideDuration={4000}
       message={`Thanks ${senderFirstName}, I'll be in touch soon.`}
+      open={displayMessage}
+      onClose={handleClose}
     />
   );
 }

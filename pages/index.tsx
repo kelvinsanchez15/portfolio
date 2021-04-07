@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
+
 import HeroSection from '../components/home/HeroSection';
 import AboutSection from '../components/home/AboutSection';
 import PortfolioSection from '../components/home/PortfolioSection';
@@ -37,21 +38,21 @@ export default function Index({
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
+        <meta content={description} name="description" />
         <meta
-          name="keywords"
           content="portfolio, personal website, web developer"
+          name="keywords"
         />
-        <meta name="language" content="English" />
-        <meta name="author" content="Kelvin Sanchez" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta content="English" name="language" />
+        <meta content="Kelvin Sanchez" name="author" />
+        <link href="/favicon.ico" rel="icon" />
 
         {/* Open Graph */}
-        <meta property="og:title" content={title} key="ogtitle" />
-        <meta property="og:description" content={description} key="ogdesc" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={url} key="ogurl" />
-        <meta property="og:image" content={previewImage} key="ogimage" />
+        <meta key="ogtitle" content={title} property="og:title" />
+        <meta key="ogdesc" content={description} property="og:description" />
+        <meta content="website" property="og:type" />
+        <meta key="ogurl" content={url} property="og:url" />
+        <meta key="ogimage" content={previewImage} property="og:image" />
       </Head>
 
       <HeroSection heroData={heroData} />
