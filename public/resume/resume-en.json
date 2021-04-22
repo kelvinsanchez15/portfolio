@@ -13,7 +13,7 @@
     "location": {
       "address": "Bolívar, Venezuela"
     },
-    "website": "https://kelvinsanchez.vercel.app/"
+    "website": "https://www.kelvinsanchez15.com"
   },
   "education": [
     {
@@ -29,10 +29,21 @@
   ],
   "work": [
     {
+      "highlights": [
+        "Build, maintain and deploy platform project using Next.js, Redux and Firebase",
+        "Develop features from design through implementation and launch",
+        "Test application to ensure responsiveness and efficiency"
+      ],
+      "company": "alacartadigital",
+      "position": "Full Stack Developer",
+      "location": "Madrid, Spain",
+      "startDate": "Apr 2021",
+      "endDate": "Present"
+    },
+    {
       "position": "Web Developer",
-      "website": "",
       "startDate": "Ene 2019",
-      "endDate": "Present",
+      "endDate": "Dec 2020",
       "highlights": [
         "Maintain and improve website",
         "Optimize web pages for maximum speed and scalability",
@@ -40,18 +51,6 @@
       ],
       "company": "PETUCA",
       "location": "Ciudad Bolívar, Venezuela"
-    },
-    {
-      "highlights": [
-        "Set up hardware and install and configure software",
-        "Maintain and repair technological equipment or peripheral devices",
-        "Troubleshoot system failures or bugs and provide solutions to restore functionality"
-      ],
-      "company": "PETUCA",
-      "position": "Computer Technician",
-      "location": "Ciudad Bolívar, Venezuela",
-      "startDate": "Ene 2015",
-      "endDate": "Dec 2018"
     }
   ],
   "skills": [
@@ -63,89 +62,52 @@
         "JavaScript",
         "TypeScript",
         "React",
-        "Next.js"
+        "Next.js",
+        "Redux"
       ],
       "name": "Front-end"
     },
     {
-      "keywords": [
-        "Node.js",
-        "Express.js"
-      ],
+      "keywords": ["Node.js", "Express.js"],
       "name": "Back-end"
     },
     {
-      "keywords": [
-        "PostgreSQL",
-        "MongoDB"
-      ],
+      "keywords": ["PostgreSQL", "MongoDB", "Firebase"],
       "name": "Databases"
     },
     {
-      "keywords": [
-        "Tailwind CSS",
-        "Material UI",
-        "Bootstrap"
-      ],
+      "keywords": ["Tailwind CSS", "Material UI", "Bootstrap"],
       "name": "CSS frameworks"
     },
     {
-      "keywords": [
-        "Jest",
-        "Cypress"
-      ],
+      "keywords": ["Jest", "Cypress"],
       "name": "Testing"
     },
     {
-      "keywords": [
-        "Git",
-        "Figma",
-        "Postman"
-      ]
+      "keywords": ["Git", "Figma", "Postman"]
     }
   ],
   "projects": [
     {
       "description": "JAMStack Issue Tracker project inspired on GitHub issues.",
       "url": "https://issueless.vercel.app/",
-      "keywords": [
-        "React",
-        "Next.js",
-        "PostgreSQL",
-        "Prisma",
-        "Material UI"
-      ],
+      "keywords": ["React", "Next.js", "PostgreSQL", "Prisma", "Material UI"],
       "name": "Issueless"
     },
     {
-      "keywords": [
-        "Tailwind CSS",
-        "TypeScript",
-        "React",
-        "Next.js"
-      ],
+      "keywords": ["Tailwind CSS", "TypeScript", "React", "Next.js"],
       "name": "Easybank",
       "description": "Fully responsive SAAS product landing page designed with Tailwind CSS.",
       "url": "https://easybank-web.vercel.app/"
     },
     {
-      "keywords": [
-        "React",
-        "Next.js",
-        "MongoDB",
-        "Material UI",
-        "SWR"
-      ],
+      "keywords": ["React", "Next.js", "MongoDB", "Material UI", "SWR"],
       "name": "A-Note",
       "description": "A simple, fast and intuitive note-taking app built with NextJS JAMStack solution.",
       "url": "https://a-note.vercel.app/"
     },
     {
-      "keywords": [
-        "Express.js",
-        "Node.js",
-        "MongoDB"
-      ],
+      "keywords": ["Express.js", "Node.js", "MongoDB"],
       "name": "Anonymous Message Board",
       "description": "A web app where users can create boards, post comments and remove them.",
       "url": "https://message-board.glitch.me/"

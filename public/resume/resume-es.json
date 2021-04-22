@@ -13,14 +13,14 @@
     "location": {
       "address": "Bolívar, Venezuela"
     },
-    "website": "https://kelvinsanchez.vercel.app/"
+    "website": "https://www.kelvinsanchez15.com"
   },
   "education": [
     {
       "location": "",
       "area": "",
-      "studyType": "Full Stack Developer",
-      "endDate": "Dec 2020",
+      "studyType": "Desarrollador full stack",
+      "endDate": "Dic 2020",
       "gpa": "",
       "institution": "freeCodeCamp",
       "startDate": "Jul 2020"
@@ -29,10 +29,22 @@
   ],
   "work": [
     {
-      "position": "Desarrollador Web",
+      "highlights": [
+        "Compilar, mantener y desplegar la plataforma usando Next.js, Redux y Firebase",
+        "Desarrollar funcionalidades desde el diseño hasta la implementación y el lanzamiento",
+        "Probar la aplicación para garantizar que sea responsiva y eficiente"
+      ],
+      "company": "alacartadigital",
+      "position": "Desarrollador full stack",
+      "location": "Madrid, España",
+      "startDate": "Abr 2021",
+      "endDate": "Presente"
+    },
+    {
+      "position": "Desarrollador web",
       "website": "",
       "startDate": "Ene 2019",
-      "endDate": "Presente",
+      "endDate": "Dic 2020",
       "highlights": [
         "Mantener y mejorar el sitio web",
         "Optimizar las páginas web para lograr la máxima velocidad y escalabilidad",
@@ -40,18 +52,6 @@
       ],
       "company": "PETUCA",
       "location": "Ciudad Bolívar, Venezuela"
-    },
-    {
-      "highlights": [
-        "Instalar y configurar hardware y software informático",
-        "Mantener y reparar equipos tecnológicos y periféricos",
-        "Solucionar fallas o errores del sistema y brindar soluciones"
-      ],
-      "company": "PETUCA",
-      "position": "Técnico Informático",
-      "location": "Ciudad Bolívar, Venezuela",
-      "startDate": "Ene 2015",
-      "endDate": "Dic 2018"
     }
   ],
   "skills": [
@@ -63,7 +63,8 @@
         "JavaScript",
         "TypeScript",
         "React",
-        "Next.js"
+        "Next.js",
+        "Redux"
       ],
       "name": "Front-end"
     },
@@ -72,7 +73,7 @@
       "name": "Back-end"
     },
     {
-      "keywords": ["PostgreSQL", "MongoDB"],
+      "keywords": ["PostgreSQL", "MongoDB", "Firebase"],
       "name": "Bases de datos"
     },
     {
