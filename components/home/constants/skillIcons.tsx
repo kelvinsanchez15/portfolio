@@ -1,19 +1,18 @@
 import {
   SiHtml5,
   SiCss3,
-  SiSass,
   SiJavascript,
   SiGit,
   SiNodeDotJs,
   SiReact,
+  SiRedux,
   SiMongodb,
   SiJest,
-  SiMocha,
-  SiD3DotJs,
   SiMaterialUi,
   SiBootstrap,
   SiNextDotJs,
   SiPostgresql,
+  SiFirebase,
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
@@ -26,10 +25,6 @@ const skillLogos = [
   {
     icon: <SiCss3 title="CSS3" />,
     label: 'CSS3',
-  },
-  {
-    icon: <SiSass title="SASS" />,
-    label: 'SASS',
   },
   {
     icon: <SiJavascript title="JavaScript" />,
@@ -48,6 +43,10 @@ const skillLogos = [
     label: 'React',
   },
   {
+    icon: <SiRedux title="Redux" />,
+    label: 'Redux',
+  },
+  {
     icon: <SiNextDotJs title="NextJS" />,
     label: 'NextJS',
   },
@@ -64,16 +63,12 @@ const skillLogos = [
     label: 'MongoDB',
   },
   {
+    icon: <SiFirebase title="Firebase" />,
+    label: 'Firebase',
+  },
+  {
     icon: <SiJest title="Jest" />,
     label: 'Jest',
-  },
-  {
-    icon: <SiMocha title="Mocha" />,
-    label: 'Mocha',
-  },
-  {
-    icon: <SiD3DotJs title="D3" />,
-    label: 'D3',
   },
   {
     icon: <SiTailwindcss title="Tailwind CSS" />,
