@@ -1,6 +1,6 @@
 ## View project
 
-[kelvinsanchez.vercel.app](https://kelvinsanchez.vercel.app/)
+[www.kelvinsanchez15.com](https://www.kelvinsanchez15.com)
 
 ## About the project
 
