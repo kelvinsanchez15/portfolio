@@ -18,7 +18,7 @@
     "resumeTitle": "Resumé",
     "resumeParagraph": "You can check my resumé in the link below.",
     "resumeButton": "Resumé",
-    "resumeLink": "resume/resume-en.pdf",
+    "resumeLink": "/resume/resume-en.pdf",
     "skillsTitle": "Skills"
   },
   "portfolioData": {
@@ -103,7 +103,7 @@
     "p2": "portfolio",
     "p3": " and ",
     "p4": "resumé",
-    "resumeLink": "resume/resume-en.pdf",
+    "resumeLink": "/resume/resume-en.pdf",
     "subtitle": "You can also find me on the following channels",
     "formTitle": "Get in touch",
     "firstNameLabel": "First Name",

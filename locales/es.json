@@ -18,7 +18,7 @@
     "resumeTitle": "Curriculum",
     "resumeParagraph": "Puedes revisar mi curriculum en el siguiente enlace.",
     "resumeButton": "Curriculum",
-    "resumeLink": "resume/resume-es.pdf",
+    "resumeLink": "/resume/resume-es.pdf",
     "skillsTitle": "Habilidades"
   },
   "portfolioData": {
@@ -103,7 +103,7 @@
     "p2": "portafolio",
     "p3": " y ",
     "p4": "curriculum",
-    "resumeLink": "resume/resume-es.pdf",
+    "resumeLink": "/resume/resume-es.pdf",
     "subtitle": "Tambien puedes encontrarme a traves de los siguientes canales",
     "formTitle": "Llena el formulario",
     "firstNameLabel": "Nombre",
