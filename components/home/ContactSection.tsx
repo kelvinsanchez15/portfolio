@@ -56,11 +56,11 @@ const useStyles = makeStyles((theme) => ({
   avatarWrapper: {
     display: 'flex',
     justifyContent: 'center',
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(2.5),
   },
   avatar: {
-    width: theme.spacing(7),
-    height: theme.spacing(7),
+    width: theme.spacing(12),
+    height: theme.spacing(12),
   },
   formHeader: {
     marginBottom: theme.spacing(2),
@@ -168,9 +168,9 @@ export default function Contact({
           <Avatar className={classes.avatar}>
             <Image
               alt="Kelvin Sánchez"
-              height={56}
+              height={160}
               src="/profile-picture.jpg"
-              width={56}
+              width={160}
             />
           </Avatar>
         </div>
