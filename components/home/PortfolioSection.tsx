@@ -17,6 +17,8 @@ import {
 } from '@material-ui/core/';
 import { ChevronRight, GitHub, Visibility } from '@material-ui/icons';
 
+import getDataUrlWithShimmerEffect from '../../utils/getDataUrlWithShimmerEffect';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(10),
@@ -146,9 +148,11 @@ export default function Portfolio({
                 <div className={classes.mediaWrapper}>
                   <Image
                     alt={project.imgAlt}
+                    blurDataURL={getDataUrlWithShimmerEffect(600, 370)}
                     className={classes.media}
                     height={370}
                     layout="responsive"
+                    placeholder="blur"
                     src={`/${project.imgPath}`}
                     width={600}
                   />

@@ -13,6 +13,7 @@ import {
 } from '@material-ui/core/';
 
 import RecentPostCard from '../RecentPostCard';
+import getDataUrlWithShimmerEffect from '../../utils/getDataUrlWithShimmerEffect';
 
 import blogPosts from './constants/blogs';
 
@@ -68,9 +69,11 @@ export default function Blog({ blogData: t }: { blogData: BlogData }) {
               >
                 <Image
                   alt={blogPosts.featuredPost.title}
+                  blurDataURL={getDataUrlWithShimmerEffect(500, 300)}
                   className={classes.media}
                   height={300}
                   layout="responsive"
+                  placeholder="blur"
                   src={blogPosts.featuredPost.mediaSrc}
                   width={500}
                 />
