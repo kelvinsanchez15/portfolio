@@ -12,6 +12,7 @@
     "plugin:import/typescript",
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:@next/next/recommended",
     "prettier"
   ],
   "env": {

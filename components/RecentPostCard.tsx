@@ -7,6 +7,8 @@ import {
   CardActionArea,
 } from '@material-ui/core/';
 
+import getDataUrlWithShimmerEffect from '../utils/getDataUrlWithShimmerEffect';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     marginBottom: theme.spacing(2),
@@ -62,9 +64,11 @@ export default function RecentPostCard({
         <div className={classes.mediaWrapper}>
           <Image
             alt={title}
+            blurDataURL={getDataUrlWithShimmerEffect(500, 300)}
             className={classes.media}
             height={300}
             layout="responsive"
+            placeholder="blur"
             src={mediaSrc}
             width={500}
           />
