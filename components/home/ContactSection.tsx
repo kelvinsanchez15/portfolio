@@ -18,6 +18,7 @@ import {
 
 import Link from '../Link';
 import EmailSuccessMessage from '../EmailSuccessMessage';
+import profilePicture from '../../public/profile-picture.jpg';
 
 import socialIcons from './constants/socialIcons';
 
@@ -169,7 +170,8 @@ export default function Contact({
             <Image
               alt="Kelvin Sánchez"
               height={160}
-              src="/profile-picture.jpg"
+              placeholder="blur"
+              src={profilePicture}
               width={160}
             />
           </Avatar>
