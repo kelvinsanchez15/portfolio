@@ -1,5 +1,5 @@
 {
-  "selectedTemplate": 6,
+  "selectedTemplate": 2,
   "headings": {
     "skills": "Skills",
     "projects": "Projects",
@@ -8,7 +8,7 @@
   },
   "basics": {
     "email": "kelvinsanchez15@gmail.com",
-    "phone": "+584249302355",
+    "phone": "",
     "name": "Kelvin Sánchez",
     "location": {
       "address": "Bolívar, Venezuela"
@@ -37,8 +37,20 @@
       "company": "alacartadigital",
       "position": "Full Stack Developer",
       "location": "Madrid, Spain",
-      "startDate": "Apr 2021",
+      "startDate": "May 2021",
       "endDate": "Present"
+    },
+    {
+      "highlights": [
+        "Frontend development using React and Redux",
+        "Serverless backend development using TypeScript, Node.js, and Google Cloud functions",
+        "Creating user-facing features with Google API integration"
+      ],
+      "company": "Quatro",
+      "position": "Consultant",
+      "location": "United States",
+      "startDate": "May 2021",
+      "endDate": "Jul 2021"
     },
     {
       "position": "Web Developer",
@@ -65,11 +77,11 @@
         "Next.js",
         "Redux"
       ],
-      "name": "Front-end"
+      "name": "Frontend"
     },
     {
-      "keywords": ["Node.js", "Express.js"],
-      "name": "Back-end"
+      "keywords": ["Node.js", "Express.js", "Cloud Functions"],
+      "name": "Backend"
     },
     {
       "keywords": ["PostgreSQL", "MongoDB", "Firebase"],
@@ -84,7 +96,8 @@
       "name": "Testing"
     },
     {
-      "keywords": ["Git", "Figma", "Postman"]
+      "keywords": ["Git", "Figma", "Postman"],
+      "name": "Other"
     }
   ],
   "projects": [

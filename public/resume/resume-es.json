@@ -1,5 +1,5 @@
 {
-  "selectedTemplate": 6,
+  "selectedTemplate": 2,
   "headings": {
     "skills": "Habilidades",
     "projects": "Proyectos",
@@ -8,7 +8,7 @@
   },
   "basics": {
     "email": "kelvinsanchez15@gmail.com",
-    "phone": "+584249302355",
+    "phone": "",
     "name": "Kelvin Sánchez",
     "location": {
       "address": "Bolívar, Venezuela"
@@ -30,7 +30,7 @@
   "work": [
     {
       "highlights": [
-        "Compilar, mantener y desplegar la plataforma usando Next.js, Redux y Firebase",
+        "Compilar, mantener y desplegar la plataforma usando Next.js, Redux, y Firebase",
         "Desarrollar funcionalidades desde el diseño hasta la implementación y el lanzamiento",
         "Probar la aplicación para garantizar que sea responsiva y eficiente"
       ],
@@ -39,6 +39,18 @@
       "location": "Madrid, España",
       "startDate": "Abr 2021",
       "endDate": "Presente"
+    },
+    {
+      "highlights": [
+        "Desarrollo frontend usando React y Redux",
+        "Desarrollo backend serverless utilizando TypeScript, Node.js, y Google Cloud functions",
+        "Crear funcionalidades orientadas al usuario integradas con la API de Google"
+      ],
+      "company": "Quatro",
+      "position": "Consultante",
+      "location": "Estados Unidos",
+      "startDate": "May 2021",
+      "endDate": "Jul 2021"
     },
     {
       "position": "Desarrollador web",
@@ -66,11 +78,11 @@
         "Next.js",
         "Redux"
       ],
-      "name": "Front-end"
+      "name": "Frontend"
     },
     {
-      "keywords": ["Node.js", "Express.js"],
-      "name": "Back-end"
+      "keywords": ["Node.js", "Express.js", "Cloud Functions"],
+      "name": "Backend"
     },
     {
       "keywords": ["PostgreSQL", "MongoDB", "Firebase"],
@@ -85,7 +97,8 @@
       "name": "Testing"
     },
     {
-      "keywords": ["Git", "Figma", "Postman"]
+      "keywords": ["Git", "Figma", "Postman"],
+      "name": "Otras"
     }
   ],
   "projects": [
