@@ -1,4 +1,10 @@
 {
+  "defaultSeo": {
+    "title": "Kelvin Sánchez | Desarrollador full stack",
+    "description": "Kelvin Sánchez es un desarrollador full stack, con experiencia en la creación de sitios web y aplicaciones web hermosas y funcionales.",
+    "url": "https://www.kelvinsanchez15.com/",
+    "previewImage": "https://user-images.githubusercontent.com/4708484/93688063-050a8980-fa91-11ea-89ca-3530a9038393.png"
+  },
   "heroData": {
     "greetings": "HOLA, ",
     "introduction": "soy Kelvin Sánchez",
