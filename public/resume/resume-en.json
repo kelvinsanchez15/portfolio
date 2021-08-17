@@ -11,7 +11,7 @@
     "phone": "",
     "name": "Kelvin Sánchez",
     "location": {
-      "address": "Bolívar, Venezuela"
+      "address": "Texas, Houston"
     },
     "website": "https://www.kelvinsanchez15.com"
   },
@@ -47,7 +47,7 @@
         "Creating user-facing features with Google API integration"
       ],
       "company": "Quatro",
-      "position": "Consultant",
+      "position": "Web Consultant",
       "location": "United States",
       "startDate": "May 2021",
       "endDate": "Jul 2021"

@@ -11,7 +11,7 @@
     "phone": "",
     "name": "Kelvin Sánchez",
     "location": {
-      "address": "Bolívar, Venezuela"
+      "address": "Texas, Houston"
     },
     "website": "https://www.kelvinsanchez15.com"
   },
@@ -47,7 +47,7 @@
         "Crear funcionalidades orientadas al usuario integradas con la API de Google"
       ],
       "company": "Quatro",
-      "position": "Consultante",
+      "position": "Consultante Web",
       "location": "Estados Unidos",
       "startDate": "May 2021",
       "endDate": "Jul 2021"
