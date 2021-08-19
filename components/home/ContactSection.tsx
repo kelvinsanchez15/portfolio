@@ -148,14 +148,8 @@ export default function Contact({
     validationSchema,
   });
 
-  const {
-    errors,
-    touched,
-    values,
-    handleChange,
-    handleSubmit,
-    getFieldProps,
-  } = formik;
+  const { errors, touched, values, handleChange, handleSubmit, getFieldProps } =
+    formik;
 
   return (
     <section className={classes.root} id="contact">
