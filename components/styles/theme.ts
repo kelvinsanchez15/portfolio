@@ -1,9 +1,9 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import cyan from '@material-ui/core/colors/cyan';
 
 // Create a theme instance.
 const theme = responsiveFontSizes(
-  createMuiTheme({
+  createTheme({
     palette: {
       type: 'dark',
       primary: cyan,
