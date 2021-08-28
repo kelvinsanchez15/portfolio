@@ -12,6 +12,13 @@ const theme = responsiveFontSizes(
       },
     },
     overrides: {
+      MuiCssBaseline: {
+        '@global': {
+          html: {
+            scrollBehavior: 'smooth',
+          },
+        },
+      },
       MuiListItemIcon: {
         root: {
           minWidth: 0,
