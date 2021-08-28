@@ -66,6 +66,21 @@
         "technologies": ["Tailwind", "TypeScript", "React", "NextJS"]
       },
       {
+        "name": "BombaiMTY",
+        "projectUrl": "https://bombai-mty-menu.vercel.app/",
+        "repoUrl": "https://github.com/kelvinsanchez15/bombai-menu",
+        "imgPath": "projectMedia/bombai-mty.png",
+        "imgAlt": "BombaiMTY website preview",
+        "summary": "Fast food sales portal with WhatsApp checkout.",
+        "keyFeatures": [
+          "Product filter",
+          "Shopping cart",
+          "Cover photo",
+          "Google Sheets integration"
+        ],
+        "technologies": ["Chakra UI", "TypeScript", "React", "NextJS"]
+      },
+      {
         "name": "A-Note",
         "projectUrl": "https://a-note.vercel.app",
         "repoUrl": "https://github.com/kelvinsanchez15/a-note",
@@ -79,22 +94,6 @@
           "Profile customization"
         ],
         "technologies": ["React", "NextJS", "MongoDB", "Material-UI", "SWR"]
-      },
-      {
-        "name": "Anonymous Message Board",
-        "projectUrl": "https://anonymous-message-board-kel.glitch.me",
-        "repoUrl": "https://github.com/kelvinsanchez15/anonymous-message-board",
-        "imgPath": "projectMedia/anonymous-message-board.jpg",
-        "imgAlt": "Anonymous message board preview",
-        "summary": "A web app where users can create boards, post comments and remove them.",
-        "keyFeatures": [
-          "RESTful API",
-          "Server side rendering",
-          "Dark theme",
-          "Flash alerts",
-          "Unit tests"
-        ],
-        "technologies": ["Express", "Node", "MongoDB", "PUG"]
       }
     ]
   },

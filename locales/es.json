@@ -66,6 +66,21 @@
         "technologies": ["Tailwind", "TypeScript", "React", "NextJS"]
       },
       {
+        "name": "BombaiMTY",
+        "projectUrl": "https://bombai-mty-menu.vercel.app/",
+        "repoUrl": "https://github.com/kelvinsanchez15/bombai-menu",
+        "imgPath": "projectMedia/bombai-mty.png",
+        "imgAlt": "Vista previa del sitio BombaiMTY",
+        "summary": "Portal de venta de comida rápida con pagos por WhatsApp.",
+        "keyFeatures": [
+          "Filtro de productos",
+          "Carrito de compras",
+          "Foto de portada",
+          "Integración con Google Sheets"
+        ],
+        "technologies": ["Chakra UI", "TypeScript", "React", "NextJS"]
+      },
+      {
         "name": "A-Note",
         "projectUrl": "https://a-note.vercel.app",
         "repoUrl": "https://github.com/kelvinsanchez15/a-note",
@@ -79,22 +94,6 @@
           "Perfil personalizado"
         ],
         "technologies": ["React", "NextJS", "MongoDB", "Material-UI", "SWR"]
-      },
-      {
-        "name": "Tablón de Mensajes Anónimos",
-        "projectUrl": "https://anonymous-message-board-kel.glitch.me",
-        "repoUrl": "https://github.com/kelvinsanchez15/anonymous-message-board",
-        "imgPath": "projectMedia/anonymous-message-board.jpg",
-        "imgAlt": "Vista previa del Tablón de Mensajes Anónimos",
-        "summary": "Una aplicación web en donde los usuarios pueden crear tablones, publicar comentarios, removerlos, entre otras funciones.",
-        "keyFeatures": [
-          "API RESTful",
-          "Server side rendering",
-          "Tema oscuro",
-          "Alertas flash",
-          "Pruebas unitarias"
-        ],
-        "technologies": ["Express", "Node", "MongoDB", "PUG"]
       }
     ]
   },
