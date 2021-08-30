@@ -3,10 +3,20 @@ import { Container, Button, Typography, Grid } from '@material-ui/core/';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
     backgroundColor: theme.palette.grey[900],
+  },
+  container: {
+    minHeight: '95vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundImage: `url('/hero-graphic.svg')`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'right -2rem bottom',
+    [theme.breakpoints.down('md')]: {
+      minHeight: '100vh',
+      background: 'none',
+    },
   },
   wrapper: {
     marginBottom: theme.spacing(7),
@@ -39,7 +49,7 @@ export default function Hero({ heroData: t }: { heroData: HeroData }) {
 
   return (
     <section className={classes.root} id="home">
-      <Container>
+      <Container className={classes.container}>
         <div className={classes.wrapper}>
           <Typography gutterBottom component="h4" variant="h5">
             <Typography color="primary" variant="inherit">
