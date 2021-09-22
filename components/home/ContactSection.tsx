@@ -108,9 +108,9 @@ export default function Contact({
           {t.title}
         </Typography>
 
-        <ShortCenteredDivider sx={{ mb: 2.5 }} />
+        <ShortCenteredDivider sx={{ mb: 4 }} />
 
-        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
           <Avatar sx={{ width: 96, height: 96 }}>
             <Image
               alt="Kelvin Sánchez"
