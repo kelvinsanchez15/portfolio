@@ -1,36 +1,24 @@
-import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
-import cyan from '@material-ui/core/colors/cyan';
+import { createTheme, responsiveFontSizes } from '@mui/material';
+import { cyan, pink } from '@mui/material/colors';
 
 // Create a theme instance.
 const theme = responsiveFontSizes(
   createTheme({
     palette: {
-      type: 'dark',
+      mode: 'dark',
       primary: cyan,
+      secondary: pink,
       error: {
         main: '#ff6358',
       },
     },
-    overrides: {
+    components: {
       MuiCssBaseline: {
-        '@global': {
-          html: {
-            scrollBehavior: 'smooth',
-          },
-        },
-      },
-      MuiListItemIcon: {
-        root: {
-          minWidth: 0,
-          marginRight: '0.5rem',
-        },
-      },
-      MuiOutlinedInput: {
-        input: {
-          '&:-webkit-autofill': {
-            WebkitBoxShadow: '0 0 0 100px #1d3140 inset',
-          },
-        },
+        styleOverrides: `
+          html {
+            scroll-behavior: smooth;
+          }
+        `,
       },
     },
   })

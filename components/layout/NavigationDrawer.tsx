@@ -1,5 +1,5 @@
-import { makeStyles } from '@material-ui/core/styles';
 import {
+  Box,
   List,
   ListItem,
   ListItemIcon,
@@ -7,24 +7,10 @@ import {
   Drawer,
   IconButton,
   Divider,
-} from '@material-ui/core';
-import CloseIcon from '@material-ui/icons/Close';
+} from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 
 import Link from '../Link';
-
-const useStyles = makeStyles((theme) => ({
-  drawerHeader: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-  },
-  listItemIcon: {
-    minWidth: '56px',
-  },
-}));
 
 interface MenuItems {
   link: string;
@@ -40,15 +26,23 @@ interface NavigationDrawerProps {
 
 export default function NavigationDrawer(props: NavigationDrawerProps) {
   const { menuItems, open, onClose } = props;
-  const classes = useStyles();
 
   return (
     <Drawer anchor="right" open={open} variant="temporary" onClose={onClose}>
-      <div className={classes.drawerHeader}>
-        <IconButton onClick={onClose}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          alignItems: 'center',
+          px: 1,
+          // TODO: Remove hardcoded values when theme.mixins.toolbar gets adapted to MUI v5
+          minHeight: { xs: 48, sm: 64 },
+        }}
+      >
+        <IconButton size="large" onClick={onClose}>
           <CloseIcon color="secondary" fontSize="large" />
         </IconButton>
-      </div>
+      </Box>
       <Divider />
       <List>
         {menuItems.map((item) => (
@@ -58,9 +52,7 @@ export default function NavigationDrawer(props: NavigationDrawerProps) {
             onClick={onClose}
             {...{ component: Link, href: item.link, noLinkStyle: true }}
           >
-            <ListItemIcon className={classes.listItemIcon}>
-              {item.icon}
-            </ListItemIcon>
+            <ListItemIcon>{item.icon}</ListItemIcon>
             <ListItemText primary={item.name} />
           </ListItem>
         ))}

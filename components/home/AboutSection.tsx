@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/material/styles';
 import {
   Container,
   Divider,
@@ -10,41 +10,15 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-} from '@material-ui/core/';
-import { Code, Description } from '@material-ui/icons';
+} from '@mui/material/';
+import { Code, Description } from '@mui/icons-material';
 
 import skillIcons from './constants/skillIcons';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(8),
-  },
-  divider: {
-    height: '4px',
-    width: '60px',
-    backgroundColor: theme.palette.primary.main,
-  },
-  resumeBtn: {
-    margin: '1rem',
-  },
-  skills: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    fontSize: '4rem',
-    [theme.breakpoints.down('xs')]: {
-      justifyContent: 'space-around',
-    },
-  },
-  skillIcon: {
-    marginRight: '1.3rem',
-    '&:hover': {
-      color: theme.palette.primary.light,
-    },
-    [theme.breakpoints.down('xs')]: {
-      margin: '0 0.4rem',
-    },
-  },
+const CustomDivider = styled(Divider)(({ theme }) => ({
+  height: '4px',
+  width: '60px',
+  backgroundColor: theme.palette.primary.main,
 }));
 
 interface AboutData {
@@ -58,17 +32,19 @@ interface AboutData {
 }
 
 export default function About({ aboutData: t }: { aboutData: AboutData }) {
-  const classes = useStyles();
-
   return (
-    <section className={classes.root} id="about">
+    <Box
+      component="section"
+      id="about"
+      sx={{ pb: 8, pt: 10, bgcolor: (theme) => theme.palette.grey[900] }}
+    >
       <Container>
         <Grid container spacing={4}>
           <Grid item md={4} xs={12}>
             <Typography gutterBottom component="h2" variant="h3">
               {t.aboutTitle}
             </Typography>
-            <Divider className={classes.divider} />
+            <CustomDivider />
           </Grid>
 
           <Grid item md={8} xs={12}>
@@ -88,7 +64,7 @@ export default function About({ aboutData: t }: { aboutData: AboutData }) {
             <Typography gutterBottom component="h2" variant="h3">
               {t.resumeTitle}
             </Typography>
-            <Divider className={classes.divider} />
+            <CustomDivider />
           </Grid>
 
           <Grid item md={8} xs={12}>
@@ -97,12 +73,12 @@ export default function About({ aboutData: t }: { aboutData: AboutData }) {
             </Typography>
 
             <Button
-              className={classes.resumeBtn}
               color="primary"
               endIcon={<Description />}
               href={t.resumeLink}
               rel="noopener"
               size="large"
+              sx={{ m: 2 }}
               target="_blank"
               variant="outlined"
             >
@@ -114,20 +90,41 @@ export default function About({ aboutData: t }: { aboutData: AboutData }) {
             <Typography gutterBottom component="h2" variant="h3">
               {t.skillsTitle}
             </Typography>
-            <Divider className={classes.divider} />
+            <CustomDivider />
           </Grid>
 
           <Grid item md={8} xs={12}>
-            <Box className={classes.skills}>
+            <Box
+              sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                fontSize: '4rem',
+                justifyContent: {
+                  xs: 'space-around',
+                  md: 'initial',
+                },
+              }}
+            >
               {skillIcons.map((skillIcon) => (
-                <div key={skillIcon.label} className={classes.skillIcon}>
+                <Box
+                  key={skillIcon.label}
+                  sx={{
+                    m: {
+                      xs: '0 0.4rem',
+                      md: '0 1.3rem 0 0',
+                    },
+                    '&:hover': {
+                      color: 'primary.light',
+                    },
+                  }}
+                >
                   {skillIcon.icon}
-                </div>
+                </Box>
               ))}
             </Box>
           </Grid>
         </Grid>
       </Container>
-    </section>
+    </Box>
   );
 }

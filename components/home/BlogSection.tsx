@@ -1,42 +1,20 @@
 import Image from 'next/image';
-import { makeStyles } from '@material-ui/core/styles';
 import {
+  Box,
   Container,
-  Divider,
   Grid,
   Typography,
   Card,
   CardContent,
   CardActionArea,
   Button,
-  Hidden,
-} from '@material-ui/core/';
+} from '@mui/material/';
 
+import ShortCenteredDivider from '../ui/ShortCenteredDivider';
 import RecentPostCard from '../RecentPostCard';
 import getDataUrlWithShimmerEffect from '../../utils/getDataUrlWithShimmerEffect';
 
 import blogPosts from './constants/blogs';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(8),
-  },
-  divider: {
-    height: '4px',
-    width: '60px',
-    backgroundColor: theme.palette.primary.main,
-    margin: 'auto',
-    marginBottom: theme.spacing(4),
-  },
-  card: {
-    marginBottom: theme.spacing(2),
-  },
-  media: {
-    height: 300,
-    objectFit: 'cover',
-  },
-}));
 
 interface BlogData {
   featuredArticle: string;
@@ -45,21 +23,25 @@ interface BlogData {
 }
 
 export default function Blog({ blogData: t }: { blogData: BlogData }) {
-  const classes = useStyles();
-
   return (
-    <section className={classes.root} id="blog">
+    <Box
+      component="section"
+      id="blog"
+      sx={{ pb: 8, pt: 10, bgcolor: (theme) => theme.palette.grey[900] }}
+    >
       <Container>
         <Typography gutterBottom align="center" component="h2" variant="h3">
           BLOG
         </Typography>
-        <Divider className={classes.divider} />
+
+        <ShortCenteredDivider />
+
         <Grid container spacing={4}>
           <Grid item md={5} xs={12}>
             <Typography gutterBottom align="left" component="h2" variant="h4">
               {t.featuredArticle}
             </Typography>
-            <Card className={classes.card} component="article">
+            <Card component="article" elevation={8} sx={{ mb: 2 }}>
               <CardActionArea
                 disableRipple
                 component="a"
@@ -70,9 +52,9 @@ export default function Blog({ blogData: t }: { blogData: BlogData }) {
                 <Image
                   alt={blogPosts.featuredPost.title}
                   blurDataURL={getDataUrlWithShimmerEffect(500, 300)}
-                  className={classes.media}
                   height={300}
                   layout="responsive"
+                  objectFit="cover"
                   placeholder="blur"
                   src={blogPosts.featuredPost.mediaSrc}
                   width={500}
@@ -99,18 +81,18 @@ export default function Blog({ blogData: t }: { blogData: BlogData }) {
                 </CardContent>
               </CardActionArea>
             </Card>
-            <Hidden smDown implementation="css">
-              <Button
-                fullWidth
-                href="https://www.freecodecamp.org/espanol/news/author/kelvin/"
-                rel="noopener"
-                size="large"
-                target="_blank"
-                variant="contained"
-              >
-                {t.button}
-              </Button>
-            </Hidden>
+
+            <Button
+              fullWidth
+              href="https://www.freecodecamp.org/espanol/news/author/kelvin/"
+              rel="noopener"
+              size="large"
+              sx={{ display: { xs: 'none', md: 'flex' } }}
+              target="_blank"
+              variant="contained"
+            >
+              {t.button}
+            </Button>
           </Grid>
           <Grid item md={7} xs={12}>
             <Typography gutterBottom align="right" component="h2" variant="h4">
@@ -128,21 +110,20 @@ export default function Blog({ blogData: t }: { blogData: BlogData }) {
               ))}
             </div>
 
-            <Hidden mdUp implementation="css">
-              <Button
-                fullWidth
-                href="https://www.freecodecamp.org/espanol/news/author/kelvin/"
-                rel="noopener"
-                size="large"
-                target="_blank"
-                variant="contained"
-              >
-                {t.button}
-              </Button>
-            </Hidden>
+            <Button
+              fullWidth
+              href="https://www.freecodecamp.org/espanol/news/author/kelvin/"
+              rel="noopener"
+              size="large"
+              sx={{ display: { md: 'none' } }}
+              target="_blank"
+              variant="contained"
+            >
+              {t.button}
+            </Button>
           </Grid>
         </Grid>
       </Container>
-    </section>
+    </Box>
   );
 }
