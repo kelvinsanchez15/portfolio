@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import { makeStyles } from '@material-ui/core/styles';
 import {
+  Box,
   Container,
   Typography,
-  Divider,
   Grid,
   Card,
   CardContent,
@@ -14,99 +13,11 @@ import {
   ListItemText,
   ButtonGroup,
   Button,
-} from '@material-ui/core/';
-import { ChevronRight, GitHub, Visibility } from '@material-ui/icons';
+} from '@mui/material/';
+import { ChevronRight, GitHub, Visibility } from '@mui/icons-material';
 
+import ShortCenteredDivider from '../ui/ShortCenteredDivider';
 import getDataUrlWithShimmerEffect from '../../utils/getDataUrlWithShimmerEffect';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(8),
-    backgroundColor: theme.palette.grey[900],
-  },
-  container: {
-    [theme.breakpoints.down('xs')]: {
-      padding: 0,
-    },
-  },
-  grid: {
-    [theme.breakpoints.down('xs')]: {
-      padding: 0,
-      margin: 0,
-      width: '100%',
-      '& > .MuiGrid-item': {
-        padding: theme.spacing(2, 0),
-      },
-    },
-  },
-  divider: {
-    height: '4px',
-    width: '60px',
-    backgroundColor: theme.palette.primary.main,
-    margin: 'auto',
-  },
-  cardStyle: {
-    display: 'flex',
-    height: '100%',
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
-    },
-  },
-  content: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    height: '100%',
-    [theme.breakpoints.up('lg')]: {
-      width: '80%',
-    },
-  },
-  mediaWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    position: 'relative',
-    [theme.breakpoints.up('lg')]: {
-      flex: '1 1 600px',
-    },
-  },
-  media: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-  },
-  overlay: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.7);',
-    opacity: 0,
-    transition: 'all 0.3s ease-in-out',
-    '&:hover': {
-      opacity: 1,
-    },
-  },
-  keyFeatures: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    '& > *': {
-      display: 'flex',
-      flex: '0 0 50%',
-    },
-    [theme.breakpoints.down('sm')]: {
-      '& > *': {
-        display: 'flex',
-        flex: '0 0 100%',
-      },
-    },
-  },
-  chip: {
-    margin: theme.spacing(0.5),
-  },
-}));
 
 interface Project {
   name: string;
@@ -129,35 +40,68 @@ export default function Portfolio({
 }: {
   portfolioData: PortfolioData;
 }) {
-  const classes = useStyles();
-
   return (
-    <section className={classes.root} id="portfolio">
-      <Container className={classes.container}>
-        <Grid container className={classes.grid} spacing={4}>
-          <Grid item xs={12}>
-            <Typography gutterBottom align="center" component="h2" variant="h3">
-              {t.portfolioTitle}
-            </Typography>
-            <Divider className={classes.divider} />
-          </Grid>
+    <Box component="section" id="portfolio" sx={{ pb: 8, pt: 10 }}>
+      <Container>
+        <Typography gutterBottom align="center" component="h2" variant="h3">
+          {t.portfolioTitle}
+        </Typography>
 
+        <ShortCenteredDivider sx={{ mb: 4 }} />
+
+        <Grid container spacing={4}>
           {t.projects.map((project) => (
             <Grid key={project.name} item lg={12} sm={6} xs={12}>
-              <Card className={classes.cardStyle} elevation={4}>
-                <div className={classes.mediaWrapper}>
-                  <Image
-                    alt={project.imgAlt}
-                    blurDataURL={getDataUrlWithShimmerEffect(600, 370)}
-                    className={classes.media}
-                    height={370}
-                    layout="responsive"
-                    placeholder="blur"
-                    src={`/${project.imgPath}`}
-                    width={600}
-                  />
+              <Card
+                elevation={4}
+                sx={{
+                  display: 'flex',
+                  height: '100%',
+                  flexDirection: {
+                    xs: 'column',
+                    lg: 'row',
+                  },
+                }}
+              >
+                <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    position: 'relative',
+                    flex: {
+                      lg: '1 1 600px',
+                    },
+                  }}
+                >
+                  <div>
+                    <Image
+                      alt={project.imgAlt}
+                      blurDataURL={getDataUrlWithShimmerEffect(600, 370)}
+                      height={370}
+                      layout="responsive"
+                      placeholder="blur"
+                      src={`/${project.imgPath}`}
+                      width={600}
+                    />
+                  </div>
 
-                  <div className={classes.overlay}>
+                  {/* Overlay */}
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      height: '100%',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      backgroundColor: 'rgba(0, 0, 0, 0.7);',
+                      opacity: 0,
+                      transition: 'all 0.3s ease-in-out',
+                      '&:hover': {
+                        opacity: 1,
+                      },
+                    }}
+                  >
                     <ButtonGroup variant="contained">
                       <Button
                         aria-label="Link to project GitHub repository"
@@ -180,10 +124,20 @@ export default function Portfolio({
                         Live
                       </Button>
                     </ButtonGroup>
-                  </div>
-                </div>
+                  </Box>
+                </Box>
 
-                <CardContent className={classes.content}>
+                <CardContent
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    height: '100%',
+                    width: {
+                      lg: '80%',
+                    },
+                  }}
+                >
                   <div>
                     <Typography gutterBottom component="h3" variant="h5">
                       {project.name}
@@ -196,10 +150,22 @@ export default function Portfolio({
                       {project.summary}
                     </Typography>
 
-                    <List dense className={classes.keyFeatures}>
+                    <List
+                      dense
+                      sx={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        '& > *': {
+                          flex: {
+                            xs: '0 0 100%',
+                            lg: '0 0 50%',
+                          },
+                        },
+                      }}
+                    >
                       {project.keyFeatures.map((feature) => (
                         <ListItem key={feature}>
-                          <ListItemIcon>
+                          <ListItemIcon sx={{ minWidth: 34 }}>
                             <ChevronRight color="secondary" />
                           </ListItemIcon>
                           <ListItemText primary={feature} />
@@ -212,9 +178,9 @@ export default function Portfolio({
                     {project.technologies.map((e) => (
                       <Chip
                         key={e}
-                        className={classes.chip}
                         label={e}
                         size="small"
+                        sx={{ m: 0.5 }}
                         variant="outlined"
                       />
                     ))}
@@ -225,6 +191,6 @@ export default function Portfolio({
           ))}
         </Grid>
       </Container>
-    </section>
+    </Box>
   );
 }

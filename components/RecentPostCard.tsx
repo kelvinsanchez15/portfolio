@@ -1,41 +1,13 @@
 import Image from 'next/image';
-import { makeStyles } from '@material-ui/core/styles';
 import {
+  Box,
   Typography,
   Card,
   CardContent,
   CardActionArea,
-} from '@material-ui/core/';
+} from '@mui/material/';
 
 import getDataUrlWithShimmerEffect from '../utils/getDataUrlWithShimmerEffect';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    marginBottom: theme.spacing(2),
-  },
-  cardActionArea: {
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-      flexDirection: 'row',
-      flex: '1 1 100%',
-    },
-  },
-  mediaWrapper: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'block',
-      flex: '1 1 260px',
-    },
-  },
-  media: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-  },
-  cardContent: {
-    flex: '0 1 80%',
-  },
-}));
 
 interface RecentPostCardProps {
   title: string;
@@ -50,31 +22,42 @@ export default function RecentPostCard({
   link,
   mediaSrc,
 }: RecentPostCardProps) {
-  const classes = useStyles();
   return (
-    <Card className={classes.root} component="article">
+    <Card component="article" elevation={8} sx={{ mb: 2 }}>
       <CardActionArea
         disableRipple
-        className={classes.cardActionArea}
         component="a"
         href={link}
         rel="noopener"
+        sx={{
+          display: { md: 'flex' },
+          flexDirection: { md: 'row' },
+          flex: { md: '1 1 100%' },
+        }}
         target="_blank"
       >
-        <div className={classes.mediaWrapper}>
+        <Box
+          sx={{
+            display: {
+              xs: 'none',
+              md: 'block',
+            },
+            flex: { md: '1 1 260px' },
+          }}
+        >
           <Image
             alt={title}
             blurDataURL={getDataUrlWithShimmerEffect(500, 300)}
-            className={classes.media}
             height={300}
             layout="responsive"
+            objectFit="cover"
             placeholder="blur"
             src={mediaSrc}
             width={500}
           />
-        </div>
+        </Box>
 
-        <CardContent className={classes.cardContent}>
+        <CardContent sx={{ flex: '0 1 80%' }}>
           <Typography color="textSecondary" component="p" variant="body2">
             {`#${category}`}
           </Typography>

@@ -1,39 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
-import { Container, Button, Typography, Grid } from '@material-ui/core/';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: theme.palette.grey[900],
-  },
-  container: {
-    minHeight: '95vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    backgroundImage: `url('/hero-graphic.svg')`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'right -2rem bottom',
-    [theme.breakpoints.down('md')]: {
-      minHeight: '100vh',
-      background: 'none',
-    },
-  },
-  wrapper: {
-    marginBottom: theme.spacing(7),
-  },
-  responsiveButtonSize: {
-    [theme.breakpoints.down('xs')]: {
-      padding: '6px 16px',
-      fontSize: theme.typography.button.fontSize,
-    },
-  },
-  responsiveOutlinedButtonSize: {
-    [theme.breakpoints.down('xs')]: {
-      padding: '5px 15px',
-      fontSize: theme.typography.button.fontSize,
-    },
-  },
-}));
+import { Box, Container, Button, Typography, Grid } from '@mui/material/';
 
 interface HeroData {
   greetings: string;
@@ -45,14 +10,27 @@ interface HeroData {
 }
 
 export default function Hero({ heroData: t }: { heroData: HeroData }) {
-  const classes = useStyles();
-
   return (
-    <section className={classes.root} id="home">
-      <Container className={classes.container}>
-        <div className={classes.wrapper}>
+    <Box component="section" id="home">
+      <Container
+        sx={{
+          minHeight: {
+            xs: '100vh',
+            lg: '95vh',
+          },
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          backgroundImage: {
+            lg: `url('/hero-graphic.svg')`,
+          },
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'right -2rem bottom',
+        }}
+      >
+        <Box mb={7}>
           <Typography gutterBottom component="h4" variant="h5">
-            <Typography color="primary" variant="inherit">
+            <Typography color="primary" component="span" variant="inherit">
               {t.greetings}
             </Typography>
             {t.introduction}
@@ -65,12 +43,11 @@ export default function Hero({ heroData: t }: { heroData: HeroData }) {
           <Typography color="textSecondary" component="p" variant="subtitle1">
             {t.paragraph}
           </Typography>
-        </div>
+        </Box>
 
         <Grid container spacing={2}>
           <Grid item>
             <Button
-              className={classes.responsiveButtonSize}
               color="primary"
               href="#portfolio"
               size="large"
@@ -81,7 +58,6 @@ export default function Hero({ heroData: t }: { heroData: HeroData }) {
           </Grid>
           <Grid item>
             <Button
-              className={classes.responsiveOutlinedButtonSize}
               color="primary"
               href="#contact"
               size="large"
@@ -92,6 +68,6 @@ export default function Hero({ heroData: t }: { heroData: HeroData }) {
           </Grid>
         </Grid>
       </Container>
-    </section>
+    </Box>
   );
 }

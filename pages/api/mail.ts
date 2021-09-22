@@ -26,9 +26,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       await sgMail.send(msg);
       return res.status(200).end();
     } catch (error) {
-      return res.status(500).json({
-        message: `ERROR SENDING EMAIL VIA SENDGRID: ${error.message}`,
-      });
+      if (error instanceof Error) {
+        return res.status(500).json({
+          message: `ERROR SENDING EMAIL VIA SENDGRID: ${error.message}`,
+        });
+      }
     }
   }
   return res.status(200).end();

@@ -1,28 +1,17 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { makeStyles } from '@material-ui/core/styles';
-import { Button, FormControl, Menu, MenuItem } from '@material-ui/core';
+import { Button, FormControl, Menu, MenuItem } from '@mui/material';
 import {
   Translate as TranslateIcon,
   KeyboardArrowDown as KeyboardArrowDownIcon,
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 
 const languages = [
   { code: 'en', text: 'English' },
   { code: 'es', text: 'Español' },
 ];
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    marginLeft: theme.spacing(2),
-    [theme.breakpoints.down('sm')]: {
-      marginRight: theme.spacing(2),
-    },
-  },
-}));
-
 export default function LanguageSelector() {
-  const classes = useStyles();
   const router = useRouter();
   const { locale } = router;
 
@@ -44,7 +33,7 @@ export default function LanguageSelector() {
   };
 
   return (
-    <FormControl className={classes.root}>
+    <FormControl sx={{ ml: 2, mr: { xs: 2, md: 0 } }}>
       <Button
         aria-haspopup="true"
         endIcon={<KeyboardArrowDownIcon />}

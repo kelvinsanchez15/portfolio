@@ -2,8 +2,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useFormik, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
-import { makeStyles } from '@material-ui/core/styles';
 import {
+  Box,
   Container,
   Grid,
   TextField,
@@ -14,62 +14,14 @@ import {
   CardContent,
   IconButton,
   Avatar,
-} from '@material-ui/core';
+} from '@mui/material';
 
+import ShortCenteredDivider from '../ui/ShortCenteredDivider';
 import Link from '../Link';
 import EmailSuccessMessage from '../EmailSuccessMessage';
 import profilePicture from '../../public/profile-picture.jpg';
 
 import socialIcons from './constants/socialIcons';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(8),
-    backgroundColor: theme.palette.grey[900],
-  },
-  divider: {
-    height: '4px',
-    width: '60px',
-    backgroundColor: theme.palette.primary.main,
-    margin: 'auto',
-    marginBottom: theme.spacing(4),
-  },
-  card: {
-    marginBottom: theme.spacing(4),
-  },
-  linkColor: {
-    color: theme.palette.primary.light,
-  },
-  socialIconWrapper: {
-    display: 'flex',
-    justifyContent: 'center',
-  },
-  socialIcon: {
-    fill: theme.palette.common.white,
-    '&:hover': {
-      fill: theme.palette.primary.light,
-    },
-    '&:focus': {
-      fill: theme.palette.primary.light,
-    },
-  },
-  avatarWrapper: {
-    display: 'flex',
-    justifyContent: 'center',
-    marginBottom: theme.spacing(2.5),
-  },
-  avatar: {
-    width: theme.spacing(12),
-    height: theme.spacing(12),
-  },
-  formHeader: {
-    marginBottom: theme.spacing(2),
-  },
-  submitButton: {
-    marginTop: theme.spacing(1),
-  },
-}));
 
 interface ContactData {
   title: string;
@@ -102,8 +54,6 @@ export default function Contact({
 }: {
   contactData: ContactData;
 }) {
-  const classes = useStyles();
-
   const [displayMessage, setDisplayMessage] = useState(false);
   const [senderFirstName, setSenderFirstName] = useState('');
 
@@ -152,15 +102,16 @@ export default function Contact({
     formik;
 
   return (
-    <section className={classes.root} id="contact">
+    <Box component="section" id="contact" sx={{ pb: 8, pt: 10 }}>
       <Container maxWidth="sm">
         <Typography gutterBottom align="center" component="h2" variant="h3">
           {t.title}
         </Typography>
-        <Divider className={classes.divider} />
 
-        <div className={classes.avatarWrapper}>
-          <Avatar className={classes.avatar}>
+        <ShortCenteredDivider sx={{ mb: 4 }} />
+
+        <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
+          <Avatar sx={{ width: 96, height: 96 }}>
             <Image
               alt="Kelvin Sánchez"
               height={160}
@@ -169,22 +120,15 @@ export default function Contact({
               width={160}
             />
           </Avatar>
-        </div>
+        </Box>
 
-        <Card className={classes.card}>
+        <Card sx={{ mb: 4 }}>
           <CardContent>
             <Typography color="textSecondary" component="p" variant="body2">
               {t.p1}
-              <Link className={classes.linkColor} href="/#portfolio">
-                {t.p2}
-              </Link>
+              <Link href="/#portfolio">{t.p2}</Link>
               {t.p3}
-              <Link
-                className={classes.linkColor}
-                href={t.resumeLink}
-                rel="noopener"
-                target="_blank"
-              >
+              <Link href={t.resumeLink} rel="noopener" target="_blank">
                 {t.p4}
               </Link>
               .
@@ -204,30 +148,34 @@ export default function Contact({
               {t.subtitle}
             </Typography>
 
-            <div className={classes.socialIconWrapper}>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
               {socialIcons.map((socialIcon) => (
                 <IconButton
                   key={socialIcon.label}
                   aria-label={socialIcon.label}
-                  className={classes.socialIcon}
                   component="a"
                   href={socialIcon.href}
                   rel="noopener"
+                  size="large"
+                  sx={{
+                    fill: (theme) => theme.palette.common.white,
+                    '&:hover': {
+                      fill: (theme) => theme.palette.primary.main,
+                    },
+                    '&:focus': {
+                      fill: (theme) => theme.palette.primary.main,
+                    },
+                  }}
                   target="_blank"
                 >
                   {socialIcon.icon}
                 </IconButton>
               ))}
-            </div>
+            </Box>
           </CardContent>
         </Card>
 
-        <Typography
-          align="center"
-          className={classes.formHeader}
-          component="h3"
-          variant="h4"
-        >
+        <Typography align="center" component="h3" mb={2} variant="h4">
           {t.formTitle}
         </Typography>
 
@@ -300,11 +248,11 @@ export default function Contact({
             <Grid item xs={12}>
               <Button
                 fullWidth
-                className={classes.submitButton}
                 color="primary"
                 size="large"
+                sx={{ mt: 1 }}
                 type="submit"
-                variant="outlined"
+                variant="contained"
               >
                 {t.submitButton}
               </Button>
@@ -318,6 +266,6 @@ export default function Contact({
           setDisplayMessage={setDisplayMessage}
         />
       </Container>
-    </section>
+    </Box>
   );
 }
