@@ -43,15 +43,13 @@ export default function Portfolio({
   return (
     <Box component="section" id="portfolio" sx={{ pb: 8, pt: 10 }}>
       <Container>
+        <Typography gutterBottom align="center" component="h2" variant="h3">
+          {t.portfolioTitle}
+        </Typography>
+
+        <ShortCenteredDivider sx={{ mb: 4 }} />
+
         <Grid container spacing={4}>
-          <Grid item xs={12}>
-            <Typography gutterBottom align="center" component="h2" variant="h3">
-              {t.portfolioTitle}
-            </Typography>
-
-            <ShortCenteredDivider />
-          </Grid>
-
           {t.projects.map((project) => (
             <Grid key={project.name} item lg={12} sm={6} xs={12}>
               <Card

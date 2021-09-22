@@ -34,7 +34,7 @@ export default function Blog({ blogData: t }: { blogData: BlogData }) {
           BLOG
         </Typography>
 
-        <ShortCenteredDivider />
+        <ShortCenteredDivider sx={{ mb: 2.5 }} />
 
         <Grid container spacing={4}>
           <Grid item md={5} xs={12}>
