@@ -6,9 +6,9 @@
 
 A personal portfolio website that showcases my feature projects, technical skill stack, contact information and more about me.
 
-## Screenshot
+## Screenshots
 
-![Portfolio material resizer mockup (7)](https://user-images.githubusercontent.com/4708484/97511766-3d3d9b80-195e-11eb-8cd9-04fb298a81e7.jpg)
+![Portfolio multidevices mockup](https://user-images.githubusercontent.com/4708484/135478774-68358e78-a50c-4cc4-8e84-29874ed549ac.png)
 
 ## Core dependencies
 
