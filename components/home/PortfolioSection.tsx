@@ -16,6 +16,7 @@ import {
 } from '@mui/material/';
 import { ChevronRight, GitHub, Visibility } from '@mui/icons-material';
 
+import Link from '../Link';
 import ShortCenteredDivider from '../ui/ShortCenteredDivider';
 import getDataUrlWithShimmerEffect from '../../utils/getDataUrlWithShimmerEffect';
 
@@ -139,9 +140,17 @@ export default function Portfolio({
                   }}
                 >
                   <div>
-                    <Typography gutterBottom component="h3" variant="h5">
+                    <Link
+                      gutterBottom
+                      href={project.projectUrl}
+                      rel="noopener"
+                      sx={{ display: 'inline-block' }}
+                      target="_blank"
+                      underline="hover"
+                      variant="h5"
+                    >
                       {project.name}
-                    </Typography>
+                    </Link>
                     <Typography
                       color="textSecondary"
                       component="p"
