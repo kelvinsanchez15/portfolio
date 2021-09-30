@@ -17,7 +17,7 @@ export default function Footer() {
           size="small"
           sx={{ mb: 2 }}
           title="Scroll back to top"
-          to="/"
+          to="/#"
         >
           <KeyboardArrowUpIcon />
         </Fab>
