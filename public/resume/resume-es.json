@@ -3,7 +3,6 @@
   "headings": {
     "skills": "Habilidades",
     "projects": "Proyectos",
-    "education": "Educación",
     "work": "Experiencia Laboral"
   },
   "basics": {
@@ -11,23 +10,18 @@
     "phone": "",
     "name": "Kelvin Sánchez",
     "location": {
-      "address": "Texas, Houston"
+      "address": "Houston, Texas"
     },
     "website": "https://www.kelvinsanchez15.com"
   },
-  "education": [
-    {
-      "location": "",
-      "area": "",
-      "studyType": "Desarrollador full stack",
-      "endDate": "Dic 2020",
-      "gpa": "",
-      "institution": "freeCodeCamp",
-      "startDate": "Jul 2020"
-    },
-    {}
-  ],
   "work": [
+    {
+      "company": "Xepelin",
+      "position": "Desarrollador front end",
+      "location": "Santiago, Chile",
+      "startDate": "Oct 2021",
+      "endDate": "Presente"
+    },
     {
       "highlights": [
         "Compilar, mantener y desplegar la plataforma usando Next.js, Redux, y Firebase",
@@ -48,7 +42,7 @@
       ],
       "company": "Quatro",
       "position": "Consultante Web",
-      "location": "Estados Unidos",
+      "location": "Pennsylvania, Estados Unidos",
       "startDate": "May 2021",
       "endDate": "Jul 2021"
     },
