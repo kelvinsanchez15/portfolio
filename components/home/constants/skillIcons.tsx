@@ -3,14 +3,14 @@ import {
   SiCss3,
   SiJavascript,
   SiGit,
-  SiNodeDotJs,
+  SiNodedotjs,
   SiReact,
   SiRedux,
   SiMongodb,
   SiJest,
-  SiMaterialUi,
+  SiMaterialui,
   SiBootstrap,
-  SiNextDotJs,
+  SiNextdotjs,
   SiPostgresql,
   SiFirebase,
   SiTailwindcss,
@@ -47,11 +47,11 @@ const skillLogos = [
     label: 'Redux',
   },
   {
-    icon: <SiNextDotJs title="NextJS" />,
+    icon: <SiNextdotjs title="NextJS" />,
     label: 'NextJS',
   },
   {
-    icon: <SiNodeDotJs title="Node" />,
+    icon: <SiNodedotjs title="Node" />,
     label: 'Node',
   },
   {
@@ -75,7 +75,7 @@ const skillLogos = [
     label: 'Tailwind CSS',
   },
   {
-    icon: <SiMaterialUi title="Material UI" />,
+    icon: <SiMaterialui title="Material UI" />,
     label: 'Material UI',
   },
   {
