@@ -1,4 +1,4 @@
-export default {
+const blogs = {
   featuredPost: {
     title: 'Aprende Next.js desde Cero',
     category: 'NEXTJS',
@@ -41,3 +41,5 @@ export default {
     },
   ],
 };
+
+export default blogs;

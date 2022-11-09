@@ -24,10 +24,7 @@ export default function MyApp(props: MyAppProps) {
     <CacheProvider value={emotionCache}>
       <Head>
         <title>Kelvin Sánchez Portfolio</title>
-        <meta
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-          name="viewport"
-        />
+        <meta content="initial-scale=1, width=device-width" name="viewport" />
       </Head>
 
       <ThemeProvider theme={theme}>

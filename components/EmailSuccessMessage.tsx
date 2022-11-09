@@ -12,10 +12,7 @@ export default function EmailSuccessMessage({
   displayMessage,
   setDisplayMessage,
 }: EmailSuccessMessageProps) {
-  const handleClose = (
-    event: React.SyntheticEvent | React.MouseEvent,
-    reason?: string
-  ) => {
+  const handleClose = (_: Event | React.SyntheticEvent, reason?: string) => {
     if (reason === 'clickaway') {
       return;
     }

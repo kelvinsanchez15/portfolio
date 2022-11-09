@@ -1,71 +1,85 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
 import * as React from 'react';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import NextLink, { LinkProps as NextLinkProps } from 'next/link';
 import MuiLink, { LinkProps as MuiLinkProps } from '@mui/material/Link';
+import { styled } from '@mui/material/styles';
+
+// Add support for the sx prop for consistency with the other branches.
+const Anchor = styled('a')({});
 
 interface NextLinkComposedProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>,
-    Omit<NextLinkProps, 'href' | 'as'> {
+    Omit<
+      NextLinkProps,
+      'href' | 'as' | 'onClick' | 'onMouseEnter' | 'onTouchStart'
+    > {
   to: NextLinkProps['href'];
   linkAs?: NextLinkProps['as'];
-  href?: NextLinkProps['href'];
 }
 
 export const NextLinkComposed = React.forwardRef<
   HTMLAnchorElement,
   NextLinkComposedProps
->((props, ref) => {
+>(function NextLinkComposed(props, ref) {
   const {
     to,
     linkAs,
-    href,
     replace,
     scroll,
-    passHref,
     shallow,
     prefetch,
+    legacyBehavior = true,
     locale,
     ...other
   } = props;
 
   return (
     <NextLink
-      as={linkAs}
       href={to}
-      locale={locale}
-      passHref={passHref}
       prefetch={prefetch}
+      as={linkAs}
       replace={replace}
       scroll={scroll}
       shallow={shallow}
+      passHref
+      locale={locale}
+      legacyBehavior={legacyBehavior}
     >
-      <a ref={ref} {...other} />
+      <Anchor ref={ref} {...other} />
     </NextLink>
   );
 });
-
-NextLinkComposed.displayName = 'NextLinkComposed';
 
 export type LinkProps = {
   activeClassName?: string;
   as?: NextLinkProps['as'];
   href: NextLinkProps['href'];
+  linkAs?: NextLinkProps['as']; // Useful when the as prop is shallow by styled().
   noLinkStyle?: boolean;
 } & Omit<NextLinkComposedProps, 'to' | 'linkAs' | 'href'> &
   Omit<MuiLinkProps, 'href'>;
 
 // A styled version of the Next.js Link component:
-// https://nextjs.org/docs/#with-link
-const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
+// https://nextjs.org/docs/api-reference/next/link
+const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(
+  props,
+  ref
+) {
   const {
     activeClassName = 'active',
-    as: linkAs,
+    as,
     className: classNameProps,
     href,
+    legacyBehavior,
+    linkAs: linkAsProp,
+    locale,
     noLinkStyle,
+    prefetch,
+    replace,
     role, // Link don't have roles.
+    scroll,
+    shallow,
     ...other
   } = props;
 
@@ -81,34 +95,30 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
 
   if (isExternal) {
     if (noLinkStyle) {
-      return (
-        <a
-          ref={ref as any}
-          className={className}
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          href={href as string}
-          {...other}
-        />
-      );
+      return <Anchor className={className} href={href} ref={ref} {...other} />;
     }
 
-    return (
-      <MuiLink
-        ref={ref}
-        className={className}
-        href={href as string}
-        {...other}
-      />
-    );
+    return <MuiLink className={className} href={href} ref={ref} {...other} />;
   }
+
+  const linkAs = linkAsProp || as;
+  const nextjsProps = {
+    to: href,
+    linkAs,
+    replace,
+    scroll,
+    shallow,
+    prefetch,
+    legacyBehavior,
+    locale,
+  };
 
   if (noLinkStyle) {
     return (
       <NextLinkComposed
-        ref={ref as any}
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         className={className}
-        to={href}
+        ref={ref}
+        {...nextjsProps}
         {...other}
       />
     );
@@ -116,11 +126,10 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
 
   return (
     <MuiLink
-      ref={ref}
-      className={className}
       component={NextLinkComposed}
-      linkAs={linkAs}
-      to={href}
+      className={className}
+      ref={ref}
+      {...nextjsProps}
       {...other}
     />
   );
