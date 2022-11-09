@@ -1,7 +1,7 @@
 import sgMail from '@sendgrid/mail';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function mail(req: NextApiRequest, res: NextApiResponse) {
   if (
     !process.env.SENDGRID_API_KEY ||
     !process.env.TO_EMAIL ||
@@ -34,4 +34,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     }
   }
   return res.status(200).end();
-};
+}
