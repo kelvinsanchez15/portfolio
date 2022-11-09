@@ -23,7 +23,7 @@ export default function Footer() {
         </Fab>
 
         <Typography gutterBottom align="center" component="p" variant="h6">
-          KELVIN SANCHEZ ©2021
+          KELVIN SANCHEZ ©{new Date().getFullYear()}
         </Typography>
       </Box>
     </Box>
