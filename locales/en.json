@@ -1,22 +1,22 @@
 {
   "defaultSeo": {
-    "title": "Kelvin Sánchez | Full stack developer",
-    "description": "Kelvin Sánchez is a full stack developer, experienced in creating beautiful and functional websites and web applications.",
+    "title": "Kelvin Sánchez | Front-end developer",
+    "description": "Kelvin Sánchez is a front-end developer, experienced in creating beautiful and functional websites and web applications.",
     "url": "https://www.kelvinsanchez15.com/",
     "previewImage": "https://user-images.githubusercontent.com/4708484/93688063-050a8980-fa91-11ea-89ca-3530a9038393.png"
   },
   "heroData": {
     "greetings": "HELLO, ",
     "introduction": "I'm Kelvin Sánchez",
-    "role": "Full Stack Developer",
-    "paragraph": "Passionate about coding and specialize in MERN and JAM stacks.",
+    "role": "Front-end Developer",
+    "paragraph": "Passionate about coding, and making my client ideas come true.",
     "button1": "Check my work",
     "button2": "Contact me"
   },
   "aboutData": {
     "aboutTitle": "About me",
     "aboutItems": [
-      "I'm a full stack developer based in Houston, Texas.",
+      "I'm a front-end developer based in Spring, Texas.",
       "I like to design and build beautiful and functional websites and web applications, taking special care to produce clear and understandable code.",
       "I love teamwork and good communication, always open to feedback and willing to learn new things.",
       "In my free time I like to play the guitar, read a good book or play videogames."
