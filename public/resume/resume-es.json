@@ -1,5 +1,5 @@
 {
-  "selectedTemplate": 2,
+  "selectedTemplate": 3,
   "headings": {
     "skills": "Habilidades",
     "projects": "Proyectos",
@@ -10,51 +10,44 @@
     "phone": "",
     "name": "Kelvin Sánchez",
     "location": {
-      "address": "Houston, Texas"
+      "address": "Spring, Texas"
     },
-    "website": "https://www.kelvinsanchez15.com"
+    "website": "www.kelvinsanchez15.com"
   },
   "work": [
     {
       "company": "Xepelin",
-      "position": "Desarrollador front end",
+      "position": "Desarrollador Front-end",
       "location": "Santiago, Chile",
       "startDate": "Oct 2021",
-      "endDate": "Presente"
+      "endDate": "Presente",
+      "highlights": [
+        "Construí un nuevo flujo de onboarding, mejorando un 33% los usuarios autoenrolados",
+        "Desarrollé componentes de alto impacto de negocio, como el widget de Linea de Crédito y una barra de navegación escalable",
+        "Fuí pionero en la implementación de Typescript y pruebas unitarias, mejorando los niveles de confianza en la aplicación"
+      ]
     },
     {
-      "highlights": [
-        "Compilar, mantener y desplegar la plataforma usando Next.js, Redux, y Firebase",
-        "Desarrollar funcionalidades desde el diseño hasta la implementación y el lanzamiento",
-        "Probar la aplicación para garantizar que sea responsiva y eficiente"
-      ],
       "company": "alacartadigital",
-      "position": "Desarrollador full stack",
+      "position": "Desarrollador Full Stack",
       "location": "Madrid, España",
       "startDate": "Abr 2021",
-      "endDate": "Presente"
-    },
-    {
+      "endDate": "Sep 2022",
       "highlights": [
-        "Desarrollo frontend usando React y Redux",
-        "Desarrollo backend serverless utilizando TypeScript, Node.js, y Google Cloud functions",
-        "Crear funcionalidades orientadas al usuario integradas con la API de Google"
-      ],
-      "company": "Quatro",
-      "position": "Consultante Web",
-      "location": "Pennsylvania, Estados Unidos",
-      "startDate": "May 2021",
-      "endDate": "Jul 2021"
+        "Implementé funcionalidades para suscripciones anuales y múltiples restaurantes, aumentando los ingresos de la empresa en un 40%",
+        "Optimicé las métricas Lighthouse en 98, logrando una experiencia de usuario más fluida y mejoras significativas en el SEO de la aplicación",
+        "Responsable de compilar, mantener, y desplegar la plataforma utilizando Next.js, Redux y Firebase como stack de tecnología principal"
+      ]
     },
     {
-      "position": "Desarrollador web",
+      "position": "Desarrollador Front-end",
       "website": "",
       "startDate": "Ene 2019",
       "endDate": "Dic 2020",
       "highlights": [
-        "Mantener y mejorar el sitio web",
-        "Optimizar las páginas web para lograr la máxima velocidad y escalabilidad",
-        "Desarrollar funcionalidades para mejorar la experiencia del usuario"
+        "Encargado de mejorar el sitio web y mantener el sistema de diseño",
+        "Optimicé la aplicación para lograr máxima velocidad y escalabilidad",
+        "Creé funcionalidades para mejorar la experiencia del usuario"
       ],
       "company": "PETUCA",
       "location": "Ciudad Bolívar, Venezuela"
@@ -113,12 +106,6 @@
       "name": "A-Note",
       "description": "Una aplicación JAMStack que permite tomar notas de forma simple, rápida e intuitiva.",
       "url": "https://a-note.vercel.app/"
-    },
-    {
-      "keywords": ["Express.js", "Node.js", "MongoDB"],
-      "name": "Tablón de mensajes anónimos",
-      "description": "Una aplicación web en donde los usuarios pueden crear tablones, publicar comentarios, removerlos, entre otras funciones.",
-      "url": "https://message-board.glitch.me/"
     }
   ],
   "awards": [

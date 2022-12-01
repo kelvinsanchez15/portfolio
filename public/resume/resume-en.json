@@ -1,5 +1,5 @@
 {
-  "selectedTemplate": 2,
+  "selectedTemplate": 3,
   "headings": {
     "skills": "Skills",
     "projects": "Projects",
@@ -10,50 +10,43 @@
     "phone": "",
     "name": "Kelvin Sánchez",
     "location": {
-      "address": "Houston, Texas"
+      "address": "Spring, Texas"
     },
-    "website": "https://www.kelvinsanchez15.com"
+    "website": "www.kelvinsanchez15.com"
   },
   "work": [
     {
       "company": "Xepelin",
-      "position": "Front End Developer",
+      "position": "Front-end Developer",
       "location": "Santiago, Chile",
       "startDate": "Oct 2021",
-      "endDate": "Present"
+      "endDate": "Present",
+      "highlights": [
+        "Built a new onboarding flow, improving self-enrolled users by 33%",
+        "Developed high business impact components, such as the Credit Line widget and a scalable Navbar",
+        "Pioneered the implementation of Typescript and Unit testing, improving overall application trust"
+      ]
     },
     {
-      "highlights": [
-        "Build, maintain and deploy platform project using Next.js, Redux and Firebase",
-        "Develop features from design through implementation and launch",
-        "Test application to ensure responsiveness and efficiency"
-      ],
       "company": "alacartadigital",
       "position": "Full Stack Developer",
       "location": "Madrid, Spain",
       "startDate": "Apr 2021",
-      "endDate": "Present"
-    },
-    {
+      "endDate": "Sep 2022",
       "highlights": [
-        "Frontend development using React and Redux",
-        "Serverless backend development using TypeScript, Node.js, and Google Cloud functions",
-        "Creating user-facing features with Google API integration"
-      ],
-      "company": "Quatro",
-      "position": "Web Consultant",
-      "location": "Pennsylvania, United States",
-      "startDate": "May 2021",
-      "endDate": "Jul 2021"
+        "Implemented features such as yearly subscriptions and multiple restaurants per user, increasing company revenue by 40%",
+        "Optimized Lighthouse metrics by 98, achieving a smoother user experience and significant SEO improvements",
+        "Responsible for maintaining and deploying the platform using Next.js, Redux, and Firebase as the primary technology stack"
+      ]
     },
     {
-      "position": "Web Developer",
+      "position": "Front-end Developer",
       "startDate": "Ene 2019",
       "endDate": "Dec 2020",
       "highlights": [
-        "Maintain and improve website",
-        "Optimize web pages for maximum speed and scalability",
-        "Develop features to enhance the user experience"
+        "In charge of improving the company website and maintaining the design system",
+        "Optimized the app for maximum speed and scalability",
+        "Created features to enhance the user experience"
       ],
       "company": "PETUCA",
       "location": "Ciudad Bolívar, Venezuela"
@@ -112,12 +105,6 @@
       "name": "A-Note",
       "description": "A simple, fast and intuitive note-taking app built with NextJS JAMStack solution.",
       "url": "https://a-note.vercel.app/"
-    },
-    {
-      "keywords": ["Express.js", "Node.js", "MongoDB"],
-      "name": "Anonymous Message Board",
-      "description": "A web app where users can create boards, post comments and remove them.",
-      "url": "https://message-board.glitch.me/"
     }
   ],
   "awards": [
