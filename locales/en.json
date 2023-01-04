@@ -31,6 +31,21 @@
     "portfolioTitle": "Portfolio",
     "projects": [
       {
+        "name": "alacartadigital",
+        "projectUrl": "https://www.alacartadigital.es/",
+        "repoUrl": "https://github.com/alacartadigital-team",
+        "imgPath": "projectMedia/alacartadigital.png",
+        "imgAlt": "alacartadigital site mocked device preview",
+        "summary": "Online restaurant menu platform with QR code integration.",
+        "keyFeatures": [
+          "User-friendly dashboard",
+          "Live preview",
+          "Brand customization",
+          "Paid subscriptions"
+        ],
+        "technologies": ["React", "NextJS", "Firebase", "Material-UI", "Stripe"]
+      },
+      {
         "name": "Issueless",
         "projectUrl": "https://issueless.vercel.app",
         "repoUrl": "https://github.com/kelvinsanchez15/issueless",
@@ -79,21 +94,6 @@
           "Google Sheets integration"
         ],
         "technologies": ["Chakra UI", "TypeScript", "React", "NextJS"]
-      },
-      {
-        "name": "A-Note",
-        "projectUrl": "https://a-note.vercel.app",
-        "repoUrl": "https://github.com/kelvinsanchez15/a-note",
-        "imgPath": "projectMedia/a-note.png",
-        "imgAlt": "A-note site mocked device preview",
-        "summary": "A simple, fast and intuitive note-taking app built with NextJS JAMStack solution.",
-        "keyFeatures": [
-          "Serveless API routes",
-          "Optimistic UI",
-          "JWT authentication",
-          "Profile customization"
-        ],
-        "technologies": ["React", "NextJS", "MongoDB", "Material-UI", "SWR"]
       }
     ]
   },
