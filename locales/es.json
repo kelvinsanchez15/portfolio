@@ -31,6 +31,21 @@
     "portfolioTitle": "Portafolio",
     "projects": [
       {
+        "name": "alacartadigital",
+        "projectUrl": "https://www.alacartadigital.es/",
+        "repoUrl": "https://github.com/alacartadigital-team",
+        "imgPath": "projectMedia/alacartadigital.png",
+        "imgAlt": "Vista previa del sitio alacartadigital en varios dispositivos",
+        "summary": "Plataforma online para menús de restaurantes con integracion QR.",
+        "keyFeatures": [
+          "Dashboard amigable para el usuario",
+          "Vista previa en vivo",
+          "Personalización de marca",
+          "Suscripciones de pago"
+        ],
+        "technologies": ["React", "NextJS", "MongoDB", "Material-UI", "SWR"]
+      },
+      {
         "name": "Issueless",
         "projectUrl": "https://issueless.vercel.app",
         "repoUrl": "https://github.com/kelvinsanchez15/issueless",
@@ -79,21 +94,6 @@
           "Integración con Google Sheets"
         ],
         "technologies": ["Chakra UI", "TypeScript", "React", "NextJS"]
-      },
-      {
-        "name": "A-Note",
-        "projectUrl": "https://a-note.vercel.app",
-        "repoUrl": "https://github.com/kelvinsanchez15/a-note",
-        "imgPath": "projectMedia/a-note.png",
-        "imgAlt": "Vista previa del sitio A-note en varios dispositivos",
-        "summary": "Una aplicación JAMStack que permite tomar notas de forma simple, rápida e intuitiva.",
-        "keyFeatures": [
-          "Rutas API Serveless",
-          "IU Optimística",
-          "Autenticación JWT",
-          "Perfil personalizado"
-        ],
-        "technologies": ["React", "NextJS", "MongoDB", "Material-UI", "SWR"]
       }
     ]
   },
