@@ -18,7 +18,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.13",
     "@next/font": "^13.0.2",
-    "@sendgrid/mail": "^7.4.6",
+    "@sendgrid/mail": "^7.7.0",
     "clsx": "^1.2.1",
     "formik": "^2.2.9",
     "next": "^13.0.2",
