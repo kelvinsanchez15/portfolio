@@ -1,5 +1,5 @@
 {
-  "selectedTemplate": 3,
+  "selectedTemplate": 2,
   "headings": {
     "skills": "Skills",
     "projects": "Projects",
@@ -16,11 +16,23 @@
   },
   "work": [
     {
+      "company": "Research Improving People's Lives",
+      "position": "Senior Front-end Developer",
+      "location": "Spring, Texas",
+      "startDate": "Feb 2023",
+      "endDate": "Present",
+      "highlights": [
+        "Integrated Rec Engine API V2 to improve page load speed and performance",
+        "Contributed to developing the Wisconsin Career Accelerator",
+        "Created documentation on frontend best practices and standardization for faster onboarding and improved development efficiency"
+      ]
+    },
+    {
       "company": "Xepelin",
       "position": "Front-end Developer",
-      "location": "Santiago, Chile",
+      "location": "Spring, Texas",
       "startDate": "Oct 2021",
-      "endDate": "Present",
+      "endDate": "Feb 2023",
       "highlights": [
         "Built a new onboarding flow, improving self-enrolled users by 33%",
         "Developed high business impact components, such as the Credit Line widget and a scalable Navbar",
@@ -30,7 +42,7 @@
     {
       "company": "alacartadigital",
       "position": "Full Stack Developer",
-      "location": "Madrid, Spain",
+      "location": "Spring, Texas",
       "startDate": "Apr 2021",
       "endDate": "Sep 2022",
       "highlights": [
@@ -88,6 +100,12 @@
     }
   ],
   "projects": [
+    {
+      "description": "Online restaurant menu platform with QR code integration.",
+      "url": "https://issueless.vercel.app/",
+      "keywords": ["React", "Next.js", "Material UI", "Firebase", "Stripe"],
+      "name": "alacartadigital"
+    },
     {
       "description": "JAMStack Issue Tracker project inspired on GitHub issues.",
       "url": "https://issueless.vercel.app/",
