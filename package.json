@@ -17,7 +17,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.13",
-    "@next/font": "^13.0.2",
+    "@next/font": "^13.3.4",
     "@sendgrid/mail": "^7.4.6",
     "clsx": "^1.2.1",
     "formik": "^2.2.9",
