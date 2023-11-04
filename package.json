@@ -2,6 +2,9 @@
   "name": "nextjs-portfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.18.2"
+   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +13,7 @@
     "lint": "next lint",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\""
   },
+
   "dependencies": {
     "@emotion/cache": "^11.10.5",
     "@emotion/react": "^11.10.5",
