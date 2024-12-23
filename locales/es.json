@@ -1,14 +1,14 @@
 {
   "defaultSeo": {
-    "title": "Kelvin Sánchez | Desarrollador front-end",
-    "description": "Kelvin Sánchez es un desarrollador front-end, con experiencia en la creación de sitios y aplicaciones web hermosas y funcionales.",
+    "title": "Kelvin Sanchez | Ingeniero de Software Senior",
+    "description": "Kelvin Sanchez es un Ingeniero de Software Senior, con experiencia en la creación de sitios y aplicaciones web hermosas y funcionales.",
     "url": "https://www.kelvinsanchez15.com/",
     "previewImage": "https://user-images.githubusercontent.com/4708484/93688063-050a8980-fa91-11ea-89ca-3530a9038393.png"
   },
   "heroData": {
     "greetings": "HOLA, ",
-    "introduction": "soy Kelvin Sánchez",
-    "role": "Desarrollador Front-end",
+    "introduction": "soy Kelvin Sanchez",
+    "role": "Ingeniero de Software Senior",
     "paragraph": "Me apasiona programar, y hacer las ideas de mis clientes realidad.",
     "button1": "Revisa mis proyectos",
     "button2": "Contáctame"
@@ -16,7 +16,7 @@
   "aboutData": {
     "aboutTitle": "Acerca de mi",
     "aboutItems": [
-      "Soy un desarrollador front-end residenciado en Spring, Texas.",
+      "Soy un Ingeniero de Software Senior residenciado en Spring, Texas.",
       "Me gusta diseñar y construir aplicaciones web hermosas y funcionales, poniendo especial cuidado en producir un código limpio y comprensible.",
       "Me encanta trabajar en equipo y comunicar mis ideas, permaneciendo abierto a recibir comentarios y dispuesto a adquirir nuevos conocimientos.",
       "En mi tiempo libre suelo tocar la guitarra, leer un buen libro o jugar videojuegos."
