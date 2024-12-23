@@ -1,14 +1,14 @@
 {
   "defaultSeo": {
-    "title": "Kelvin Sánchez | Front-end developer",
-    "description": "Kelvin Sánchez is a front-end developer, experienced in creating beautiful and functional websites and web applications.",
+    "title": "Kelvin Sanchez | Senior Software Engineer",
+    "description": "Kelvin Sanchez is a Senior Software Engineer, experienced in creating beautiful and functional websites and web applications.",
     "url": "https://www.kelvinsanchez15.com/",
     "previewImage": "https://user-images.githubusercontent.com/4708484/93688063-050a8980-fa91-11ea-89ca-3530a9038393.png"
   },
   "heroData": {
     "greetings": "HELLO, ",
-    "introduction": "I'm Kelvin Sánchez",
-    "role": "Front-end Developer",
+    "introduction": "I'm Kelvin Sanchez",
+    "role": "Senior Software Engineer",
     "paragraph": "Passionate about coding, and making my client ideas come true.",
     "button1": "Check my work",
     "button2": "Contact me"
@@ -16,10 +16,10 @@
   "aboutData": {
     "aboutTitle": "About me",
     "aboutItems": [
-      "I'm a front-end developer based in Spring, Texas.",
-      "I like to design and build beautiful and functional websites and web applications, taking special care to produce clear and understandable code.",
-      "I love teamwork and good communication, always open to feedback and willing to learn new things.",
-      "In my free time I like to play the guitar, read a good book or play videogames."
+      "Senior Software Engineer based in Spring, Texas.",
+      "Passionate about designing and building beautiful, user-centric websites and applications, with a focus on clean, maintainable code.",
+      "Enthusiastic team player who values clear communication, embraces feedback, and is always eager to learn and grow.",
+      "Outside of work, I enjoy playing guitar, reading, and indulging in video games."
     ],
     "resumeTitle": "Resumé",
     "resumeParagraph": "You can check my resumé in the link below.",
