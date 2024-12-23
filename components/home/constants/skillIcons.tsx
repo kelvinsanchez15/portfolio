@@ -8,13 +8,15 @@ import {
   SiRedux,
   SiMongodb,
   SiJest,
-  SiMaterialui,
-  SiBootstrap,
+  SiMui,
   SiNextdotjs,
   SiPostgresql,
   SiFirebase,
   SiTailwindcss,
   SiTypescript,
+  SiAmazonwebservices,
+  SiGooglecloud,
+  SiTerraform,
 } from 'react-icons/si';
 
 const skillLogos = [
@@ -75,12 +77,20 @@ const skillLogos = [
     label: 'Tailwind CSS',
   },
   {
-    icon: <SiMaterialui title="Material UI" />,
+    icon: <SiMui title="Material UI" />,
     label: 'Material UI',
   },
   {
-    icon: <SiBootstrap title="Bootstrap" />,
-    label: 'Bootstrap',
+    icon: <SiTerraform title="Terraform" />,
+    label: 'Terraform',
+  },
+  {
+    icon: <SiAmazonwebservices title="Amazon Web Services" />,
+    label: 'Amazon Web Services',
+  },
+  {
+    icon: <SiGooglecloud title="Google Cloud" />,
+    label: 'Google Cloud',
   },
 ];
 
