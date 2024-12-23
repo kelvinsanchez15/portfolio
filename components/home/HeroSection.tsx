@@ -26,6 +26,7 @@ export default function Hero({ heroData: t }: { heroData: HeroData }) {
           },
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'right -2rem bottom',
+          backgroundSize: '60%'
         }}
       >
         <Box mb={7}>
