@@ -7,24 +7,24 @@
   },
   "basics": {
     "email": "kelvinsanchez15@gmail.com",
-    "phone": "",
-    "name": "Kelvin Sánchez",
+    "name": "Kelvin Sanchez",
     "location": {
       "address": "Spring, Texas"
     },
     "website": "www.kelvinsanchez15.com"
   },
+  "education": [],
   "work": [
     {
       "company": "Research Improving People's Lives",
-      "position": "Senior Front-end Developer",
+      "position": "Senior Front-end Engineer",
       "location": "Spring, Texas",
       "startDate": "Feb 2023",
       "endDate": "Present",
       "highlights": [
-        "Integrated Rec Engine API V2 to improve page load speed and performance",
-        "Contributed to developing the Wisconsin Career Accelerator",
-        "Created documentation on frontend best practices and standardization for faster onboarding and improved development efficiency"
+        "Led frontend architecture and crafted custom UX solutions to enhance user engagement and streamline workflows",
+        "Built interactive dashboards with geospatial insights to transform complex public safety data into actionable visuals",
+        "Developed secure, scalable cloud infrastructure to ensure reliable performance and protect sensitive research data"
       ]
     },
     {
@@ -67,24 +67,20 @@
   "skills": [
     {
       "level": "",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Next.js",
-        "Redux"
-      ],
+      "keywords": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Redux"],
       "name": "Frontend"
     },
     {
-      "keywords": ["Node.js", "Express.js", "Cloud Functions"],
+      "keywords": ["Python", "FastAPI", "Node.js"],
       "name": "Backend"
     },
     {
       "keywords": ["PostgreSQL", "MongoDB", "Firebase"],
       "name": "Databases"
+    },
+    {
+      "keywords": ["Terraform", "Amazon Web Services", "Google Cloud"],
+      "name": "Infrastructure"
     },
     {
       "keywords": ["Tailwind CSS", "Material UI", "Bootstrap"],
@@ -101,28 +97,28 @@
   ],
   "projects": [
     {
+      "description": "Arkansas Skills-Based Candidate Matching Tool",
+      "url": "https://employer.launch.arkansas.gov/",
+      "keywords": ["React", "Next.js", "Typescript", "Jest"],
+      "name": "LAUNCH for Employers"
+    },
+    {
+      "description": "Public Safety Data for Village of Hazel Crest",
+      "url": "https://hazelcrest.dataforcommunitytrust.org/",
+      "keywords": ["Terraform", "AWS", "React", "Next.js"],
+      "name": "Data for Community Trust"
+    },
+    {
+      "description": "Certified Payroll Collection and Analysis Tool",
+      "url": "https://njwages.nj.gov/",
+      "keywords": ["React", "Next.js", "Typescript", "Material UI", "Zod"],
+      "name": "New Jersey Wage Hub"
+    },
+    {
       "description": "Online restaurant menu platform with QR code integration.",
-      "url": "https://issueless.vercel.app/",
+      "url": "https://avocaty.io/",
       "keywords": ["React", "Next.js", "Material UI", "Firebase", "Stripe"],
       "name": "alacartadigital"
-    },
-    {
-      "description": "JAMStack Issue Tracker project inspired on GitHub issues.",
-      "url": "https://issueless.vercel.app/",
-      "keywords": ["React", "Next.js", "PostgreSQL", "Prisma", "Material UI"],
-      "name": "Issueless"
-    },
-    {
-      "keywords": ["Tailwind CSS", "TypeScript", "React", "Next.js"],
-      "name": "Easybank",
-      "description": "Fully responsive SAAS product landing page designed with Tailwind CSS.",
-      "url": "https://easybank-web.vercel.app/"
-    },
-    {
-      "keywords": ["React", "Next.js", "MongoDB", "Material UI", "SWR"],
-      "name": "A-Note",
-      "description": "A simple, fast and intuitive note-taking app built with NextJS JAMStack solution.",
-      "url": "https://a-note.vercel.app/"
     }
   ],
   "awards": [
@@ -133,13 +129,5 @@
       "summary": ""
     }
   ],
-  "sections": [
-    "templates",
-    "profile",
-    "work",
-    "skills",
-    "projects",
-    "education",
-    "awards"
-  ]
+  "sections": ["templates", "profile", "education", "work", "skills", "projects", "awards"]
 }
