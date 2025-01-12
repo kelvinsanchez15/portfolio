@@ -17,7 +17,7 @@
   "work": [
     {
       "company": "Research Improving People's Lives",
-      "position": "Senior Front-end Engineer",
+      "position": "Senior Software Engineer",
       "location": "Spring, Texas",
       "startDate": "Feb 2023",
       "endDate": "Present",
@@ -67,7 +67,15 @@
   "skills": [
     {
       "level": "",
-      "keywords": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Redux"],
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Redux"
+      ],
       "name": "Frontend"
     },
     {
@@ -129,5 +137,13 @@
       "summary": ""
     }
   ],
-  "sections": ["templates", "profile", "education", "work", "skills", "projects", "awards"]
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "work",
+    "skills",
+    "projects",
+    "awards"
+  ]
 }
