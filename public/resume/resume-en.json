@@ -1,5 +1,5 @@
 {
-  "selectedTemplate": 2,
+  "selectedTemplate": 3,
   "headings": {
     "skills": "Skills",
     "projects": "Projects",
@@ -22,9 +22,11 @@
       "startDate": "Feb 2023",
       "endDate": "Present",
       "highlights": [
-        "Led frontend architecture and crafted custom UX solutions to enhance user engagement and streamline workflows",
+        "Led frontend architecture, established best practices, and improved code quality through reviews, elevating engineering standards",
+        "Engineered UX solutions that increased page speed, usability, and accessibility, leading to better user engagement",
         "Built interactive dashboards with geospatial insights to transform complex public safety data into actionable visuals",
-        "Developed secure, scalable cloud infrastructure to ensure reliable performance and protect sensitive research data"
+        "Developed secure, scalable cloud infrastructures to ensure reliable performance and protect sensitive research data",
+        "Spearheaded the new Resume Generator feature, from POC to full integration into the main application, collaborating across product, engineering, and engagement teams"
       ]
     },
     {
@@ -47,7 +49,7 @@
       "endDate": "Sep 2022",
       "highlights": [
         "Implemented features such as yearly subscriptions and multiple restaurants per user, increasing company revenue by 40%",
-        "Optimized Lighthouse metrics by 98, achieving a smoother user experience and significant SEO improvements",
+        "Optimized Lighthouse metrics, achieving a score of 98 for a smoother user experience and improved SEO",
         "Responsible for maintaining and deploying the platform using Next.js, Redux, and Firebase as the primary technology stack"
       ]
     },
@@ -56,9 +58,9 @@
       "startDate": "Ene 2019",
       "endDate": "Dec 2020",
       "highlights": [
-        "In charge of improving the company website and maintaining the design system",
-        "Optimized the app for maximum speed and scalability",
-        "Created features to enhance the user experience"
+        "Led improvements to the company website and managed the design system",
+        "Optimized app performance for speed and scalability",
+        "Designed and built features that enhanced the usability and functionality of the application"
       ],
       "company": "PETUCA",
       "location": "Ciudad Bolívar, Venezuela"
